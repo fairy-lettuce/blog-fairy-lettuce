@@ -21,6 +21,8 @@ Hugo (hugo-primer テーマ) + GitHub Pages + GitHub Actions でブログを作�
 
 リポジトリは https://github.com/fairy-lettuce/fairy-lettuce.github.io で公開してるよ。
 
+<!--more-->
+
 ## 動機
 
 1. はてなブログはとにかく記法が厄介。  

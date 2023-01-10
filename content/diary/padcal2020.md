@@ -11,6 +11,8 @@ keywords: ["ボカロ", "機械学習", ]
 
 皆さんこんにちは。はじめまして、れたすです。Twitter は [@fairy_lettuce](https://twitter.com/fairy_lettuce) です。  
 
+<!--more-->
+
 [:contents]
 
 ## 自己紹介
