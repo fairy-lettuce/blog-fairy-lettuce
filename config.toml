@@ -6,7 +6,7 @@ theme = "hugo-primer"
 languageCode = "ja"
 # If you are using Chinese, Japanese, or Korean, I highly recommend you to set this true.
 hasCJKLanguage = true
-summaryLength = 70
+summaryLength = 140
 # Code pen
 # pygmentsCodeFences = true
 # pygmentsUseClasses = true
