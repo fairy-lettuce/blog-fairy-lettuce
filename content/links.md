@@ -1,6 +1,6 @@
 ---
 title: "Links"
-date: 2023-01-01T00:00:00+09:00
+date: 2000-08-23T00:00:00+09:00
 categories: ["diary",]
 tags: ["リンク",]
 keywords:
