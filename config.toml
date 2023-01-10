@@ -1,0 +1,64 @@
+# config.toml
+
+baseURL = "https://fairy-lettuce.github.io/"
+title = "Growth Record of Lettuce Farm: Extended"
+theme = "hugo-primer"
+languageCode = "ja"
+# If you are using Chinese, Japanese, or Korean, I highly recommend you to set this true.
+hasCJKLanguage = true
+summaryLength = 70
+# Code pen
+# pygmentsCodeFences = true
+# pygmentsUseClasses = true
+# googleAnalytics = "U-12345678-0"
+
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`.
+copyright = "&copy;fairy-lettuce 2023"
+
+[frontmatter]
+# update sitemap.xml's lastmod datetime by file change time, instead of git.
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[params]
+description = "れたすのブログ"
+twitter = "fairy_lettuce"
+# You can use favicon by adding `favicon-64.png` to `static` directory.
+# You can also add `apple-touch-icon.png` and `pinned-icon.svg`.  
+useIcon = true
+useTwitterCard = true
+# Use MathJax.js. Disabling site-wide and you still can enable in indivisual pages
+math = true
+
+shareTo = ["Twitter", "Hatena", "Facebook", "Pocket"]
+showFooterCredits = true
+
+publishDir = "docs"
+canonifyurls = true
+
+[[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-about'></i>"
+    weight = 10
+    identifier = "about"
+    url = "/about"
+[[menu.main]]
+    name = "Diary"
+    pre = "<i class='fa fa-diary'></i>"
+    weight = 20
+    url = "/diary"
+[[menu.main]]
+    name = "Competitive"
+    pre = "<i class='fa fa-cp'></i>"
+    weight = 30
+    url = "/competitive-programming"
+[[menu.main]]
+    name = "Links"
+    pre = "<i class='fa fa-diary-old'></i>"
+    weight = 120
+    url = "/links"
+[[menu.main]]
+    name = "GitHub"
+    pre = "<i class='fa fa-github'></i>"
+    weight = 210
+    url = "https://github.com/fairy-lettuce"
