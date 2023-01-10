@@ -12,6 +12,6 @@ keywords:
 
 [Growth Record of Lettuce Farm](https://fairy-lettuce.hatenadiary.com/)
 
-### はてなブログ（日常用）
+### はてなブログ (日常用)
 
 [Lettuce Diary](https://lettuce-diary.hatenadiary.com/)
