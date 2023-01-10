@@ -51,7 +51,7 @@ canonifyurls = true
     name = "Competitive"
     pre = "<i class='fa fa-cp'></i>"
     weight = 30
-    url = "/competitive-programming"
+    url = "/cp"
 [[menu.main]]
     name = "Links"
     pre = "<i class='fa fa-diary-old'></i>"

@@ -10,5 +10,11 @@ keywords:
 
 以前より使用していたはてなブログから移管作業中です。
 
+## サイトマップ
 
+- [About](/about): 自己紹介です。
+- [Diary](/diary): 日常などの個人的なことのブログです。
+- [Competitive](/competitive-programming): 競技プログラミングに関する内容です。
+- [Links](/links): 自分の関連するサイトの紹介です。
+- [GitHub](https://github.com/fairy-lettuce): GitHubアカウントです。
 

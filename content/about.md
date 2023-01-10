@@ -1,9 +1,8 @@
 ---
 title: "About me"
-date: 2023-01-09T21:49:48+09:00
-draft: false
-categories:
-tags:
+date: 2000-08-23T00:00:00+09:00
+categories: ["diary", "自己紹介"]
+tags: ["自己紹介"]
 keywords:
 ---
 
