@@ -1,8 +1,8 @@
 ---
 title: "Links"
 date: 2023-01-01T00:00:00+09:00
-categories:
-tags:
+categories: ["diary",]
+tags: ["リンク",]
 keywords:
 ---
 

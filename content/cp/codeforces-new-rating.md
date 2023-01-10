@@ -1,7 +1,7 @@
 ---
 title: "Codeforces New Rating"
 date: 2023-01-10T11:13:01+09:00
-categories: ["Codeforces", "競プロその他", ]
+categories: ["competitive", ]
 tags: ["Codeforces", "競プロその他", "test", ]
 ---
 

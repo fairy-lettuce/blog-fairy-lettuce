@@ -1,7 +1,7 @@
 ---
 title: "About me"
 date: 2000-08-23T00:00:00+09:00
-categories: ["diary", "自己紹介"]
+categories: ["diary"]
 tags: ["自己紹介"]
 keywords:
 ---
