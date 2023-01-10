@@ -34,7 +34,7 @@ Hugo (hugo-primer テーマ) + GitHub Pages + GitHub Actions でブログを作�
 
 ## 採用した技術
 
-Hugo + GitHub Pages + GitHub Actions for HUGO。テーマには hugo-primer を採用。
+Hugo + GitHub Pages + GitHub Actions for HUGO。テーマには [hugo-primer](https://github.com/qqpann/hugo-primer) を採用。
 
 ## やったこと
 
