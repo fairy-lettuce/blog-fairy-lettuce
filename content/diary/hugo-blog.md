@@ -3,7 +3,7 @@ title: "Hugo で素敵なブログ生活"
 date: 2023-01-10T14:48:14+09:00
 draft: false
 categories: ["diary", ]
-tags: ["ブログ", "日常", ]
+tags: ["ブログ", "日常", "技術", ]
 keywords: ["Hugo", "はてなブログ", ]
 ---
 
@@ -40,13 +40,13 @@ Hugo + GitHub Pages + GitHub Actions for HUGO。テーマには [hugo-primer](ht
 
 ### Hugo テンプレートを用意する (大昔)
 
-既存の Hugo テンプレートがあって、clone するだけで楽にできるというものがあった。それを用いて実装したものが[これ](https://github.com/fairy-lettuce/fairy-lettuce-blog)。見え方は[こんな感じ](https://fairy-lettuce.github.io/fairy-lettuce-blog/)。
+既存の Hugo テンプレートがあって、clone するだけで楽にできるというものがありました。それを用いて実装したものが[これ](https://github.com/fairy-lettuce/fairy-lettuce-blog)。見え方は[こんな感じ](https://fairy-lettuce.github.io/fairy-lettuce-blog/)。
 
-非常に楽だったが、これではあまり意味がないと思った。どうせカスタマイズするには結局自分で内部を覗かないといけないので折角ならここで使われている技術を勉強しようと考えた。
+非常に楽だったが、これではあまり意味がないと思いました。どうせカスタマイズするには結局自分で内部を覗かないといけないので折角ならここで使われている技術を勉強しようと考えました。
 
 ### Hugo を一から理解する
 
-ということで Hugo について調べまくった。[Hugo + GitHub Pages + GitHub Actions で独自ドメインのウェブサイトを構築する](https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages)を専ら参考にした。というか、これが全てだと思います。はい。これを読んだらあなたも静的なブログを作れますおめでとうございます！(嘘です、事前知識ゼロだったのでちゃんと調べないと結構苦労しました)
+ということで Hugo について調べまくりました。[Hugo + GitHub Pages + GitHub Actions で独自ドメインのウェブサイトを構築する](https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages)を専ら参考にしました。というか、これが全てだと思います。はい。これを読んだらあなたも静的なブログを作れますおめでとうございます！(嘘です、事前知識ゼロだったのでちゃんと調べないと結構苦労しました)
 
 他にも[HugoとGitHub Pagesでブログを公開する](https://open-groove.net/other-tools/hugo-github-pages-blog/)も参考になったが、これは GitHub Actions で自動化してくれないので前者のサイトが非常に役立った。
 
