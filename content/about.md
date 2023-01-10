@@ -6,9 +6,9 @@ tags: ["自己紹介"]
 keywords:
 ---
 
-![アイコン](/icon.png)
-
-[@nixets](https://twitter.com/nixets) さんに描いていただいた素敵なアイコンです。
+<div align="center">
+{{< figure src="/icon.png" caption="[@nixets](https://twitter.com/nixets) さんに描いていただいた素敵なアイコンです。" width="320" height="320" >}}
+</div>
 
 # 自己紹介
 
