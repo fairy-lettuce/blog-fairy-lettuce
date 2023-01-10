@@ -1,8 +1,9 @@
 ---
 title: "Codeforces New Rating"
 date: 2023-01-10T11:13:01+09:00
+draft: true
 categories: ["competitive", ]
-tags: ["Codeforces", "競プロその他", "test", ]
+tags: ["Codeforces", "競プロその他", "test", "cp-misc", ]
 ---
 
 初めまして。最近競プロ頑張ってるれたすです。  

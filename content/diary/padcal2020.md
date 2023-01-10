@@ -1,9 +1,10 @@
 ---
 title: "プログラミングでボカロ曲の歌詞を解析して遊んでみた"
 date: 2020-12-02T14:46:12+09:00
+draft: true
 categories: ["diary", ]
-tags: ["アドベントカレンダー2020", "ぱドカレ2020", "ボカロ", "機械学習", ]
-keywords:
+tags: ["アドベントカレンダー2020", "ぱドカレ2020", ]
+keywords: ["ボカロ", "機械学習", ]
 ---
 
 この記事は、[東大ぱてゼミAdvent Calendar 2020](https://tps-blog.hatenablog.com/entry/2020/12/01/002233) の12月02日公開の記事です。  
