@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {{ if not .Site.BuildDrafts }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-QZ9N5F5QDD');
+    </script>{{ if not .Site.BuildDrafts }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
     <meta charset="utf-8">
