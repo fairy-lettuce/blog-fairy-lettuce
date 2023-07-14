@@ -5,9 +5,8 @@
 &lt;p>Hugo (hugo-primer テーマ) + GitHub Pages + GitHub Actions でブログを作ったよ。&lt;/p>
 &lt;p>2 日で出来たよ。&lt;/p>
 &lt;p>リポジトリは &lt;a href="https://github.com/fairy-lettuce/fairy-lettuce.github.io">https://github.com/fairy-lettuce/fairy-lettuce.github.io&lt;/a> で公開してるよ。&lt;/p></description></item><item><title>Lettuce Diary</title><link>https://fairy-lettuce.github.io/diary/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0900</pubDate><guid>https://fairy-lettuce.github.io/diary/</guid><description>&lt;p>れたすの日常やなにやらについて書いています。&lt;/p></description></item><item><title>About me</title><link>https://fairy-lettuce.github.io/about/</link><pubDate>Wed, 23 Aug 2000 00:00:00 +0900</pubDate><guid>https://fairy-lettuce.github.io/about/</guid><description>&lt;div align="center">
-&lt;figure>
-&lt;img src="https://fairy-lettuce.github.io/icon.png"
-alt="@nixets さんに描いていただいた素敵なアイコンです。" width="320" height="320"/> &lt;figcaption>
+&lt;figure>&lt;img src="https://fairy-lettuce.github.io/icon.png"
+alt="@nixets さんに描いていただいた素敵なアイコンです。" width="320" height="320"/>&lt;figcaption>
 &lt;p>&lt;a href="https://twitter.com/nixets">@nixets&lt;/a> さんに描いていただいた素敵なアイコンです。&lt;/p>
 &lt;/figcaption>
 &lt;/figure>

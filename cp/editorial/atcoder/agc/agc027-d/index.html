@@ -1,8 +1,9 @@
-<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-QZ9N5F5QDD');</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説 &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content="公式解説と全然違うことをしている……。
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説 &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content=" 公式解説と全然違うことをしている……。
 問題リンク https://atcoder.jp/contests/agc027/tasks/agc027_d
 問題概要 $N$ が与えられます。次のような $N \times N$ 行列 $a$ を構築してください。
- $1\le a_{ij}\le 10^{15}$ $a_{ij}$ は distinct 隣接する要素 $x, y$ について、$\max(x,y) \% \min(x,y)$ の値は正かつ全て同じ  制約  $2\le N \le 500$ |れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://fairy-lettuce.github.io/favicon-64.png><link rel=apple-touch-icon href=https://fairy-lettuce.github.io/apple-touch-icon.png><link rel=mask-icon size=any href=https://fairy-lettuce.github.io/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="AtCoder Grand Contest 027 D - Modulo Matrix 解説 | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="公式解説と全然違うことをしている……。
+$1\le a_{ij}\le 10^{15}$ $a_{ij}$ は distinct 隣接する要素 $x, y$ について、$\max(x,y) \% \min(x,y)$ の値は正かつ全て同じ 制約 $2\le N \le 500$ |れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://fairy-lettuce.github.io/favicon-64.png><link rel=apple-touch-icon href=https://fairy-lettuce.github.io/apple-touch-icon.png><link rel=mask-icon size=any href=https://fairy-lettuce.github.io/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="AtCoder Grand Contest 027 D - Modulo Matrix 解説 | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="
+公式解説と全然違うことをしている……。
 問題リンク
 https://atcoder.jp/contests/agc027/tasks/agc027_d
 問題概要
@@ -15,11 +16,16 @@ $a_{ij}$ は distinct
 制約
 
 $2\le N \le 500$
-|れたすのブログ"><meta name=twitter:image content="https://fairy-lettuce.github.io/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://fairy-lettuce.github.io/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class="fa fa-about"></i><span>About</span></a>
-<a class=UnderlineNav-item href=/diary><i class="fa fa-diary"></i><span>Diary</span></a>
-<a class=UnderlineNav-item href=/cp><i class="fa fa-cp"></i><span>Competitive</span></a>
-<a class=UnderlineNav-item href=/links><i class="fa fa-diary-old"></i><span>Links</span></a>
-<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class="fa fa-github"></i><span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div class=Subhead><div class=Subhead-heading><div class="h1 mt-3 mb-1">AtCoder Grand Contest 027 D - Modulo Matrix 解説</div></div><div class=Subhead-description><a href=/categories/competitive class=muted-link><span class="Label Label--gray-darker">Competitive</span></a>
+|れたすのブログ"><meta name=twitter:image content="https://fairy-lettuce.github.io/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://fairy-lettuce.github.io/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
+<span>About</span></a>
+<a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
+<span>Diary</span></a>
+<a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
+<span>Competitive</span></a>
+<a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
+<span>Links</span></a>
+<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
+<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div class=Subhead><div class=Subhead-heading><div class="h1 mt-3 mb-1">AtCoder Grand Contest 027 D - Modulo Matrix 解説</div></div><div class=Subhead-description><a href=/categories/competitive class=muted-link><span class="Label Label--gray-darker">Competitive</span></a>
 <a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
 <a href=/categories/atcoder class=muted-link><span class="Label Label--gray-darker">AtCoder</span></a>
 <a href=/tags/atcoder class=muted-link><span class="Label Label--gray">AtCoder</span></a>
@@ -38,129 +44,131 @@ p_{0}q_{0} &				& p_{0}q_{2}		& 				& \cdots \\
 p_{1}q_{0} &				& p_{1}q_{2}		&				& \\
 			& p_{1}q_{1} & 					& p_{1}q_{3}	& \\
 \vdots		& & 					&				& \ddots
-\end{pmatrix}</div><p>このようにすることで、$p$ は隣接 $2$ つのみの素数の積が寄与となる上、$250$ 個に減らすことができます。</p><p>$256$ 番目の素数は $1619$ なので、隣接 $2$ 項の積の上界はおよそ $2.7\times 10^6$ です。よって LCM の上界はおよそ $3.8 \times 10^{13}$ です。</p><p>ただし、$q$ の隣接 $3$ 項の LCM が同じ場所が存在するため、白いマスの値が何箇所か被ってしまいます。</p><p>そのような場所は、適当に数倍した上で $+1$ をする必要があります。実際に実装してみると、余裕をもって通るので問題はありません。</p><h2 id=解法>解法</h2><p>数列 $q$ を $14414400=2^6\times 3^2\times 5^2\times 7\times 11\times 13$ の約数を並べた数列とします。</p><p>ただし、$q$ の隣接する要素は片方がもう片方の素数倍になるように並べ替えます。$1,2,4/12,6,3/9,18,36$ のように素因数を順次増減させることで実現できます。</p><p>また、数列 $p$ を $17$ 以上の素数 $250$ 個とします。</p><p>$0\le i,j\le N-1$ について、$(i+j)\%2=0$ ならば $a_{ij}=p_{\lfloor\frac{i}{2}\rfloor}q_j$ とします。</p><p>$(i+j)\%2=1$ のとき、適当な正整数を $k$、隣接する数の最小公倍数を $lcm$ として、$k\times lcm+1$ とします。$k$ は $a_{ij}$ が他の場所と重複しないような最小のものを選びます。</p><p>自分の実装では、$a_{ij}$ の最大値は何も工夫をせずに $112,927,324,910,401$ に、$p, q$ の順序を最適化することで $28,477,412,964,001$ になりました。</p><h2 id=実装>実装</h2><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>		<span style=color:#66d9ef>int</span>[] dx = { <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span> };
-		<span style=color:#66d9ef>int</span>[] dy = { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span> };
- 
-		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>void</span> Solve()
-		{
-			<span style=color:#66d9ef>var</span> l = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>13</span> };
-			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>11</span> });
-			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>7</span> });
-			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>25</span> });
-			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>9</span> });
-			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>8</span>, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>32</span>, <span style=color:#ae81ff>64</span> });
-			<span style=color:#66d9ef>var</span> p = CreateArray(<span style=color:#ae81ff>2000</span>, i =&gt; <span style=color:#66d9ef>true</span>);
-			p[<span style=color:#ae81ff>0</span>] = <span style=color:#66d9ef>false</span>;
-			p[<span style=color:#ae81ff>1</span>] = <span style=color:#66d9ef>false</span>;
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>2</span>; i * i &lt; <span style=color:#ae81ff>2000</span>; i++)
-			{
-				<span style=color:#66d9ef>if</span> (!p[i]) <span style=color:#66d9ef>continue</span>;
-				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>2</span> * i; j &lt; <span style=color:#ae81ff>2000</span>; j += i)
-				{
-					p[j] = <span style=color:#66d9ef>false</span>;
-				}
-			}
-			<span style=color:#66d9ef>var</span> primes = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt;();
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>17</span>; i &lt; <span style=color:#ae81ff>2000</span>; i++)
-			{
-				<span style=color:#66d9ef>if</span> (p[i]) primes.Add(i);
-				<span style=color:#66d9ef>if</span> (primes.Count &gt;= <span style=color:#ae81ff>250</span>) <span style=color:#66d9ef>continue</span>;
-			}
-			primes = Shuffle(primes);
-			<span style=color:#66d9ef>var</span> a = CreateArray(<span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>500</span>, (i, j) =&gt; (i + j) % <span style=color:#ae81ff>2</span> == <span style=color:#ae81ff>0</span> ? primes[i / <span style=color:#ae81ff>2</span>] * l[j] : <span style=color:#ae81ff>1</span>);
-			<span style=color:#66d9ef>var</span> s = <span style=color:#66d9ef>new</span> HashSet&lt;<span style=color:#66d9ef>long</span>&gt;();
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>500</span>; i++)
-			{
-				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; <span style=color:#ae81ff>500</span>; j++)
-				{
-					<span style=color:#66d9ef>if</span> (a[i][j] &gt; <span style=color:#ae81ff>1</span>)
-					{
-						s.Add(a[i][j]);
-					}
-				}
-			}
-			<span style=color:#66d9ef>var</span> max = <span style=color:#ae81ff>0L</span>;
-			<span style=color:#66d9ef>var</span> maxrep = <span style=color:#ae81ff>0L</span>;
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>500</span>; i++)
-			{
-				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>500</span> - <span style=color:#ae81ff>1</span>; j &gt;= <span style=color:#ae81ff>0</span>; j--)
-				{
-					<span style=color:#66d9ef>if</span> (a[i][j] == <span style=color:#ae81ff>1</span>)
-					{
-						<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> k = <span style=color:#ae81ff>0</span>; k &lt; <span style=color:#ae81ff>4</span>; k++)
-						{
-							<span style=color:#66d9ef>var</span> nx = i + dx[k];
-							<span style=color:#66d9ef>var</span> ny = j + dy[k];
-							<span style=color:#66d9ef>if</span> (nx &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>continue</span>;
-							<span style=color:#66d9ef>if</span> (ny &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>continue</span>;
-							<span style=color:#66d9ef>if</span> (nx &gt;= <span style=color:#ae81ff>500</span>) <span style=color:#66d9ef>continue</span>;
-							<span style=color:#66d9ef>if</span> (ny &gt;= <span style=color:#ae81ff>500</span>) <span style=color:#66d9ef>continue</span>;
-							a[i][j] = LeastCommonMultiple(a[i][j], a[nx][ny]);
-						}
-						<span style=color:#66d9ef>var</span> v = a[i][j];
-						<span style=color:#66d9ef>while</span> (s.Contains(a[i][j] + <span style=color:#ae81ff>1</span>)) a[i][j] += v;
-						maxrep.Chmax(a[i][j] / v);
-						a[i][j]++;
-						s.Add(a[i][j]);
-					}
-					max.Chmax(a[i][j]);
-				}
-			}
-			<span style=color:#66d9ef>var</span> n = sr.ReadInt();
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; n; i++)
-			{
-				Console.WriteLine(a[i].Take(n).Join(<span style=color:#e6db74>&#34; &#34;</span>));
-			}
-		}
- 
-		<span style=color:#66d9ef>public</span> List&lt;<span style=color:#66d9ef>long</span>&gt; Shuffle(List&lt;<span style=color:#66d9ef>long</span>&gt; a)
-		{
-			<span style=color:#66d9ef>var</span> ret = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[a.Count].ToList();
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; a.Count / <span style=color:#ae81ff>2</span>; i++)
-			{
-				ret[<span style=color:#ae81ff>2</span> * i] = a[i];
-				ret[a.Count / <span style=color:#ae81ff>2</span> * <span style=color:#ae81ff>2</span> - <span style=color:#ae81ff>2</span> * i - <span style=color:#ae81ff>1</span>] = a[a.Count / <span style=color:#ae81ff>2</span> + i];
-			}
-			<span style=color:#66d9ef>return</span> ret;
-		}
- 
-		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>long</span> GreatestCommonDivisor(<span style=color:#66d9ef>long</span> a, <span style=color:#66d9ef>long</span> b)
-		{
-			<span style=color:#66d9ef>if</span> (a &lt; b) <span style=color:#66d9ef>return</span> GreatestCommonDivisor(b, a);
-			<span style=color:#66d9ef>if</span> (a % b == <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>return</span> b;
-			<span style=color:#66d9ef>return</span> GreatestCommonDivisor(b, a % b);
-		}
- 
-		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>long</span> LeastCommonMultiple(<span style=color:#66d9ef>long</span> a, <span style=color:#66d9ef>long</span> b) =&gt; a / GreatestCommonDivisor(a, b) * b;
- 
-		<span style=color:#66d9ef>public</span> List&lt;<span style=color:#66d9ef>long</span>&gt; Multiply(List&lt;<span style=color:#66d9ef>long</span>&gt; a, List&lt;<span style=color:#66d9ef>long</span>&gt; b)
-		{
-			<span style=color:#66d9ef>var</span> ret = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt;();
-			<span style=color:#66d9ef>var</span> rev = <span style=color:#66d9ef>false</span>;
-			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; b.Count; i++)
-			{
-				<span style=color:#66d9ef>if</span> (rev)
-				{
-					<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = a.Count - <span style=color:#ae81ff>1</span>; j &gt;= <span style=color:#ae81ff>0</span>; j--)
-					{
-						ret.Add(a[j] * b[i]);
-					}
-				}
-				<span style=color:#66d9ef>else</span>
-				{
-					<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; a.Count; j++)
-					{
-						ret.Add(a[j] * b[i]);
-					}
-				}
-				rev = !rev;
-			}
-			<span style=color:#66d9ef>return</span> ret;
-		}
-</code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/agc027/submissions/43560489>https://atcoder.jp/contests/agc027/submissions/43560489</a></p><h2 id=感想>感想</h2><p>公式解説よりも変で回りくどい構築方法でしたが、使う素数の個数が $256$ 個にまで減らせるのが効いたため要素の最大値を小さく抑えることができました。</p><p>もう少し頑張れば最大値を小さくできそうですが、様々なパラメータいじりが必要そうですね。ヒューリスティックっぽい。</p><p>てかこの問題焼きなませそうでは……？</p></section><section></section></article></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div id=toc class="Box Box--blue mb-3"><b>AtCoder Grand Contest 027 D - Modulo Matrix 解説</b><nav id=TableOfContents><ul><li><a href=#問題リンク>問題リンク</a></li><li><a href=#問題概要>問題概要</a></li><li><a href=#制約>制約</a></li><li><a href=#考察>考察</a><ul><li><a href=#黒のマスの構築>黒のマスの構築</a></li><li><a href=#縦と横に分解する>縦と横に分解する</a></li><li><a href=#素数列を半分にする>素数列を半分にする</a></li></ul></li><li><a href=#解法>解法</a></li><li><a href=#実装>実装</a></li><li><a href=#感想>感想</a></li></ul></nav></div><div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js></script>
+\end{pmatrix}</div><p>このようにすることで、$p$ は隣接 $2$ つのみの素数の積が寄与となる上、$250$ 個に減らすことができます。</p><p>$256$ 番目の素数は $1619$ なので、隣接 $2$ 項の積の上界はおよそ $2.7\times 10^6$ です。よって LCM の上界はおよそ $3.8 \times 10^{13}$ です。</p><p>ただし、$q$ の隣接 $3$ 項の LCM が同じ場所が存在するため、白いマスの値が何箇所か被ってしまいます。</p><p>そのような場所は、適当に数倍した上で $+1$ をする必要があります。実際に実装してみると、余裕をもって通るので問題はありません。</p><h2 id=解法>解法</h2><p>数列 $q$ を $14414400=2^6\times 3^2\times 5^2\times 7\times 11\times 13$ の約数を並べた数列とします。</p><p>ただし、$q$ の隣接する要素は片方がもう片方の素数倍になるように並べ替えます。$1,2,4/12,6,3/9,18,36$ のように素因数を順次増減させることで実現できます。</p><p>また、数列 $p$ を $17$ 以上の素数 $250$ 個とします。</p><p>$0\le i,j\le N-1$ について、$(i+j)\%2=0$ ならば $a_{ij}=p_{\lfloor\frac{i}{2}\rfloor}q_j$ とします。</p><p>$(i+j)\%2=1$ のとき、適当な正整数を $k$、隣接する数の最小公倍数を $lcm$ として、$k\times lcm+1$ とします。$k$ は $a_{ij}$ が他の場所と重複しないような最小のものを選びます。</p><p>自分の実装では、$a_{ij}$ の最大値は何も工夫をせずに $112,927,324,910,401$ に、$p, q$ の順序を最適化することで $28,477,412,964,001$ になりました。</p><h2 id=実装>実装</h2><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span>		<span style=color:#66d9ef>int</span>[] dx = { <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span> };
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>int</span>[] dy = { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span> };
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> l = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>13</span> };
+</span></span><span style=display:flex><span>			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>11</span> });
+</span></span><span style=display:flex><span>			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>7</span> });
+</span></span><span style=display:flex><span>			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>25</span> });
+</span></span><span style=display:flex><span>			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>9</span> });
+</span></span><span style=display:flex><span>			l = Multiply(l, <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt; { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>8</span>, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>32</span>, <span style=color:#ae81ff>64</span> });
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> p = CreateArray(<span style=color:#ae81ff>2000</span>, i =&gt; <span style=color:#66d9ef>true</span>);
+</span></span><span style=display:flex><span>			p[<span style=color:#ae81ff>0</span>] = <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>			p[<span style=color:#ae81ff>1</span>] = <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>2</span>; i * i &lt; <span style=color:#ae81ff>2000</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (!p[i]) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>2</span> * i; j &lt; <span style=color:#ae81ff>2000</span>; j += i)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					p[j] = <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> primes = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>17</span>; i &lt; <span style=color:#ae81ff>2000</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (p[i]) primes.Add(i);
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (primes.Count &gt;= <span style=color:#ae81ff>250</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			primes = Shuffle(primes);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> a = CreateArray(<span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>500</span>, (i, j) =&gt; (i + j) % <span style=color:#ae81ff>2</span> == <span style=color:#ae81ff>0</span> ? primes[i / <span style=color:#ae81ff>2</span>] * l[j] : <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> s = <span style=color:#66d9ef>new</span> HashSet&lt;<span style=color:#66d9ef>long</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>500</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; <span style=color:#ae81ff>500</span>; j++)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> (a[i][j] &gt; <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						s.Add(a[i][j]);
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> max = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> maxrep = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>500</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>500</span> - <span style=color:#ae81ff>1</span>; j &gt;= <span style=color:#ae81ff>0</span>; j--)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> (a[i][j] == <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> k = <span style=color:#ae81ff>0</span>; k &lt; <span style=color:#ae81ff>4</span>; k++)
+</span></span><span style=display:flex><span>						{
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>var</span> nx = i + dx[k];
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>var</span> ny = j + dy[k];
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>if</span> (nx &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>if</span> (ny &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>if</span> (nx &gt;= <span style=color:#ae81ff>500</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>if</span> (ny &gt;= <span style=color:#ae81ff>500</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>							a[i][j] = LeastCommonMultiple(a[i][j], a[nx][ny]);
+</span></span><span style=display:flex><span>						}
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>var</span> v = a[i][j];
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>while</span> (s.Contains(a[i][j] + <span style=color:#ae81ff>1</span>)) a[i][j] += v;
+</span></span><span style=display:flex><span>						maxrep.Chmax(a[i][j] / v);
+</span></span><span style=display:flex><span>						a[i][j]++;
+</span></span><span style=display:flex><span>						s.Add(a[i][j]);
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>					max.Chmax(a[i][j]);
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> n = sr.ReadInt();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; n; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				Console.WriteLine(a[i].Take(n).Join(<span style=color:#e6db74>&#34; &#34;</span>));
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> List&lt;<span style=color:#66d9ef>long</span>&gt; Shuffle(List&lt;<span style=color:#66d9ef>long</span>&gt; a)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ret = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[a.Count].ToList();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; a.Count / <span style=color:#ae81ff>2</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				ret[<span style=color:#ae81ff>2</span> * i] = a[i];
+</span></span><span style=display:flex><span>				ret[a.Count / <span style=color:#ae81ff>2</span> * <span style=color:#ae81ff>2</span> - <span style=color:#ae81ff>2</span> * i - <span style=color:#ae81ff>1</span>] = a[a.Count / <span style=color:#ae81ff>2</span> + i];
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>long</span> GreatestCommonDivisor(<span style=color:#66d9ef>long</span> a, <span style=color:#66d9ef>long</span> b)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (a &lt; b) <span style=color:#66d9ef>return</span> GreatestCommonDivisor(b, a);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (a % b == <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>return</span> b;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> GreatestCommonDivisor(b, a % b);
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>long</span> LeastCommonMultiple(<span style=color:#66d9ef>long</span> a, <span style=color:#66d9ef>long</span> b) =&gt; a / GreatestCommonDivisor(a, b) * b;
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> List&lt;<span style=color:#66d9ef>long</span>&gt; Multiply(List&lt;<span style=color:#66d9ef>long</span>&gt; a, List&lt;<span style=color:#66d9ef>long</span>&gt; b)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ret = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>long</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> rev = <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; b.Count; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (rev)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = a.Count - <span style=color:#ae81ff>1</span>; j &gt;= <span style=color:#ae81ff>0</span>; j--)
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						ret.Add(a[j] * b[i]);
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; a.Count; j++)
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						ret.Add(a[j] * b[i]);
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				rev = !rev;
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/agc027/submissions/43560489>https://atcoder.jp/contests/agc027/submissions/43560489</a></p><h2 id=感想>感想</h2><p>公式解説よりも変で回りくどい構築方法でしたが、使う素数の個数が $256$ 個にまで減らせるのが効いたため要素の最大値を小さく抑えることができました。</p><p>もう少し頑張れば最大値を小さくできそうですが、様々なパラメータいじりが必要そうですね。ヒューリスティックっぽい。</p><p>てかこの問題焼きなませそうでは……？</p></section><section></section></article></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div id=toc class="Box Box--blue mb-3"><b>AtCoder Grand Contest 027 D - Modulo Matrix 解説</b><nav id=TableOfContents><ul><li><a href=#問題リンク>問題リンク</a></li><li><a href=#問題概要>問題概要</a></li><li><a href=#制約>制約</a></li><li><a href=#考察>考察</a><ul><li><a href=#黒のマスの構築>黒のマスの構築</a></li><li><a href=#縦と横に分解する>縦と横に分解する</a></li><li><a href=#素数列を半分にする>素数列を半分にする</a></li></ul></li><li><a href=#解法>解法</a></li><li><a href=#実装>実装</a></li><li><a href=#感想>感想</a></li></ul></nav></div><div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js></script>
 <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=61&height=20&appId" width=61 height=20 style=border:none;overflow:hidden scrolling=no frameborder=0 allowtransparency=true allow=encrypted-media></iframe>
 <a href=http://b.hatena.ne.jp/entry/ class=hatena-bookmark-button data-hatena-bookmark-layout=basic-label-counter data-hatena-bookmark-lang=ja title=このエントリーをはてなブックマークに追加><img src=https://b.st-hatena.com/images/entry-button/button-only@2x.png alt=このエントリーをはてなブックマークに追加 width=20 height=20 style=border:none></a><script type=text/javascript src=https://b.st-hatena.com/js/bookmark_button.js async></script>
-<a data-pocket-label=pocket data-pocket-count=none class=pocket-btn data-lang=en></a><script type=text/javascript>!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
+<a data-pocket-label=pocket data-pocket-count=none class=pocket-btn data-lang=en></a>
+<script type=text/javascript>!function(e,t){if(!e.getElementById(t)){var s,n=e.createElement("script");n.id=t,n.src="https://widgets.getpocket.com/v1/j/btn.js?v=1",s=e.getElementById(t),e.body.appendChild(n)}}(document,"pocket-btn-js")</script></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
 Powered by the
 <a href=https://github.com/qqhann/hugo-primer class=link-gray-dark>Hugo-Primer</a> theme for
-<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>
+<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>
