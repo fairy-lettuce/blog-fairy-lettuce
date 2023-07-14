@@ -1,6 +1,6 @@
 # config.toml
 
-baseURL = "https://fairy-lettuce.github.io/"
+baseURL = "https://blog.fairy-lettuce.com/"
 title = "Growth Record of Lettuce Farm: Extended"
 theme = "hugo-primer"
 languageCode = "ja"
