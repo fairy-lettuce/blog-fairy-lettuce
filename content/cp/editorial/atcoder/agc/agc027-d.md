@@ -1,6 +1,6 @@
 ---
 title: "AtCoder Grand Contest 027 D - Modulo Matrix 解説"
-date: 2022-04-30T21:23:14+09:00
+date: 2022-07-14T23:50:00+09:00
 categories: ["Competitive", "競プロ解説", "AtCoder"]
 tags: ["AtCoder", "AGC"]
 draft: false
