@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AtCoder on Growth Record of Lettuce Farm: Extended</title><link>https://fairy-lettuce.github.io/tags/atcoder/</link><description>Recent content in AtCoder on Growth Record of Lettuce Farm: Extended</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sat, 30 Apr 2022 21:23:14 +0900</lastBuildDate><atom:link href="https://fairy-lettuce.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml"/><item><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説</title><link>https://fairy-lettuce.github.io/cp/editorial/atcoder/agc/agc027-d/</link><pubDate>Sat, 30 Apr 2022 21:23:14 +0900</pubDate><guid>https://fairy-lettuce.github.io/cp/editorial/atcoder/agc/agc027-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
+&lt;p>公式解説と全然違うことをしている……。&lt;/p>
+&lt;h2 id="問題リンク">問題リンク&lt;/h2>
+&lt;p>&lt;a href="https://atcoder.jp/contests/agc027/tasks/agc027_d">https://atcoder.jp/contests/agc027/tasks/agc027_d&lt;/a>&lt;/p>
+&lt;h2 id="問題概要">問題概要&lt;/h2>
+&lt;p>$N$ が与えられます。次のような $N \times N$ 行列 $a$ を構築してください。&lt;/p>
+&lt;ul>
+&lt;li>$1\le a_{ij}\le 10^{15}$&lt;/li>
+&lt;li>$a_{ij}$ は distinct&lt;/li>
+&lt;li>隣接する要素 $x, y$ について、$\max(x,y) \% \min(x,y)$ の値は正かつ全て同じ&lt;/li>
+&lt;/ul>
+&lt;h2 id="制約">制約&lt;/h2>
+&lt;ul>
+&lt;li>$2\le N \le 500$&lt;/li>
+&lt;/ul></description></item></channel></rss>
