@@ -35,3 +35,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
           publish_dir: ./public
+          cname: blog.fairy-lettuce.com
