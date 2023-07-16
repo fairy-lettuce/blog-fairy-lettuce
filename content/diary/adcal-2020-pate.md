@@ -7,7 +7,8 @@ categories: ["アドベントカレンダー2020","ぱドカレ2020"]
 tags: ["ブログ", ]
 archives: ["2020", "2020-12"]
 description: "この記事は、東大ぱてゼミAdvent Calendar 2020 の12月02日公開の記事です。 皆さんこんにちは。はじめまして、れたすです。Twitter は @fairy_lettuce です。 自己紹介 序文 やったこと 実際に歌詞を解析してみた 歌詞サイトから歌詞を取得す…"
-url: "/entry/2020/12/02/144612"
+aliases:
+  - "/entry/2020/12/02/144612"
 ---
 
 この記事は、[東大ぱてゼミAdvent Calendar 2020](https://tps-blog.hatenablog.com/entry/2020/12/01/002233) の12月02日公開の記事です。  
