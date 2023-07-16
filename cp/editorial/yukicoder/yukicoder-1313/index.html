@@ -1,0 +1,83 @@
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>yukicoder No. 1313 - N言っちゃダメゲーム (4) &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content="問題リンク https://yukicoder.me/problems/no/1313 問題概要 先攻のプレイヤーであるあなたは から始めます。交互に のうちのどれかの整数を加算していきます。 以上の数字、または予め指定された危険な数字を言ってしまうと負けです。 あなたが勝つ場合…|れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://blog.fairy-lettuce.com/favicon-64.png><link rel=apple-touch-icon href=https://blog.fairy-lettuce.com/apple-touch-icon.png><link rel=mask-icon size=any href=https://blog.fairy-lettuce.com/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="yukicoder No. 1313 - N言っちゃダメゲーム (4) | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="問題リンク https://yukicoder.me/problems/no/1313 問題概要 先攻のプレイヤーであるあなたは から始めます。交互に のうちのどれかの整数を加算していきます。 以上の数字、または予め指定された危険な数字を言ってしまうと負けです。 あなたが勝つ場合…|れたすのブログ"><meta name=twitter:image content="https://blog.fairy-lettuce.com/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://blog.fairy-lettuce.com/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
+<span>About</span></a>
+<a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
+<span>Diary</span></a>
+<a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
+<span>Competitive</span></a>
+<a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
+<span>Links</span></a>
+<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
+<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div class=Subhead><div class=Subhead-heading><div class="h1 mt-3 mb-1">yukicoder No. 1313 - N言っちゃダメゲーム (4)</div></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
+<a href=/categories/yukicoder class=muted-link><span class="Label Label--gray-darker">yukicoder</span></a>
+<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span title="Lastmod: 2020-12-10. Published at: 2020-12-10.">Published: 2020-12-10</span></div></div></div><article><section class="pb-6 mb-3 border-bottom"><h2 id=問題リンク>問題リンク</h2><p><a href=https://yukicoder.me/problems/no/1313>https://yukicoder.me/problems/no/1313</a></p><h2 id=問題概要>問題概要</h2><p>先攻のプレイヤーであるあなたは $0$ から始めます。交互に $[1,\ K]$ のうちのどれかの整数を加算していきます。$N$ 以上の数字、または予め指定された<b>危険な数字</b>を言ってしまうと負けです。</p><p>あなたが勝つ場合は最初に宣言して勝てる数字を全て出力してください。あなたが負ける場合は $0$ を出力してください。</p><h2 id=制約>制約</h2><ul><li>$N,\ K$ は整数</li><li>$1\le K\lt N\le 2\times 10^{5}$</li><li>$|S|=N-1$</li><li>$S_{i}$ が <code>x</code> のときは $i$ は「危険な数字」で、<code>o</code> のときはそうではない</li></ul><h2 id=考察解法>考察・解法</h2><p>典型的な Nim っぽいゲームなので、<b>Grundy 数</b>を考えます。以下、$g(i)$ を数 $i$ が<b>相手から渡された</b>ときに関する Grundy 数と定義します。</p><p>今回は $N$ 以上の数を言っては負けるので、$N$ 未満で最も大きい危険な数字でない数を $x$ とすると $g(x)=0$ です。また、初期条件以外の Grundy 数は「その状態から遷移できる先のGrundy 数の $\mathrm{mex}$」で定義されます。<br>まず危険な数字が存在しないものとして考えると、通常の場合は $g(N-1)=0,\ g(N-2)=1,\ \dots,\ g(N-K-1)=K$ と続き、$g(N-K-2)=0$ に戻る、というように $0,\ 1,\ \dots,\ K$ を順番に繰り返します。では、危険な数字を考慮して Grundy 数を考えてみます。</p><p>危険な数字はそもそも言った時点で負けであるので、最初から遷移できないものと考えてよいです。なので、Grundy 数は無限 (INF) 扱いしてもよいです。実装上は危険な数字が存在しない場合の Grundy 数の最大値 $K$ よりも大きい値 ($K+1$ など) を与えると良いでしょう。</p><p>この通りに Grundy 数を求めていき、$g(0)=0$ なら先攻であるあなたの負け、そうでないなら $g(i)=0$ を満たす $i=1,\ 2,\ \dots,\ K$ を全て出力すればよいです。</p><h2 id=実装>実装</h2><p>$\mathrm{mex}$ は <code>multiset</code> やセグ木などで実装すると良いです。今回はセグ木で実装しました。</p><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> (n, k, s) = cin.ReadValue&lt;<span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>string</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> grundy = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span>[n];
+</span></span><span style=display:flex><span>			s = s.Reverse().Join();
+</span></span><span style=display:flex><span>			s += <span style=color:#e6db74>&#34;o&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> seg = <span style=color:#66d9ef>new</span> SegmentTree&lt;(<span style=color:#66d9ef>int</span> count, <span style=color:#66d9ef>int</span> index)&gt;(
+</span></span><span style=display:flex><span>				Enumerable.Zip(Enumerable.Repeat(<span style=color:#ae81ff>0</span>, k + <span style=color:#ae81ff>2</span>), Enumerable.Range(<span style=color:#ae81ff>0</span>, k + <span style=color:#ae81ff>2</span>), (x, y) =&gt; (count: x, index: y)),
+</span></span><span style=display:flex><span>				(x, y) =&gt; (x.count == <span style=color:#ae81ff>0</span>) ? x : ((y.count == <span style=color:#ae81ff>0</span>) ? y : (<span style=color:#66d9ef>int</span>.MaxValue, -<span style=color:#ae81ff>1</span>)),
+</span></span><span style=display:flex><span>				(<span style=color:#66d9ef>int</span>.MaxValue, -<span style=color:#ae81ff>1</span>));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>int</span> max = -<span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; k; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (s[i] == <span style=color:#e6db74>&#39;o&#39;</span>)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					max++;
+</span></span><span style=display:flex><span>					grundy[i] = max;
+</span></span><span style=display:flex><span>					seg.Update(max, (seg[max].count + <span style=color:#ae81ff>1</span>, max));
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					grundy[i] = k + <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>					seg.Update(k + <span style=color:#ae81ff>1</span>, (seg[k + <span style=color:#ae81ff>1</span>].count + <span style=color:#ae81ff>1</span>, k + <span style=color:#ae81ff>1</span>));
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = k; i &lt; n; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (s[i] == <span style=color:#e6db74>&#39;o&#39;</span>)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					grundy[i] = seg.GetResult(<span style=color:#ae81ff>0</span>, k + <span style=color:#ae81ff>2</span>).index;
+</span></span><span style=display:flex><span>					seg.Update(grundy[i], (seg[grundy[i]].count + <span style=color:#ae81ff>1</span>, grundy[i]));
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					grundy[i] = k + <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>					seg.Update(grundy[i], (seg[grundy[i]].count + <span style=color:#ae81ff>1</span>, grundy[i]));
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> g = grundy[i - k];
+</span></span><span style=display:flex><span>				seg.Update(g, (seg[g].count - <span style=color:#ae81ff>1</span>, g));
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ans = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = k; i &gt;= <span style=color:#ae81ff>1</span>; i--)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (grundy[n - i - <span style=color:#ae81ff>1</span>] == <span style=color:#ae81ff>0</span>) ans.Add(i);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			ans.Sort();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (grundy[n - <span style=color:#ae81ff>1</span>] == <span style=color:#ae81ff>0</span>) Console.WriteLine(<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> ans)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					Console.WriteLine(e);
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://yukicoder.me/submissions/591636>https://yukicoder.me/submissions/591636</a></p><h2 id=感想>感想</h2><p>N言っちゃダメゲームに新作が出るとは思いもよりませんでした。びっくり。</p><p>変則 Nim の典型的な練習になると思います。面白かったです。</p><p>【追記】Grundy 数は実は必要なく、「<b>勝ち状態か負け状態か</b>」を管理するだけで解けます。遷移先に負け状態があれば勝ち状態、そうでなければ負け状態というようにする DP です。<br>勝ち負けを管理するだけのほうが遥かに実装が楽ですね。不必要に難しい考察をする必要もないので、こちらのほうがエレガントな解法と言えます。</p></section><section></section></article></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div id=toc class="Box Box--blue mb-3"><b>yukicoder No. 1313 - N言っちゃダメゲーム (4)</b><nav id=TableOfContents><ul><li><a href=#問題リンク>問題リンク</a></li><li><a href=#問題概要>問題概要</a></li><li><a href=#制約>制約</a></li><li><a href=#考察解法>考察・解法</a></li><li><a href=#実装>実装</a></li><li><a href=#感想>感想</a></li></ul></nav></div><div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js></script>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=61&height=20&appId" width=61 height=20 style=border:none;overflow:hidden scrolling=no frameborder=0 allowtransparency=true allow=encrypted-media></iframe>
+<a href=http://b.hatena.ne.jp/entry/ class=hatena-bookmark-button data-hatena-bookmark-layout=basic-label-counter data-hatena-bookmark-lang=ja title=このエントリーをはてなブックマークに追加><img src=https://b.st-hatena.com/images/entry-button/button-only@2x.png alt=このエントリーをはてなブックマークに追加 width=20 height=20 style=border:none></a><script type=text/javascript src=https://b.st-hatena.com/js/bookmark_button.js async></script>
+<a data-pocket-label=pocket data-pocket-count=none class=pocket-btn data-lang=en></a>
+<script type=text/javascript>!function(e,t){if(!e.getElementById(t)){var s,n=e.createElement("script");n.id=t,n.src="https://widgets.getpocket.com/v1/j/btn.js?v=1",s=e.getElementById(t),e.body.appendChild(n)}}(document,"pocket-btn-js")</script></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
+Powered by the
+<a href=https://github.com/qqhann/hugo-primer class=link-gray-dark>Hugo-Primer</a> theme for
+<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>

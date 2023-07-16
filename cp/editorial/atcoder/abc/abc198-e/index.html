@@ -1,0 +1,151 @@
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>AtCoder Beginner Contest 198 E - Unique Color 解説 &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content="最近似た問題を見ていたのでその解説を見て難しい解法にハマりました。 Editorial と同じ解法と、自分の解法を両方紹介します。 問題リンク https://atcoder.jp/contests/abc198/tasks/abc198_e 問題概要 頂点の木が与えられます。頂…|れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://blog.fairy-lettuce.com/favicon-64.png><link rel=apple-touch-icon href=https://blog.fairy-lettuce.com/apple-touch-icon.png><link rel=mask-icon size=any href=https://blog.fairy-lettuce.com/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="AtCoder Beginner Contest 198 E - Unique Color 解説 | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="最近似た問題を見ていたのでその解説を見て難しい解法にハマりました。 Editorial と同じ解法と、自分の解法を両方紹介します。 問題リンク https://atcoder.jp/contests/abc198/tasks/abc198_e 問題概要 頂点の木が与えられます。頂…|れたすのブログ"><meta name=twitter:image content="https://blog.fairy-lettuce.com/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://blog.fairy-lettuce.com/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
+<span>About</span></a>
+<a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
+<span>Diary</span></a>
+<a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
+<span>Competitive</span></a>
+<a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
+<span>Links</span></a>
+<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
+<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div class=Subhead><div class=Subhead-heading><div class="h1 mt-3 mb-1">AtCoder Beginner Contest 198 E - Unique Color 解説</div></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
+<a href=/categories/atcoder class=muted-link><span class="Label Label--gray-darker">AtCoder</span></a>
+<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span title="Lastmod: 2021-04-12. Published at: 2021-04-12.">Published: 2021-04-12</span></div></div></div><article><section class="pb-6 mb-3 border-bottom"><p>最近似た問題を見ていたのでその解説を見て難しい解法にハマりました。</p><p>Editorial と同じ解法と、自分の解法を両方紹介します。</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/abc198/tasks/abc198_e>https://atcoder.jp/contests/abc198/tasks/abc198_e</a></p><h2 id=問題概要>問題概要</h2><p>$N$ 頂点の木が与えられます。頂点 $i$ は色 $C_i$ で塗られています。</p><p>頂点 $1$ から $x$ への最短パスに色 $C_x$ が頂点 $x$ 以外に現れないような頂点を<b>良い頂点</b>と呼びます。良い頂点を列挙してください。</p><h2 id=制約>制約</h2><ul><li>$2\le N\le 10^5$</li><li>$1\le C_i\le 10^5$</li><li>与えられるグラフは木</li></ul><h2 id=考察>考察</h2><p>純粋に考えると、$dp_{i,j}$ を頂点 $1,i$ のパス上に色 $j$ があるかどうかと定義して、木の根から下っていく木上の DP で解けますが、これでは実行時間制限に間に合いません。どうにかして間に合わせることを考えます。</p><h2 id=解法-1---editorial-解-あたまいい>解法 (1) - Editorial 解 (あたまいい)</h2><p>$dp_{i,j}$ は考察の段階では <code>bool</code> 値であり、情報に無駄があります。そこで、$dp_{i,j}$ をパス上に存在する色 $j$ の頂点数と定義しなおします。</p><p>こうすることで、DFS で親から子に下るときは色 $C_i$ の個数を増やし、子から親へ登るときは色 $C_i$ の個数を減らすようにすれば $dp$ の添字 $i$ をなくして in-place に更新できるようになります。</p><p>計算量は $O(N+\max(C))$ になります。</p><h2 id=実装-1>実装 (1)</h2><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> n = sr.ReadInt();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> c = sr.ReadIntArray(n);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> (a, b) = sr.ReadValueArray&lt;<span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>int</span>&gt;(n - <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> g = Enumerable.Repeat(<span style=color:#ae81ff>0</span>, n).Select(p =&gt; <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;()).ToArray();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; n - <span style=color:#ae81ff>1</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				g[--a[i]].Add(--b[i]);
+</span></span><span style=display:flex><span>				g[b[i]].Add(a[i]);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> dp = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>int</span>[<span style=color:#ae81ff>100005</span>];
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ans = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>bool</span>[n];
+</span></span><span style=display:flex><span>			Dfs(<span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span>, g, c, dp, ans);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; n; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (ans[i]) Console.WriteLine(i + <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Dfs(<span style=color:#66d9ef>int</span> cur, <span style=color:#66d9ef>int</span> par, List&lt;<span style=color:#66d9ef>int</span>&gt;[] g, <span style=color:#66d9ef>int</span>[] c, <span style=color:#66d9ef>int</span>[] dp, <span style=color:#66d9ef>bool</span>[] ans)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			dp[c[cur]]++;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (dp[c[cur]] == <span style=color:#ae81ff>1</span>) ans[cur] = <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> g[cur])
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (e == par) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>				Dfs(e, cur, g, c, dp, ans);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			dp[c[cur]]--;
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/abc198/submissions/21700986>https://atcoder.jp/contests/abc198/submissions/21700986</a></p><h2 id=解法-2---自分の解-めんどい重実装>解法 (2) - 自分の解 (めんどい重実装)</h2><p>頂点 $1,i$ のパス上の色を持つと空間計算量が $O(N\max(C))$ となってしまいます。ここでマージテクの使用を検討します。</p><p>木の根から降りていくのではマージテクは上手くできそうにないので、葉から登っていくことを考えます。$dp_i$ を、頂点 $i$ を根とした部分木における良い頂点の集合を、色別に <code>unordered_map</code> や <code>map</code> などで管理したものと定義します。ただし、色ごとに良い頂点は $1$ つとは限らないので、例えば C++ では <code>map&lt;int, vector&lt;int>></code>
+のような型を使います。</p><p>あとは、以下の要領でマージテクを行います。</p><ul><li><p>子から親に登るときに子の集合をマージする。</p><ul><li>子の集合・親の集合のうち、色数が少ない方を大きい方へ移す。</li><li>各色について、その色にの良い頂点数が少ない方を大きい方へ移す。</li></ul></li><li><p>親の頂点の色を親の集合に追加する。</p><ul><li>もし子の集合からマージした集合にその色があるなら全部消して上書きする。</li></ul></li></ul><p>計算量は $O(N\log{N})$ だと思います<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>。</p><h2 id=実装-2>実装 (2)</h2><p>C# では <code>foreach</code> (range-based for) 中にループを回している要素そのものを変更できないので、実装に困りました。わざわざ <code>Dictionary&lt;int, List&lt;int>>.Keys</code> を実体化させています。</p><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> n = sr.ReadInt();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> c = sr.ReadIntArray(n);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> (a, b) = sr.ReadValueArray&lt;<span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>int</span>&gt;(n - <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> dp = <span style=color:#66d9ef>new</span> Dictionary&lt;<span style=color:#66d9ef>int</span>, List&lt;<span style=color:#66d9ef>int</span>&gt;&gt;[n];
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> g = Enumerable.Repeat(<span style=color:#ae81ff>0</span>, n).Select(p =&gt; <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;()).ToArray();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; n - <span style=color:#ae81ff>1</span>; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				g[--a[i]].Add(--b[i]);
+</span></span><span style=display:flex><span>				g[b[i]].Add(a[i]);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			Dfs(<span style=color:#ae81ff>0</span>, -<span style=color:#ae81ff>1</span>, dp, c, g);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ans = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> dp[<span style=color:#ae81ff>0</span>].Values)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> f <span style=color:#66d9ef>in</span> e)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					ans.Add(f);
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			ans.Sort();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> ans)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				Console.WriteLine(e + <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Dfs(<span style=color:#66d9ef>int</span> cur, <span style=color:#66d9ef>int</span> par, Dictionary&lt;<span style=color:#66d9ef>int</span>, List&lt;<span style=color:#66d9ef>int</span>&gt;&gt;[] dp, <span style=color:#66d9ef>int</span>[] color, List&lt;<span style=color:#66d9ef>int</span>&gt;[] g)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			dp[cur] = <span style=color:#66d9ef>new</span> Dictionary&lt;<span style=color:#66d9ef>int</span>, List&lt;<span style=color:#66d9ef>int</span>&gt;&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> g[cur])
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (e == par) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>				Dfs(e, cur, dp, color, g);
+</span></span><span style=display:flex><span>				Merge(dp, cur, e);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			dp[cur][color[cur]] = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt; { cur };
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Merge(Dictionary&lt;<span style=color:#66d9ef>int</span>, List&lt;<span style=color:#66d9ef>int</span>&gt;&gt;[] dp, <span style=color:#66d9ef>int</span> par, <span style=color:#66d9ef>int</span> child)
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>if</span> (dp[par].Count &gt; dp[child].Count)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> k = dp[child].Keys.ToArray();
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> key <span style=color:#66d9ef>in</span> k)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>var</span> <span style=color:#66d9ef>value</span> = dp[child][key];
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> (dp[par].ContainsKey(key))
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>if</span> (dp[par][key].Count &gt; dp[child][key].Count)
+</span></span><span style=display:flex><span>						{
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> dp[child][key])
+</span></span><span style=display:flex><span>							{
+</span></span><span style=display:flex><span>								dp[par][key].Add(e);
+</span></span><span style=display:flex><span>							}
+</span></span><span style=display:flex><span>						}
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>						{
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> dp[par][key])
+</span></span><span style=display:flex><span>							{
+</span></span><span style=display:flex><span>								dp[child][key].Add(e);
+</span></span><span style=display:flex><span>							}
+</span></span><span style=display:flex><span>							dp[par][key] = dp[child][key];
+</span></span><span style=display:flex><span>						}
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>else</span> dp[par].Add(key, <span style=color:#66d9ef>value</span>);
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> k = dp[par].Keys.ToArray();
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> key <span style=color:#66d9ef>in</span> k)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>var</span> <span style=color:#66d9ef>value</span> = dp[par][key];
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> (dp[child].ContainsKey(key))
+</span></span><span style=display:flex><span>					{
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>if</span> (dp[par][key].Count &gt; dp[child][key].Count)
+</span></span><span style=display:flex><span>						{
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> dp[child][key])
+</span></span><span style=display:flex><span>							{
+</span></span><span style=display:flex><span>								dp[par][key].Add(e);
+</span></span><span style=display:flex><span>							}
+</span></span><span style=display:flex><span>							dp[child][key] = dp[par][key];
+</span></span><span style=display:flex><span>						}
+</span></span><span style=display:flex><span>						<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>						{
+</span></span><span style=display:flex><span>							<span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> e <span style=color:#66d9ef>in</span> dp[par][key])
+</span></span><span style=display:flex><span>							{
+</span></span><span style=display:flex><span>								dp[child][key].Add(e);
+</span></span><span style=display:flex><span>							}
+</span></span><span style=display:flex><span>						}
+</span></span><span style=display:flex><span>					}
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>else</span> dp[child].Add(key, <span style=color:#66d9ef>value</span>);
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				dp[par] = dp[child];
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/abc198/submissions/21671562>https://atcoder.jp/contests/abc198/submissions/21671562</a></p><h2 id=感想>感想</h2><p>とある難しい問題の本質部分 (部分問題) がこの問題に帰着されるので、全く同じ問題を過去に考察していたことになります。その際は非常に難しく考えすぎていて分かりませんでしたし別の考え方で解いて未 AC でしたが、今回の出題でネタバレを食らってもいいやと思い解説を見てマージテク解を知りました。</p><p>そのマージテク解を実装 (100 行程度でちょっと重いかな……) したのですが、コンテスト後に単なる DFS で解けることを知ってけっこう唖然としました。私がここまで悩んでたのが 20 行の DFS で終わりだなんて……。</p><p>in-place な更新をする DP を完全に忘れていたのは大反省案件でした。</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>もしかして $\log$ ふたつ付きます？マージテクの計算量解析分かりません……。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></section><section></section></article></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div id=toc class="Box Box--blue mb-3"><b>AtCoder Beginner Contest 198 E - Unique Color 解説</b><nav id=TableOfContents><ul><li><a href=#問題リンク>問題リンク</a></li><li><a href=#問題概要>問題概要</a></li><li><a href=#制約>制約</a></li><li><a href=#考察>考察</a></li><li><a href=#解法-1---editorial-解-あたまいい>解法 (1) - Editorial 解 (あたまいい)</a></li><li><a href=#実装-1>実装 (1)</a></li><li><a href=#解法-2---自分の解-めんどい重実装>解法 (2) - 自分の解 (めんどい重実装)</a></li><li><a href=#実装-2>実装 (2)</a></li><li><a href=#感想>感想</a></li></ul></nav></div><div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js></script>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=61&height=20&appId" width=61 height=20 style=border:none;overflow:hidden scrolling=no frameborder=0 allowtransparency=true allow=encrypted-media></iframe>
+<a href=http://b.hatena.ne.jp/entry/ class=hatena-bookmark-button data-hatena-bookmark-layout=basic-label-counter data-hatena-bookmark-lang=ja title=このエントリーをはてなブックマークに追加><img src=https://b.st-hatena.com/images/entry-button/button-only@2x.png alt=このエントリーをはてなブックマークに追加 width=20 height=20 style=border:none></a><script type=text/javascript src=https://b.st-hatena.com/js/bookmark_button.js async></script>
+<a data-pocket-label=pocket data-pocket-count=none class=pocket-btn data-lang=en></a>
+<script type=text/javascript>!function(e,t){if(!e.getElementById(t)){var s,n=e.createElement("script");n.id=t,n.src="https://widgets.getpocket.com/v1/j/btn.js?v=1",s=e.getElementById(t),e.body.appendChild(n)}}(document,"pocket-btn-js")</script></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
+Powered by the
+<a href=https://github.com/qqhann/hugo-primer class=link-gray-dark>Hugo-Primer</a> theme for
+<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>

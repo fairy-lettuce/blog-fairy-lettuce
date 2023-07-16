@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロその他 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/</link><description>Recent content in 競プロその他 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Tue, 10 Jan 2023 20:31:25 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/index.xml" rel="self" type="application/rss+xml"/><item><title>【ご報告】ブログを順次引っ越します</title><link>https://blog.fairy-lettuce.com/cp/misc/blog-move/</link><pubDate>Tue, 10 Jan 2023 20:31:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/blog-move/</guid><description>&lt;p>お久しぶりです。れたすです。&lt;/p>
+&lt;p>この度は、ブログをはてなブログから&lt;a href="https://fairy-lettuce.github.io/">個人サイトのブログ&lt;/a>へと引っ越すことになりました。&lt;/p>
+&lt;p>個人ブログの中でも競技プログラミングに関連する解説記事やその他の記事はサイト内の「&lt;a href="https://fairy-lettuce.github.io/cp/">Competitive&lt;/a>」から閲覧できるようになる予定です。&lt;/p>
+&lt;div class="inner-link-wrapper">
+&lt;iframe
+class="hatenablogcard"
+style="width:100%;height:155px;max-width:680px;"
+src="https://hatenablog-parts.com/embed?url=https://fairy-lettuce.github.io/"
+width="300" height="150" frameborder="0" scrolling="no">
+&lt;/iframe>
+&lt;/div></description></item><item><title>【謹賀新年】ID変更のご報告</title><link>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</link><pubDate>Sat, 02 Jan 2021 20:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</guid><description>&lt;p>あけましておめでとうございます！&lt;/p>
+&lt;p>本年の抱負は何事もなく無事進級すること、及び AtCoder 橙達成 (中間目標として 3 月までに黄色) です。今年もよろしくお願いいたします。&lt;/p>
+&lt;h2 id="id変更のご報告">ID変更のご報告&lt;/h2>
+&lt;p>Codeforces では毎年恒例のユーザー名変更が可能な時期となりましたので、AtCoder 及び Codeforces の ID を fancy_lettuce から fairy_lettuce に変更し、Topcoder 含め統一しました。&lt;/p></description></item><item><title>AtCoder Problems の diff 推定アルゴリズムの変更に伴い色が変わった問題まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</link><pubDate>Tue, 17 Nov 2020 20:22:19 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</guid><description>&lt;p>AtCoder Problems に本日(11月17日)アップデートが入り、各問題の difficulty (以下、diff)の推定アルゴリズムが変わりました。これに伴いいくつかの問題で diff の色が変更になったため、&lt;b>色が変更になった&lt;/b>問題をまとめます。&lt;/p>
+&lt;blockquote class="twitter-tweet" >
+&lt;p lang="ja" dir="ltr">&lt;/p>
+&lt;a href="https://twitter.com/kenkoooo/status/1328538237850193920?s=20">&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
+日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
+&lt;p>出典:
+&lt;a href="https://codeforces.com/blog/entry/77890">Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a>&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b>マイナス補正&lt;/b>が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p></description></item></channel></rss>

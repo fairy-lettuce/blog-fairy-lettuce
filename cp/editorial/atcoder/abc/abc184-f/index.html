@@ -1,0 +1,127 @@
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について) &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content="ABC184-F Programming Contest を題材に、典型アルゴリズムである半分全列挙について詳しく解説します。実装の細かい部分まで解説します。 また、半分全列挙の高速化 (今回は主に を取る部分について) についても掘り下げていきます。 問題リンク https:/…|れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://blog.fairy-lettuce.com/favicon-64.png><link rel=apple-touch-icon href=https://blog.fairy-lettuce.com/apple-touch-icon.png><link rel=mask-icon size=any href=https://blog.fairy-lettuce.com/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について) | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="ABC184-F Programming Contest を題材に、典型アルゴリズムである半分全列挙について詳しく解説します。実装の細かい部分まで解説します。 また、半分全列挙の高速化 (今回は主に を取る部分について) についても掘り下げていきます。 問題リンク https:/…|れたすのブログ"><meta name=twitter:image content="https://blog.fairy-lettuce.com/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://blog.fairy-lettuce.com/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
+<span>About</span></a>
+<a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
+<span>Diary</span></a>
+<a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
+<span>Competitive</span></a>
+<a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
+<span>Links</span></a>
+<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
+<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div class=Subhead><div class=Subhead-heading><div class="h1 mt-3 mb-1">AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について)</div></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
+<a href=/categories/atcoder class=muted-link><span class="Label Label--gray-darker">AtCoder</span></a>
+<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span title="Lastmod: 2020-11-23. Published at: 2020-11-23.">Published: 2020-11-23</span></div></div></div><article><section class="pb-6 mb-3 border-bottom"><p>ABC184-F Programming Contest を題材に、典型アルゴリズムである半分全列挙について詳しく解説します。実装の細かい部分まで解説します。</p><p>また、半分全列挙の高速化 (今回は主に $\log$ を取る部分について) についても掘り下げていきます。</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/abc184/tasks/abc184_f>https://atcoder.jp/contests/abc184/tasks/abc184_f</a></p><h2 id=問題概要>問題概要</h2><p>$N$ 問の問題があります。$i$ 番目の問題は解くのに $A_i$ 分かかります。</p><p>この中からいくつかの問題を選んで解くのにかかる時間の総和のうち、$T$ 分以下での最大値を求めてください。</p><h2 id=制約>制約</h2><ul><li>$1\le N\le 40$</li><li>$1\le T\le 10^{9}$</li><li>$1\le A_i\le 10^{9}$</li></ul><h2 id=半分全列挙の解説>半分全列挙の解説</h2><h3 id=半分全列挙とは>半分全列挙とは</h3><p>$N$ 個の要素それぞれを選ぶ・選ばないを自由に選べるとき、選んだ要素の総和を列挙するのには $O(2^{N})$ かかります(<b>bit 全探索</b>)。ですが、今回は $N\le 40$ という制約より、$2^{40}\approx 10^{12}$ 回程度の探索をすると時間内には間に合いそうにありません。</p><p>このような時に役立つのが<b>半分全列挙</b><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>です。半分全列挙とは、以下のようなアルゴリズムです。</p><ul><li>要素を半分に分け、それぞれで bit 全探索でありえる総和を列挙する。</li><li>(それぞれの列挙した結果がソートされていない場合) 列挙したものをソートする。</li><li>前半と後半の結果を合わせて答えを求める。この際、全探索するのではなく<b>尺取り法</b>や<b>二分探索</b>などのアルゴリズムを使うことで高速に求められる。</li></ul><p>これにより、計算量を $O(2^{\frac{N}{2}})$ や $O(\log{2^{N}}\times 2^{\frac{N}{2}})=O(N\times 2^{\frac{N}{2}})$ に落とすことができます。一見 bit 全探索では間に合わなさそうな問題もこれにより間に合う解が見つかることもあります。</p><h3 id=この問題での具体例>この問題での具体例</h3><p>入力例 1 の場合、つまり $T=17,\ A=(2,\ 3,\ 5,\ 7,\ 11)$ のときを考えます。半分全列挙のやり方通りにやってみましょう。</p><ol><li><p>要素を半分に分けそれぞれで全探索<br>数列 $A$ を前半と後半に分けます<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>。それぞれを $A_{1},\ A_{2}$ とおきます。つまり、$A_{1}=(2,\ 3),\ A_{2}=(5,\ 7,\ 11)$ です。<br>次に、それぞれで全ての部分集合についての要素の総和を列挙します。これを $S_{1},\ S_{2}$ とおきます。</p><ul><li>$S_{1}=(0,\ 2,\ 3,\ 5)$</li><li>$S_{2}=(0,\ 5,\ 7,\ 11,\ 12,\ 16,\ 18,\ 23)$</li></ul></li><li><p>前半と後半を合わせて答えを求める<br>今回は二分探索で答えを求めることにします。<br>$S_1$ の要素 $p$ について、条件を満たす $S_2$ の要素 $q$ の条件は今回の場合、$p+q\le T\iff q\le T-p$ です。これは $q$ について単調性があります。よってソートされた数列 $S_2$ に対して二分探索をすることで、条件を満たす中での最大値を求められます。<br>試しに $S_1$ の要素 $2$ について二分探索をしてみます。$A_2$ の要素 $q$の満たすべき条件は $q\le T-p=17-2=15$ です。$A_2$ の要素のうち $15$ 以下の中で最大の値は $12$ です。よって $2$ を選んだときの要素の総和の最大値は $2+12=14$ であると分かります。<br>これを $S_1$ の要素全て ($O(2^{\frac{N}{2}})$ 個程度) について全部確認し、その中での最大値が答えです。この場合は $S_1$ からは $5$、$S_2$ からは $12$ を選んだとき最大値 $17$ をとり、これが答えです。</p></li></ol><h2 id=実装>実装</h2><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> (n, t) = sr.ReadValue&lt;<span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>long</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> a = sr.ReadLongArray(n);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> fn = n / <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> sn = n - fn;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> first = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[<span style=color:#ae81ff>1</span> &lt;&lt; fn];
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> second = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[<span style=color:#ae81ff>1</span> &lt;&lt; sn];
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>1</span> &lt;&lt; fn; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> sum = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; fn; j++)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> ((i &amp; (<span style=color:#ae81ff>1</span> &lt;&lt; j)) &gt; <span style=color:#ae81ff>0</span>) sum += a[j];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				first[i] = sum;
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; <span style=color:#ae81ff>1</span> &lt;&lt; sn; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> sum = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; sn; j++)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>if</span> ((i &amp; (<span style=color:#ae81ff>1</span> &lt;&lt; j)) &gt; <span style=color:#ae81ff>0</span>) sum += a[j + fn];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				second[i] = sum;
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			Array.Sort(first);
+</span></span><span style=display:flex><span>			Array.Sort(second);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ans = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; first.Length; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> index = second.UpperBound(t - first[i]) - <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (index &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>continue</span>;
+</span></span><span style=display:flex><span>				ans.Chmax(first[i] + second[index]);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			Console.WriteLine(ans);
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/abc184/submissions/22530246>https://atcoder.jp/contests/abc184/submissions/22530246</a></p><h2 id=半分全列挙の高速化>半分全列挙の高速化</h2><p>半分全列挙は、前半で bit 全探索や、後半で二分探索をすると、計算量に $\log$ がつき $O(N\times 2^{\frac{N}{2}})$ となります。<br>AtCoder はこれでも十分間に合う問題がほとんどですが、更に高速にプログラムを動作させたいとき (実行時間制限の定数倍が厳しいときなど) は余計な $\log$ を落としたいと思うこともあります。今回は、その $\log$ 落としの高速化を紹介します。</p><h3 id=i-番目の要素を含む集合を順次追加するようにして部分集合を生成する>$i$ 番目の要素を含む集合を順次追加するようにして部分集合を生成する</h3><p>既に見た集合に $i$ 番目の要素を足したものを追加していくという手法です。$S=(5,\ 7,\ 11)$ のときは、</p><ul><li><p>$S=(0)$</p></li><li><p>$S=(0,5)$ ($5$ を足した各要素を追加)</p></li><li><p>$S=(0,5,7,12)$ ($7$ を足した各要素を追加)</p></li><li><p>$S=(0,5,7,12,11,16,18,23)$ ($11$ を足した各要素を追加)</p></li></ul><p>となります。これだけではソートされた数列にはなりませんが、余計な $\log$ を付けずに bit 全探索できます<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>。</p><h3 id=部分集合をマージしながら生成して常に要素がソートされているようにする>部分集合をマージしながら生成して、常に要素がソートされているようにする</h3><p>上記の工夫だけでは数列はソートされていないので、列挙後にソートする必要があり結局 $O(N\times 2^{\frac{N}{2}})$ かかってしまいます。そこで、要素を追加するときに工夫し、<code>set</code> を使わなくても常に数列がソートされている状態にします。</p><p>$S=(0,5,7,12)$ に $7$ を足した要素を追加する状況を考えます。何も考えずに追加すると $S=(0,5,7,12,11,16,18,23)$ となってしまいますが、追加される前の要素と追加された後の要素をそれぞれを小さい方から取っていき、新たな数列に格納すると $\log$ 無しに常に数列を常にソート状態に保てます！具体的には、前半と後半の数列を $A,B$、新たな数列を $C$ とすると、</p><div>$A=(0,5,7,12),\ B=(11,16,18,23),\ C=()\\A=(5,7,12),\ B=(11,16,18,23),\ C=(0)\\A=(7,12),\ B=(11,16,18,23),\ C=(0,5)\\A=(12),\ B=(11,16,18,23),\ C=(0,5,7)\\A=(12),\ B=(16,18,23),\ C=(0,5,7,11)\\\vdots$</div>というようにする感じです[^4]。<p>なお、数列ふたつをマージする際には両方ともソート済みであることが必要ですが、最初の数列は $(0)$ であるため、現れる数列は帰納的にソートされていることが示せます。</p><p>ちなみに、C++ には <code>inplace_merge</code> という便利な関数が存在します。そのため自分で実装しなくても一行で終わりです (<a href=https://cpprefjp.github.io/reference/algorithm/inplace_merge.html>参考</a>)。</p><h3 id=尺取り法を使う>尺取り法を使う</h3><p>二分探索で求めていた部分は<b>尺取り法</b><sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>で求められます。尺取り法の詳しい解説はしませんが、<b>前半の数列もソートされている</b>と仮定したとき、条件を満たす後半の数列での最大値は、前半の要素を順番に見ていくに従って index が前方に単調にずれていくことを利用した解法です。</p><h3 id=log-の無しの実装>$\log$ の無しの実装</h3><details><summary><u><b>実装を展開する</b></u></summary><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cs data-lang=cs><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Solve()
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> (n, t) = sr.ReadValue&lt;<span style=color:#66d9ef>int</span>, <span style=color:#66d9ef>long</span>&gt;();
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> a = sr.ReadLongArray(n);
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> fn = n / <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> sn = n - fn;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> first = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[] { <span style=color:#ae81ff>0</span> };
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> second = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[] { <span style=color:#ae81ff>0</span> };
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; fn; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> tmp = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[first.Length];
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; first.Length; j++)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					tmp[j] = first[j] + a[i];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				first = Merge(first, tmp);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = fn; i &lt; n; i++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>var</span> tmp = <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>long</span>[second.Length];
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> j = <span style=color:#ae81ff>0</span>; j &lt; second.Length; j++)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					tmp[j] = second[j] + a[i];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				second = Merge(second, tmp);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ans = <span style=color:#ae81ff>0L</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> q = second.Length - <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> p = <span style=color:#ae81ff>0</span>; p &lt; first.Length; p++)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>while</span> (q &gt;= <span style=color:#ae81ff>0</span> &amp;&amp; first[p] + second[q] &gt; t)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					q--;
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (q &lt; <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>				ans.Chmax(first[p] + second[q]);
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			Console.WriteLine(ans);
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> T[] Merge&lt;T&gt;(T[] first, T[] second) <span style=color:#66d9ef>where</span> T : IComparable&lt;T&gt;
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> ret = <span style=color:#66d9ef>new</span> T[first.Length + second.Length];
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> p = <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> q = <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>while</span> (p &lt; first.Length || q &lt; second.Length)
+</span></span><span style=display:flex><span>			{
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> (p == first.Length)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					ret[p + q] = second[q++];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (q == second.Length)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					ret[p + q] = first[p++];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (first[p].CompareTo(second[q]) &lt; <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					ret[p + q] = first[p++];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>				{
+</span></span><span style=display:flex><span>					ret[p + q] = second[q++];
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>return</span> ret;
+</span></span><span style=display:flex><span>		}
+</span></span></code></pre></div></details><p>ACコード: <a href=https://atcoder.jp/contests/abc184/submissions/22530165>https://atcoder.jp/contests/abc184/submissions/22530165</a></p><h2 id=おまけ>おまけ</h2><p>以前に解説記事にしたことのある、とある JOI の問題も半分全列挙を用いることができ、しかも $\log$ を落とすテクニックを適用できます。興味のある方は是非見てみてください。</p><details><summary><u><b>展開する (ネタバレ防止)</b></u></summary>
+[JOI 2015 予選 F - 財宝 (Treasures)](https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f)<div class=inner-link-wrapper><iframe class=hatenablogcard style=width:100%;height:155px;max-width:680px src="https://hatenablog-parts.com/embed?url=https://fairy-lettuce.hatenadiary.com/entry/2020/11/11/174913" width=300 height=150 frameborder=0 scrolling=no></iframe></div></details><h2 id=参考サイト>参考サイト</h2><div class=inner-link-wrapper><iframe class=hatenablogcard style=width:100%;height:155px;max-width:680px src="https://hatenablog-parts.com/embed?url=https://algo-logic.info/split-and-list/" width=300 height=150 frameborder=0 scrolling=no></iframe></div><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>Codeforces では Meet in the Middle と呼ばれています。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>奇数のときは前半と後半どちらが多くなっても構いません。ここでは説明のため後半の要素が多くなっていますが、前半が多くても問題はありません。&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>特に私は通常の bit 全探索に <code>set</code> を使ってさらに $\log$ を付けてしまい、全列挙を $O(N^2\times 2^{\frac{N}{2}})$ で行っていました。C# では通りませんでしたが C++ では通ってしまいました。&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:4><p>Codeforces では Two Pointers と呼ばれています。&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></section><section></section></article></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div id=toc class="Box Box--blue mb-3"><b>AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について)</b><nav id=TableOfContents><ul><li><a href=#問題リンク>問題リンク</a></li><li><a href=#問題概要>問題概要</a></li><li><a href=#制約>制約</a></li><li><a href=#半分全列挙の解説>半分全列挙の解説</a><ul><li><a href=#半分全列挙とは>半分全列挙とは</a></li><li><a href=#この問題での具体例>この問題での具体例</a></li></ul></li><li><a href=#実装>実装</a></li><li><a href=#半分全列挙の高速化>半分全列挙の高速化</a><ul><li><a href=#i-番目の要素を含む集合を順次追加するようにして部分集合を生成する>$i$ 番目の要素を含む集合を順次追加するようにして部分集合を生成する</a></li><li><a href=#部分集合をマージしながら生成して常に要素がソートされているようにする>部分集合をマージしながら生成して、常に要素がソートされているようにする</a></li><li><a href=#尺取り法を使う>尺取り法を使う</a></li><li><a href=#log-の無しの実装>$\log$ の無しの実装</a></li></ul></li><li><a href=#おまけ>おまけ</a></li><li><a href=#参考サイト>参考サイト</a></li></ul></nav></div><div><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js></script>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=small&mobile_iframe=true&width=61&height=20&appId" width=61 height=20 style=border:none;overflow:hidden scrolling=no frameborder=0 allowtransparency=true allow=encrypted-media></iframe>
+<a href=http://b.hatena.ne.jp/entry/ class=hatena-bookmark-button data-hatena-bookmark-layout=basic-label-counter data-hatena-bookmark-lang=ja title=このエントリーをはてなブックマークに追加><img src=https://b.st-hatena.com/images/entry-button/button-only@2x.png alt=このエントリーをはてなブックマークに追加 width=20 height=20 style=border:none></a><script type=text/javascript src=https://b.st-hatena.com/js/bookmark_button.js async></script>
+<a data-pocket-label=pocket data-pocket-count=none class=pocket-btn data-lang=en></a>
+<script type=text/javascript>!function(e,t){if(!e.getElementById(t)){var s,n=e.createElement("script");n.id=t,n.src="https://widgets.getpocket.com/v1/j/btn.js?v=1",s=e.getElementById(t),e.body.appendChild(n)}}(document,"pocket-btn-js")</script></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
+Powered by the
+<a href=https://github.com/qqhann/hugo-primer class=link-gray-dark>Hugo-Primer</a> theme for
+<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>
