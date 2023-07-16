@@ -1,9 +1,14 @@
 ---
 title: "Google Code Jam Round 1C 2022 B - Squary 解説"
 date: 2022-04-30T21:23:14+09:00
-categories: ["Competitive", "競プロ解説", ]
-tags: ["GCJ", ]
 draft: false
+author: ["fairy_lettuce"]
+categories: ["競プロ解説","GCJ"]
+tags: ["Competitive", ]
+archives: ["2022", "2022-04"]
+description: "おもしろかった。気付いたときうわーーーーって言いました。 問題リンク https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76 問題概要 数列 に、 個以下の…"
+aliases:
+  - /entry/2022/04/30/212314
 ---
 
 <!-- 解説ブログ テンプレ -->
@@ -14,11 +19,19 @@ draft: false
 
 https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76
 
+**2023/07/16 追記**
+
+GCJ のサイトが閉じられたので、代替となるリンクを貼ります。
+
+https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary
+
+なお、GCJ の過去問のデータは[このリポジトリ](https://github.com/google/coding-competitions-archive)で参照できます。
+
 ## 問題概要
 
 数列 $\{E_i\}$ に、$K$ 個以下の整数 ($-10^{18}$ 以上 $10^{18}$ 以下) を追加し、以下の等式が成り立つようにしてください。
 
-- $\displaystyle \sum E_i\^2=\left(\sum E_i \right)\^2$  
+- $\displaystyle \sum E_i\^2=\left(\sum E_i \right)^2$  
 
 ## 制約
 
@@ -39,13 +52,13 @@ https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000
 
 追加する数を $X$ とします。このとき、
 
-$\displaystyle \sum E_i\^2+X\^2=\left(\sum E_i+X \right)\^2$
+$\displaystyle \sum E_i\^2+X\^2=\left(\sum E_i+X \right)^2$
 
-ここで、$\displaystyle A:=\sum E_i\^2, B:=\sum E_i$ とおくと、
+ここで、$\displaystyle A:=\sum E_i^2, B:=\sum E_i$ とおくと、
 
-$\displaystyle 2BX=A -B\^2$
+$\displaystyle 2BX=A -B^2$
 
-$\displaystyle \therefore X=\frac{A-B\^2}{2B}$  
+$\displaystyle \therefore X=\frac{A-B^2}{2B}$  
 
 これが整数になれば良いです。
 
@@ -63,27 +76,27 @@ $\displaystyle \therefore X=\frac{A-B\^2}{2B}$
 
 このとき、どのような数列でも実は適当な $X, Y$ を取ることができます。
 
-与えられた条件は、$A(=\sum E_i\^2),B(=\sum E_i),X,Y$ について表すと、
+与えられた条件は、$A(=\sum E_i^2),B(=\sum E_i),X,Y$ について表すと、
 
-$\displaystyle A+X\^2+Y\^2=(B+X+Y)\^2$
+$\displaystyle A+X\^2+Y\^2=(B+X+Y)^2$
 
-$\displaystyle \therefore A=B\^2+2XY+2B(X+Y)$
+$\displaystyle \therefore A=B^2+2XY+2B(X+Y)$
 
 となります。これでは $X,Y$ について分かりにくい式なので、$X,Y$ が $1$ つの項にまとまるようにくくります。
 
-$\displaystyle 2(X+B)(Y+B)=A+B\^2$
+$\displaystyle 2(X+B)(Y+B)=A+B^2$
 
-ところで、$A(=\sum E_i\^2),B(=\sum E_i)$ の偶奇は一致する (証明略) ので、右辺は偶数です。よって、$(X+B)(Y+B)=(A+B\^2)/2$ は整数となります (**必要条件**)。
+ところで、$A(=\sum E_i\^2),B(=\sum E_i)$ の偶奇は一致する (証明略) ので、右辺は偶数です。よって、$(X+B)(Y+B)=(A+B^2)/2$ は整数となります (**必要条件**)。
 
-$(A+B\^2)/2$ の絶対値は $10\^{12}$ を超えないので、適当に割り振っても良いです。
+$(A+B\^2)/2$ の絶対値は $10^{12}$ を超えないので、適当に割り振っても良いです。
 
-例えば、$(X+B,Y+B)=((A+B\^2)/2, 1) \iff (X,Y)=((A+B\^2)/2-B, 1-B)$ とすればどのようなケースでも条件を満たす解になります。
+例えば、$(X+B,Y+B)=((A+B\^2)/2, 1) \iff (X,Y)=((A+B^2)/2-B, 1-B)$ とすればどのようなケースでも条件を満たす解になります。
 
 ## 実装
 
 <details><summary><u><b>実装を展開する</b></u></summary>
 
-```csharp
+```cs
 		public void Solve(int testcase)
 		{
 			var n = sr.ReadInt();
@@ -122,6 +135,7 @@ $(A+B\^2)/2$ の絶対値は $10\^{12}$ を超えないので、適当に割り�
 ```
 
 </details>
+
 ACコード: 省略 (GCJ の提出コード共有するの面倒なので……)
 
 ## 感想
