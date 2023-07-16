@@ -20,6 +20,14 @@ keywords:
 
 [fairy_lettuce](https://github.com/fairy-lettuce)
 
+### Bluesky
+
+[@fairy-lettuce.com](https://bsky.app/profile/fairy-lettuce.com)
+
+### Discord
+
+@ltc
+
 ## 競技プログラミング
 
 ### 各コンテストサイト
