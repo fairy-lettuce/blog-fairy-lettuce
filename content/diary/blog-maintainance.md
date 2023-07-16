@@ -1,7 +1,7 @@
 ---
 title: "新ブログをまともに整備しました"
 date: 2023-07-16T15:24:16+09:00
-draft: true
+draft: false
 categories: []
 tags: ["ブログ"]
 keywords:
