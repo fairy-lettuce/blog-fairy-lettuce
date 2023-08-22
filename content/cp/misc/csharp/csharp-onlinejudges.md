@@ -24,7 +24,7 @@ C# の実行環境 ( **ランタイム** ) には様々な種類があります�
 
 各ランタイムの詳細について話すと長くなるので解説は下記ブログに譲ります。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://synamon.hatenablog.com/entry/2021/10/18/190000" data-iframely-url="https://iframely.net/Do5Drrl?card=small"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+<div style="left: 0; width: 100%; height: 190px; position: relative;"><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fsynamon.hatenablog.com%2Fentry%2F2021%2F10%2F18%2F190000" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"></iframe></div>
 
 更に、これとは別に言語バージョンも存在します。C++11/14/17/20/23 みたいなものです。
 
