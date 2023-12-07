@@ -1,7 +1,7 @@
 ---
 title: "ダークファンタジーなメトロイドヴァニア ENDER LILIES"
 date: 2023-12-08T00:00:00+09:00
-draft: true
+draft: false
 categories: ["ゲーム"]
 tags: ["ゲームレビュー"]
 keywords: ["メトロイドヴァニア"]
