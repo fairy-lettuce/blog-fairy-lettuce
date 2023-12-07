@@ -17,6 +17,6 @@ keywords:
 - [About](/about): 自己紹介です。
 - [Diary](/diary): 日常などの個人的なことのブログです。
 - [Competitive](/cp): 競技プログラミングに関する内容です。
+- [Game](/game): ゲーム日記です。
 - [Links](/links): 自分の関連するサイトの紹介です。
 - [GitHub](https://github.com/fairy-lettuce): GitHubアカウントです。
-

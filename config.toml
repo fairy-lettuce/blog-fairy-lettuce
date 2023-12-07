@@ -58,6 +58,11 @@ canonifyurls = true
     weight = 30
     url = "/cp"
 [[menu.main]]
+    name = "Game"
+    pre = "<i class='fa fa-cp'></i>"
+    weight = 40
+    url = "/game"
+[[menu.main]]
     name = "Links"
     pre = "<i class='fa fa-diary-old'></i>"
     weight = 120
