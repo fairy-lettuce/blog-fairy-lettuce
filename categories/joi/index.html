@@ -1,81 +1,82 @@
-<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>JOI &ndash; Growth Record of Lettuce Farm: Extended</title><meta name=description property="og:description" content="れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://blog.fairy-lettuce.com/favicon-64.png><link rel=apple-touch-icon href=https://blog.fairy-lettuce.com/apple-touch-icon.png><link rel=mask-icon size=any href=https://blog.fairy-lettuce.com/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="JOI | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="|れたすのブログ"><meta name=twitter:image content="https://blog.fairy-lettuce.com/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://blog.fairy-lettuce.com/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
-<span>About</span></a>
-<a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
-<span>Diary</span></a>
-<a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
-<span>Competitive</span></a>
-<a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
-<span>Links</span></a>
-<a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
-<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div><h1>JOI</h1><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2021yo2-c/><div class="h2 mt-1 mb-1">JOI 2021 二次予選 C イベント巡り (Event Hopping)</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
-<a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span></a>
-<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-12-16</span></div></div></div><div class=text-gray><p>JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c>https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c</a></p><h2 id=問題概要>問題概要</h2><p>$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。</p><p>JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。</p><p>参加できるイベント数の最大値を求めてください。</p><h2 id=制約-満点>制約 (満点)</h2><p>$1\le N\le 200\ 000$<br>$1\le D\le 10^{12}$<br>$0\le K\le 10^{12}$<br>$1\le P_{i} \le 2$<br>$1\le S_{i} \le 10^{12}$<br>$S_{i}$ は全て異なる。</p><a class=muted-link href=/cp/editorial/joi/joi2021yo2-c/>…</a></div></div><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2015yo-f/><div class="h2 mt-1 mb-1">JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
-<a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span></a>
-<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-11-11</span></div></div></div><div class=text-gray><p>今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。<br>思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。<br>C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f>https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f</a></p><h2 id=問題概要>問題概要</h2><p>$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。<br>Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。<br>一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。</p><h2 id=制約満点>制約(満点)</h2><ul><li>$1\le N\le 30$</li><li>$0\le D,\ X_i,\ Y_i\le 10^{15}$</li></ul><a class=muted-link href=/cp/editorial/joi/joi2015yo-f/>…</a></div></div><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2011sc-guess/><div class="h2 mt-1 mb-1">JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span></a>
-<a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span></a>
-<a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-11-03</span></div></div></div><div class=text-gray><p>お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。</p><p>初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。</p><h2 id=問題ページ>問題ページ</h2><p><a href=https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess>https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess</a></p><h2 id=問題概要>問題概要</h2><p>インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。</p><h2 id=制約満点>制約(満点)</h2><ul><li>$1\le N\le100$</li><li>$L=700$</li></ul><a class=muted-link href=/cp/editorial/joi/joi2011sc-guess/>…</a></div></div></div></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div class="Box Box--blue p-2 mb-3 mt-5"><a href=/tags/ class=link-gray-dark><h4>Tags</h4></a><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/c class="link-gray text-emphasized css-truncate-target"><span>C#</span></a>
-<span class="text-right Counter">2</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/competitive class="link-gray text-emphasized css-truncate-target"><span>Competitive</span></a>
-<span class="text-right Counter">53</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%88%e3%83%83%e3%83%97%e3%83%9a%e3%83%bc%e3%82%b8 class="link-gray text-emphasized css-truncate-target"><span>トップページ</span></a>
-<span class="text-right Counter">3</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%96%e3%83%ad%e3%82%b0 class="link-gray text-emphasized css-truncate-target"><span>ブログ</span></a>
-<span class="text-right Counter">8</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%aa%e3%83%b3%e3%82%af class="link-gray text-emphasized css-truncate-target"><span>リンク</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%8a%80%e8%a1%93 class="link-gray text-emphasized css-truncate-target"><span>技術</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%97%a5%e5%b8%b8 class="link-gray text-emphasized css-truncate-target"><span>日常</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%9d%b1%e6%96%b9 class="link-gray text-emphasized css-truncate-target"><span>東方</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e8%87%aa%e5%b7%b1%e7%b4%b9%e4%bb%8b class="link-gray text-emphasized css-truncate-target"><span>自己紹介</span></a>
+<!doctype html><html><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ9N5F5QDD"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QZ9N5F5QDD")</script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>JOI &ndash; Growth Record of Lettuce Farm: Extended
+</title><meta name=description property="og:description" content="れたすのブログ"><meta name=apple-mobile-web-app-title content="Growth Record of Lettuce Farm: Extended"><link rel=icon href=https://blog.fairy-lettuce.com/favicon-64.png><link rel=apple-touch-icon href=https://blog.fairy-lettuce.com/apple-touch-icon.png><link rel=mask-icon size=any href=https://blog.fairy-lettuce.com/pinned-icon.svg><meta name=twitter:card content="summary"><meta name=twitter:site content="@fairy_lettuce"><meta name=twitter:creator content="@fairy_lettuce"><meta name=twitter:title content="JOI | Growth Record of Lettuce Farm: Extended"><meta name=twitter:description content="|れたすのブログ"><meta name=twitter:image content="https://blog.fairy-lettuce.com/twitter-card.png"><link rel=stylesheet href=/assets/syntax.css><link rel=stylesheet href=/assets/primer-build.css><link rel=stylesheet href=/assets/style.css><link rel=stylesheet href=/assets/custom_style.css></head><body class=bg-gray><div id=holy class="container-lg bg-white h-100"><div id=header class="px-1 bg-white"><nav class="UnderlineNav UnderlineNav--right px-2"><a class="UnderlineNav-actions muted-link h2" href=https://blog.fairy-lettuce.com/>Growth Record of Lettuce Farm: Extended</a><div class=UnderlineNav-body><a class=UnderlineNav-item href=/about><i class='fa fa-about'></i>
+<span>About</span>
+</a><a class=UnderlineNav-item href=/diary><i class='fa fa-diary'></i>
+<span>Diary</span>
+</a><a class=UnderlineNav-item href=/cp><i class='fa fa-cp'></i>
+<span>Competitive</span>
+</a><a class=UnderlineNav-item href=/game><i class='fa fa-cp'></i>
+<span>Game</span>
+</a><a class=UnderlineNav-item href=/links><i class='fa fa-diary-old'></i>
+<span>Links</span>
+</a><a class=UnderlineNav-item href=https://github.com/fairy-lettuce><i class='fa fa-github'></i>
+<span>GitHub</span></a></div></nav></div><div role=main id=main class="holy-main markdown-body px-4 bg-white"><div><h1>JOI</h1><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2021yo2-c/><div class="h2 mt-1 mb-1">JOI 2021 二次予選 C イベント巡り (Event Hopping)</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span>
+</a><a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span>
+</a><a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-12-16</span></div></div></div><div class=text-gray><p>JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c>https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c</a></p><h2 id=問題概要>問題概要</h2><p>$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。</p><p>JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。</p><p>参加できるイベント数の最大値を求めてください。</p><h2 id=制約-満点>制約 (満点)</h2><p>$1\le N\le 200\ 000$<br>$1\le D\le 10^{12}$<br>$0\le K\le 10^{12}$<br>$1\le P_{i} \le 2$<br>$1\le S_{i} \le 10^{12}$<br>$S_{i}$ は全て異なる。</p><a class=muted-link href=/cp/editorial/joi/joi2021yo2-c/>…</a></div></div><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2015yo-f/><div class="h2 mt-1 mb-1">JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span>
+</a><a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span>
+</a><a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-11-11</span></div></div></div><div class=text-gray><p>今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。<br>思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。<br>C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。</p><h2 id=問題リンク>問題リンク</h2><p><a href=https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f>https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f</a></p><h2 id=問題概要>問題概要</h2><p>$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。<br>Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。<br>一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。</p><h2 id=制約満点>制約(満点)</h2><ul><li>$1\le N\le 30$</li><li>$0\le D,\ X_i,\ Y_i\le 10^{15}$</li></ul><a class=muted-link href=/cp/editorial/joi/joi2015yo-f/>…</a></div></div><div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3"><div class="Subhead mb-2"><div class=Subhead-heading><a href=/cp/editorial/joi/joi2011sc-guess/><div class="h2 mt-1 mb-1">JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</div></a></div><div class=Subhead-description><a href=/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC class=muted-link><span class="Label Label--gray-darker">競プロ解説</span>
+</a><a href=/categories/joi class=muted-link><span class="Label Label--gray-darker">JOI</span>
+</a><a href=/tags/competitive class=muted-link><span class="Label Label--gray">Competitive</span></a><div class=float-md-right><span>2020-11-03</span></div></div></div><div class=text-gray><p>お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。</p><p>初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。</p><h2 id=問題ページ>問題ページ</h2><p><a href=https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess>https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess</a></p><h2 id=問題概要>問題概要</h2><p>インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。</p><h2 id=制約満点>制約(満点)</h2><ul><li>$1\le N\le100$</li><li>$L=700$</li></ul><a class=muted-link href=/cp/editorial/joi/joi2011sc-guess/>…</a></div></div></div></div><div id=side class="pr-1 bg-white"><aside class=pr-3><div id=author class="Box mb-3 mt-3 p-2 text-center"><a href=/about><img class=m-1 src=/icon-round.png alt=プロフィール画像 width=120 height=120></a><p class="text-emphasized f3">れたす</p><p>遊んだこと・学んだことをまとめる個人ブログ</p><a href=https://twitter.com/fairy_lettuce>Twitter</a></div><div class="Box Box--blue p-2 mb-3 mt-5"><a href=/tags/ class=link-gray-dark><h4>Tags</h4></a><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/c class="link-gray text-emphasized css-truncate-target"><span>C#</span></a>
+<span class="text-right Counter">2</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/competitive class="link-gray text-emphasized css-truncate-target"><span>Competitive</span></a>
+<span class="text-right Counter">53</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%88%e3%83%83%e3%83%97%e3%83%9a%e3%83%bc%e3%82%b8 class="link-gray text-emphasized css-truncate-target"><span>トップページ</span></a>
+<span class="text-right Counter">3</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%96%e3%83%ad%e3%82%b0 class="link-gray text-emphasized css-truncate-target"><span>ブログ</span></a>
+<span class="text-right Counter">8</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e3%83%aa%e3%83%b3%e3%82%af class="link-gray text-emphasized css-truncate-target"><span>リンク</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%8a%80%e8%a1%93 class="link-gray text-emphasized css-truncate-target"><span>技術</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%97%a5%e5%b8%b8 class="link-gray text-emphasized css-truncate-target"><span>日常</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e6%9d%b1%e6%96%b9 class="link-gray text-emphasized css-truncate-target"><span>東方</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/tags/%e8%87%aa%e5%b7%b1%e7%b4%b9%e4%bb%8b class="link-gray text-emphasized css-truncate-target"><span>自己紹介</span></a>
 <span class="text-right Counter">1</span></span></div><div class="Box Box--blue p-2 mb-3"><a href=/categories/ class=link-gray-dark><h4>Categories</h4></a><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/atcoder class="link-gray text-emphasized css-truncate-target"><span>Atcoder</span></a>
-<span class="text-right Counter">28</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/codeforces class="link-gray text-emphasized css-truncate-target"><span>Codeforces</span></a>
-<span class="text-right Counter">13</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/competitive class="link-gray text-emphasized css-truncate-target"><span>Competitive</span></a>
-<span class="text-right Counter">3</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/diary class="link-gray text-emphasized css-truncate-target"><span>Diary</span></a>
-<span class="text-right Counter">4</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gcj class="link-gray text-emphasized css-truncate-target"><span>Gcj</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gut%e3%82%a2%e3%83%89%e3%82%ab%e3%83%ac2020 class="link-gray text-emphasized css-truncate-target"><span>Gutアドカレ2020</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gut%e3%82%a2%e3%83%89%e3%82%ab%e3%83%ac2021 class="link-gray text-emphasized css-truncate-target"><span>Gutアドカレ2021</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/icpc class="link-gray text-emphasized css-truncate-target"><span>Icpc</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/joi class="link-gray text-emphasized css-truncate-target"><span>Joi</span></a>
-<span class="text-right Counter">3</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/topcoder class="link-gray text-emphasized css-truncate-target"><span>Topcoder</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/writer%e8%a8%98%e9%8c%b2 class="link-gray text-emphasized css-truncate-target"><span>Writer記録</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/yukicoder class="link-gray text-emphasized css-truncate-target"><span>Yukicoder</span></a>
-<span class="text-right Counter">10</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%81%b1%e3%83%89%e3%82%ab%e3%83%ac2020 class="link-gray text-emphasized css-truncate-target"><span>ぱドカレ2020</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%82%a2%e3%83%89%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc2020 class="link-gray text-emphasized css-truncate-target"><span>アドベントカレンダー2020</span></a>
-<span class="text-right Counter">2</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%82%a2%e3%83%89%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc2021 class="link-gray text-emphasized css-truncate-target"><span>アドベントカレンダー2021</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%83%88%e3%83%83%e3%83%97%e3%83%9a%e3%83%bc%e3%82%b8 class="link-gray text-emphasized css-truncate-target"><span>トップページ</span></a>
-<span class="text-right Counter">3</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e6%9d%b1%e6%96%b9%e5%8e%9f%e4%bd%9c class="link-gray text-emphasized css-truncate-target"><span>東方原作</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e3%81%9d%e3%81%ae%e4%bb%96 class="link-gray text-emphasized css-truncate-target"><span>競プロその他</span></a>
-<span class="text-right Counter">6</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e5%8f%82%e5%8a%a0%e8%a8%98 class="link-gray text-emphasized css-truncate-target"><span>競プロイベント参加記</span></a>
-<span class="text-right Counter">1</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e8%a7%a3%e8%aa%ac class="link-gray text-emphasized css-truncate-target"><span>競プロ解説</span></a>
-<span class="text-right Counter">44</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e8%89%b2%e5%a4%89%e8%a8%98%e4%ba%8b class="link-gray text-emphasized css-truncate-target"><span>色変記事</span></a>
-<span class="text-right Counter">3</span></span>
-<span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e9%9f%b3%e3%82%b2%e3%83%bc class="link-gray text-emphasized css-truncate-target"><span>音ゲー</span></a>
+<span class="text-right Counter">28</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/codeforces class="link-gray text-emphasized css-truncate-target"><span>Codeforces</span></a>
+<span class="text-right Counter">13</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/competitive class="link-gray text-emphasized css-truncate-target"><span>Competitive</span></a>
+<span class="text-right Counter">3</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/diary class="link-gray text-emphasized css-truncate-target"><span>Diary</span></a>
+<span class="text-right Counter">4</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gcj class="link-gray text-emphasized css-truncate-target"><span>Gcj</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gut%e3%82%a2%e3%83%89%e3%82%ab%e3%83%ac2020 class="link-gray text-emphasized css-truncate-target"><span>Gutアドカレ2020</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/gut%e3%82%a2%e3%83%89%e3%82%ab%e3%83%ac2021 class="link-gray text-emphasized css-truncate-target"><span>Gutアドカレ2021</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/icpc class="link-gray text-emphasized css-truncate-target"><span>Icpc</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/joi class="link-gray text-emphasized css-truncate-target"><span>Joi</span></a>
+<span class="text-right Counter">3</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/topcoder class="link-gray text-emphasized css-truncate-target"><span>Topcoder</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/writer%e8%a8%98%e9%8c%b2 class="link-gray text-emphasized css-truncate-target"><span>Writer記録</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/yukicoder class="link-gray text-emphasized css-truncate-target"><span>Yukicoder</span></a>
+<span class="text-right Counter">10</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%81%b1%e3%83%89%e3%82%ab%e3%83%ac2020 class="link-gray text-emphasized css-truncate-target"><span>ぱドカレ2020</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%82%a2%e3%83%89%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc2020 class="link-gray text-emphasized css-truncate-target"><span>アドベントカレンダー2020</span></a>
+<span class="text-right Counter">2</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%82%a2%e3%83%89%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc2021 class="link-gray text-emphasized css-truncate-target"><span>アドベントカレンダー2021</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e3%83%88%e3%83%83%e3%83%97%e3%83%9a%e3%83%bc%e3%82%b8 class="link-gray text-emphasized css-truncate-target"><span>トップページ</span></a>
+<span class="text-right Counter">3</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e6%9d%b1%e6%96%b9%e5%8e%9f%e4%bd%9c class="link-gray text-emphasized css-truncate-target"><span>東方原作</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e3%81%9d%e3%81%ae%e4%bb%96 class="link-gray text-emphasized css-truncate-target"><span>競プロその他</span></a>
+<span class="text-right Counter">6</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e5%8f%82%e5%8a%a0%e8%a8%98 class="link-gray text-emphasized css-truncate-target"><span>競プロイベント参加記</span></a>
+<span class="text-right Counter">1</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e7%ab%b6%e3%83%97%e3%83%ad%e8%a7%a3%e8%aa%ac class="link-gray text-emphasized css-truncate-target"><span>競プロ解説</span></a>
+<span class="text-right Counter">44</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e8%89%b2%e5%a4%89%e8%a8%98%e4%ba%8b class="link-gray text-emphasized css-truncate-target"><span>色変記事</span></a>
+<span class="text-right Counter">3</span>
+</span><span class="css-truncate no-wrap m-1 pl-1"><a href=/categories/%e9%9f%b3%e3%82%b2%e3%83%bc class="link-gray text-emphasized css-truncate-target"><span>音ゲー</span></a>
 <span class="text-right Counter">1</span></span></div></aside></div><div id=footer class="pt-2 pb-3 bg-white text-center"><span class="text-small text-gray">©fairy-lettuce 2023 &#183;
 Powered by the
 <a href=https://github.com/qqhann/hugo-primer class=link-gray-dark>Hugo-Primer</a> theme for
-<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>
+<a href=https://gohugo.io class=link-gray-dark>Hugo</a>.</span></div></div><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type=text/x-mathjax-config>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body></html>

@@ -16,12 +16,12 @@
 &lt;p>この度は、ブログをはてなブログから&lt;a href="https://fairy-lettuce.github.io/">個人サイトのブログ&lt;/a>へと引っ越すことになりました。&lt;/p>
 &lt;p>個人ブログの中でも競技プログラミングに関連する解説記事やその他の記事はサイト内の「&lt;a href="https://fairy-lettuce.github.io/cp/">Competitive&lt;/a>」から閲覧できるようになる予定です。&lt;/p>
 &lt;div class="inner-link-wrapper">
-&lt;iframe
-class="hatenablogcard"
-style="width:100%;height:155px;max-width:680px;"
-src="https://hatenablog-parts.com/embed?url=https://fairy-lettuce.github.io/"
-width="300" height="150" frameborder="0" scrolling="no">
-&lt;/iframe>
+ &lt;iframe
+ class="hatenablogcard"
+ style="width:100%;height:155px;max-width:680px;"
+ src="https://hatenablog-parts.com/embed?url=https://fairy-lettuce.github.io/"
+ width="300" height="150" frameborder="0" scrolling="no">
+ &lt;/iframe>
 &lt;/div></description></item><item><title>AtCoder Regular Contest 129 D - -1+2-1 解説 (エスパー→証明)</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</link><pubDate>Tue, 20 Dec 2022 21:14:45 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
 &lt;p>エスパーです。正直&lt;a href="https://kmjp.hatenablog.jp/entry/2021/12/19/0900">こっち&lt;/a>のほうが分かりやすいです。&lt;/p>
 &lt;p>厳密ではありませんが証明はちゃんとつけました。&lt;/p>
@@ -136,6 +136,8 @@ width="300" height="150" frameborder="0" scrolling="no">
 &lt;/ul></description></item><item><title>AtCoder 黄色になりました</title><link>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-yellow/</link><pubDate>Sat, 03 Apr 2021 23:17:54 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-yellow/</guid><description>&lt;p>お久しぶりです。れたすです。&lt;/p>
 &lt;p>&lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">fairy_lettuceさんのパナコン2021（AtCoder Beginner Contest 195）での成績：81位&lt;br>パフォーマンス：2400相当&lt;br>レーティング：1948→2002 (+54) :)&lt;br>Highestを更新し、初段になりました！&lt;a href="https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw">#AtCoder&lt;/a> &lt;a href="https://twitter.com/hashtag/%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88?src=hash&amp;amp;ref_src=twsrc%5Etfw">#パナソニックプログラミングコンテスト&lt;/a>（ABC195） &lt;a href="https://t.co/HUIasXMrTB">https://t.co/HUIasXMrTB&lt;/a> &lt;br>AtCoder 黄色！！！！！！ &lt;a href="https://t.co/zp28cVuxT3">pic.twitter.com/zp28cVuxT3&lt;/a>&lt;/p>&amp;mdash; れたす (@lettuce_cs) &lt;a href="https://twitter.com/lettuce_cs/status/1370734607658721291?ref_src=twsrc%5Etfw">March 13, 2021&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
 今回はこの通り、AtCoder &lt;span style="color: #C0C000">黄色&lt;/span>になったので、そのご報告とか色々をいたします。&lt;/p></description></item><item><title>AtCoder Regular Contest 114 C - Sequence Scores 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</link><pubDate>Fri, 19 Mar 2021 07:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</guid><description>&lt;!-- 解説ブログ テンプレ -->
 &lt;p>解説記事を書くのはかなりお久しぶりになってしまいました。&lt;/p>
 &lt;h2 id="問題リンク">問題リンク&lt;/h2>
@@ -340,9 +342,11 @@ $N$ は今回 $2$ 以上 $M$ の各整数を用います。先手の人は残っ
 &lt;p>色変記事アドベントカレンダー、なるものの募集を見ました。&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">色変記事AdventCalendarを作成しました。&lt;br>みなさまの勇気ある宣言をお待ちしております！&lt;a href="https://t.co/1NqMxq7Wu3">https://t.co/1NqMxq7Wu3&lt;/a>&lt;/p>&amp;mdash; dokin (@ayoiyouyoeyo) &lt;a href="https://twitter.com/ayoiyouyoeyo/status/1323945171734519809?ref_src=twsrc%5Etfw">November 4, 2020&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
 &lt;p>この恐ろしいアドベントカレンダーを見てしまった私。そういえば、AtCoder 青も Codeforces 紫も、近かったような……あれ、Topcoder も黄になれるんじゃ？&lt;/p>
 &lt;a href="https://f.hatena.ne.jp/fairy_lettuce/20201105125829">
-&lt;img src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fairy_lettuce/20201105/20201105125829.png" alt="20201105125829">
+ &lt;img src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fairy_lettuce/20201105/20201105125829.png" alt="20201105125829">
 &lt;/a>
 &lt;p>ということで、参加してみました。完全にノリですが、Topcoder はともかく AtCoder と Codeforces はずっと色変しないまま膠着していたので、これを期に色変してやろうと考えました。&lt;/p>
 &lt;p>(達成できたら)恐らく前代未聞の、3 コンテストサイト同時の色変記事になります。&lt;/p></description></item><item><title>yukicoder No.1311 - Reverse Permutation Index 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</link><pubDate>Tue, 08 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</guid><description>&lt;!-- 解説ブログ テンプレ -->
@@ -507,8 +511,8 @@ $1\le D,\ W\le \min\left(10^{5},\ \frac{N(N-1)}{2}\right)$&lt;/p></description><
 &lt;h2 id="制約">制約&lt;/h2>
 &lt;p>$1\le |S| \le 2\times 10^{5}$&lt;/p></description></item><item><title>AtCoder Problems の diff 推定アルゴリズムの変更に伴い色が変わった問題まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</link><pubDate>Tue, 17 Nov 2020 20:22:19 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</guid><description>&lt;p>AtCoder Problems に本日(11月17日)アップデートが入り、各問題の difficulty (以下、diff)の推定アルゴリズムが変わりました。これに伴いいくつかの問題で diff の色が変更になったため、&lt;b>色が変更になった&lt;/b>問題をまとめます。&lt;/p>
 &lt;blockquote class="twitter-tweet" >
-&lt;p lang="ja" dir="ltr">&lt;/p>
-&lt;a href="https://twitter.com/kenkoooo/status/1328538237850193920?s=20">&lt;/a>
+ &lt;p lang="ja" dir="ltr">&lt;/p>
+ &lt;a href="https://twitter.com/kenkoooo/status/1328538237850193920?s=20">&lt;/a>
 &lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Codeforces Round #683 Div.2-D/Div.1-B - Catching Cheaters 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</link><pubDate>Mon, 16 Nov 2020 04:30:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</guid><description>&lt;p>Rated コンテストにたくさん出たいのでこどふぉに出ました。冷えました。つらいです……。&lt;/p>
 &lt;p>今回はその冷えたこどふぉで解けなかった問題の解説です。解けて然るべき問題を解けなかった時の辛さは全競プロer共通だと勝手に思っています。&lt;/p>
@@ -544,6 +548,8 @@ Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った
 &lt;/ul></description></item><item><title>AtCoder 水色になりました</title><link>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-cyan/</link><pubDate>Tue, 18 Aug 2020 00:21:18 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-cyan/</guid><description>&lt;p>先日の エイシング プログラミング コンテスト 2020 で、AtCoder水色になりました！！！！！！！！！！！！！！！！！！！！！！&lt;/p>
 &lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">fancy_lettuceさんのエイシング プログラミング コンテスト 2020での成績：837位&lt;br>パフォーマンス：1599相当&lt;br>レーティング：1166→1218 (+52) :)&lt;br>Highestを更新し、4 級になりました！&lt;a href="https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw">#AtCoder&lt;/a> &lt;a href="https://twitter.com/hashtag/%E3%82%A8%E3%82%A4%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%882020?src=hash&amp;amp;ref_src=twsrc%5Etfw">#エイシングプログラミングコンテスト2020&lt;/a> &lt;a href="https://t.co/72e591XRhS">https://t.co/72e591XRhS&lt;/a> &lt;br>青パフォ逃しましたが入水です！！！ &lt;a href="https://t.co/q1qJf43FQj">pic.twitter.com/q1qJf43FQj&lt;/a>&lt;/p>&amp;mdash; れたす (@lettuce_cs) &lt;a href="https://twitter.com/lettuce_cs/status/1281953832964993030?ref_src=twsrc%5Etfw">July 11, 2020&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+
+
 &lt;p>自分にとって水色は通過点だと思っていたのでぱぱっと水色になって上に行こうと思っていたら思いの外レートが伸び悩んでしまい、一時期非常に苦しかったのですが、無事水色になれました。マイルストーンとして今までに競プロでやったことをまとめようと思います。&lt;/p>
 &lt;p>ところで、先日って7月11日？もう1か月経ったらしいですよ？ぼーっとしてたらこの記事を下書きに保存したまま1か月経ったらしいです。怠惰ですね。この記事をお蔵入りさせるわけにもいかないので、1か月遅刻してしまいましたが公開します。&lt;/p></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
 日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
