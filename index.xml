@@ -14,7 +14,7 @@
 &lt;h2 id="解法">解法&lt;/h2>
 &lt;p>素直に DP する。ここで、各文字列が既に部分文字列として含まれているか ($O(2^N)$ 通り)、およびその文字列の suffix が重なる最長の prefix が状態になる。各文字列の prefix は $M=\sum_i |S_i|$ 個で、DP は全体で $O(2^NML\sigma)$ で動く (ただし $\sigma=26$)。&lt;/p></description></item><item><title>日記 2025-08-13: 堂々巡り</title><link>https://blog.fairy-lettuce.com/diary/2025-08-13/</link><pubDate>Wed, 13 Aug 2025 00:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/diary/2025-08-13/</guid><description>&lt;p>うつ病は人の思考能力を奪うことがあります。&lt;br>
 作業や行動をするとき、難しい思考ができなかったり記憶力がなくなったり集中力が続かなかったりします。自分の活動が停滞していることもわからず、ひたすら「何もできない、何も続かない」と空虚な焦燥感ばかり感じてしまうのです。&lt;br>
-最近、何かをしようとしても全く手が動きませんでした。実感しているよりも、調子が酷くなっているのだと思います。&lt;/p></description></item><item><title>2025-06-18: 『シメジ シミュレーション』読書感想文</title><link>https://blog.fairy-lettuce.com/diary/2025-06-18/</link><pubDate>Wed, 18 Jun 2025 00:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/diary/2025-06-18/</guid><description>&lt;p>『シメジ シミュレーション』を読んだ。&lt;/p>
+最近、何かをしようとしても全く手が動きませんでした。実感しているよりも、調子が酷くなっているのだと思います。&lt;/p></description></item><item><title>日記 2025-06-18: 『シメジ シミュレーション』読書感想文</title><link>https://blog.fairy-lettuce.com/diary/2025-06-18/</link><pubDate>Wed, 18 Jun 2025 00:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/diary/2025-06-18/</guid><description>&lt;p>『シメジ シミュレーション』を読んだ。&lt;/p>
 &lt;p>夜空は永遠の孤独と深遠の空虚の象徴である。&lt;/p>
 &lt;p>ある夜、私は自室の机に座っていた。夜空を特に見上げていたわけではないが、こころにまっくろの宇宙を描いていた。私は孤独を感じていた。&lt;/p>
 &lt;p>どうして私は私なの？&lt;br>
