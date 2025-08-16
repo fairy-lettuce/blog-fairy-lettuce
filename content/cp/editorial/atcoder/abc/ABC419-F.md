@@ -1,6 +1,6 @@
 ---
 title: 'AtCoder Beginner Contest 419 F - All Included 解説'
-date: 2025-08-17T036:00+09:00
+date: 2025-08-17T00:36:00+09:00
 draft: false
 author: ['fairy_lettuce']
 categories: ['競プロ解説', 'AtCoder']
