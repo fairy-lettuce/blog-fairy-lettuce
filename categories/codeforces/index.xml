@@ -126,7 +126,7 @@ $1\le k \le 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #68
 &lt;h2 id="制約">制約&lt;/h2>
 &lt;p>$1\le |A|,\ |B|\le 5000$&lt;/p></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
 日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
-&lt;p>出典:
+&lt;p>出典:&lt;br>
 &lt;a href="https://codeforces.com/blog/entry/77890">Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a>&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;p>新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b>マイナス補正&lt;/b>が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p></description></item></channel></rss>

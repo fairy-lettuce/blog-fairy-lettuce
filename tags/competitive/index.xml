@@ -171,7 +171,7 @@
 &lt;p>&lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">fairy_lettuceさんのパナコン2021（AtCoder Beginner Contest 195）での成績：81位&lt;br>パフォーマンス：2400相当&lt;br>レーティング：1948→2002 (+54) :)&lt;br>Highestを更新し、初段になりました！&lt;a href="https://twitter.com/hashtag/AtCoder?src=hash&amp;amp;ref_src=twsrc%5Etfw">#AtCoder&lt;/a> &lt;a href="https://twitter.com/hashtag/%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88?src=hash&amp;amp;ref_src=twsrc%5Etfw">#パナソニックプログラミングコンテスト&lt;/a>（ABC195） &lt;a href="https://t.co/HUIasXMrTB">https://t.co/HUIasXMrTB&lt;/a> &lt;br>AtCoder 黄色！！！！！！ &lt;a href="https://t.co/zp28cVuxT3">pic.twitter.com/zp28cVuxT3&lt;/a>&lt;/p>&amp;mdash; れたす (@lettuce_cs) &lt;a href="https://twitter.com/lettuce_cs/status/1370734607658721291?ref_src=twsrc%5Etfw">March 13, 2021&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 
-
+&lt;br>
 今回はこの通り、AtCoder &lt;span style="color: #C0C000">黄色&lt;/span>になったので、そのご報告とか色々をいたします。&lt;/p></description></item><item><title>AtCoder Regular Contest 114 C - Sequence Scores 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</link><pubDate>Fri, 19 Mar 2021 07:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</guid><description>&lt;!-- 解説ブログ テンプレ -->
 &lt;p>解説記事を書くのはかなりお久しぶりになってしまいました。&lt;/p>
 &lt;h2 id="問題リンク">問題リンク&lt;/h2>
@@ -587,7 +587,7 @@ Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った
 &lt;p>自分にとって水色は通過点だと思っていたのでぱぱっと水色になって上に行こうと思っていたら思いの外レートが伸び悩んでしまい、一時期非常に苦しかったのですが、無事水色になれました。マイルストーンとして今までに競プロでやったことをまとめようと思います。&lt;/p>
 &lt;p>ところで、先日って7月11日？もう1か月経ったらしいですよ？ぼーっとしてたらこの記事を下書きに保存したまま1か月経ったらしいです。怠惰ですね。この記事をお蔵入りさせるわけにもいかないので、1か月遅刻してしまいましたが公開します。&lt;/p></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
 日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
-&lt;p>出典:
+&lt;p>出典:&lt;br>
 &lt;a href="https://codeforces.com/blog/entry/77890">Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a>&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;p>新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b>マイナス補正&lt;/b>が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p></description></item></channel></rss>
