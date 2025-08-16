@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロ解説 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/</link><description>Recent content in 競プロ解説 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Fri, 14 Jul 2023 23:50:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</link><pubDate>Fri, 14 Jul 2023 23:50:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロ解説 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/</link><description>Recent content in 競プロ解説 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sun, 17 Aug 2025 00:36:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>AtCoder Beginner Contest 419 F - All Included 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</link><pubDate>Sun, 17 Aug 2025 00:36:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</guid><description>&lt;h2 id="問題リンク">問題リンク&lt;/h2>
+&lt;p>&lt;a href="https://atcoder.jp/contests/abc419/tasks/abc419_f">https://atcoder.jp/contests/abc419/tasks/abc419_f&lt;/a>&lt;/p>
+&lt;h2 id="問題概要">問題概要&lt;/h2>
+&lt;p>長さ $L$ の英小文字列であって、$S_1,S_2,\dots,S_N$ をすべて部分文字列として含むものの個数を数え上げよ。&lt;/p>
+&lt;h2 id="制約">制約&lt;/h2>
+&lt;ul>
+&lt;li>$1\le N\le 8$&lt;/li>
+&lt;li>$1\le L\le 100$&lt;/li>
+&lt;li>$N,L$ は整数&lt;/li>
+&lt;li>$1\le |S_i|\le 10$, 英小文字からなる文字列&lt;/li>
+&lt;li>$S_i\ne S_j\ (i\ne j)$&lt;/li>
+&lt;/ul>
+&lt;!-- more -->
+&lt;h2 id="解法">解法&lt;/h2>
+&lt;p>素直に DP する。ここで、各文字列が既に部分文字列として含まれているか ($O(2^N)$ 通り)、およびその文字列の suffix が重なる最長の prefix が状態になる。各文字列の prefix は $M=\sum_i |S_i|$ 個で、DP は全体で $O(2^NML\sigma)$ で動く (ただし $\sigma=26$)。&lt;/p></description></item><item><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</link><pubDate>Fri, 14 Jul 2023 23:50:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
 &lt;p>公式解説と全然違うことをしている……。&lt;/p>
 &lt;h2 id="問題リンク">問題リンク&lt;/h2>
 &lt;p>&lt;a href="https://atcoder.jp/contests/agc027/tasks/agc027_d">https://atcoder.jp/contests/agc027/tasks/agc027_d&lt;/a>&lt;/p>
@@ -48,7 +62,27 @@
 &lt;ul>
 &lt;li>小課題 1 (9pts): $K=1$&lt;/li>
 &lt;li>小課題 2 (22pts): $2\le K \le 1000$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 091 C / AtCoder Regular Contest 092 A - 2D Plane 2D Points 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</link><pubDate>Tue, 09 Nov 2021 11:20:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</guid><description>計算機プログラミングの授業では解説しなかったため没となったスライドを供養します。 本番では使用してないですがほぼ完成しています。あくまでスライドなので、普段の解説記事よりは簡潔かと思います。</description></item><item><title>AtCoder Grand Contest 029 B - Powers of two 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</link><pubDate>Tue, 09 Nov 2021 11:16:21 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</guid><description>お久しぶりです。 計算機プログラミングの授業でこの問題の解説をしたので、普段の解説記事とは違う形式ですがそのスライドを公開しようと思います (教員には許可を取っております)。 最近競技プログラミングを休んでいたのでかなりお久しぶりになっていました。ABC どころか Rated も出ていない……。 ゆっ</description></item><item><title>AtCoder Regular Contest 046 D - うさぎとマス目 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</link><pubDate>Tue, 01 Jun 2021 23:09:41 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
+&lt;/ul></description></item><item><title>AtCoder Beginner Contest 091 C / AtCoder Regular Contest 092 A - 2D Plane 2D Points 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</link><pubDate>Tue, 09 Nov 2021 11:20:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</guid><description>&lt;p>計算機プログラミングの授業では解説しなかったため没となったスライドを供養します。&lt;/p>
+&lt;p>本番では使用してないですがほぼ完成しています。あくまでスライドなので、普段の解説記事よりは簡潔かと思います。&lt;/p>
+&lt;div class="inner-link-wrapper">
+ &lt;iframe
+ class="hatenablogcard"
+ style="width:100%;height:155px;max-width:680px;"
+ src="https://hatenablog-parts.com/embed?url=https://drive.google.com/file/d/1K-0uNAh0CCfkpp27WTjvbk3ubbj46NlC/view?usp=sharing"
+ width="300" height="150" frameborder="0" scrolling="no">
+ &lt;/iframe>
+&lt;/div></description></item><item><title>AtCoder Grand Contest 029 B - Powers of two 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</link><pubDate>Tue, 09 Nov 2021 11:16:21 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</guid><description>&lt;p>お久しぶりです。&lt;/p>
+&lt;p>計算機プログラミングの授業でこの問題の解説をしたので、普段の解説記事とは違う形式ですがそのスライドを公開しようと思います (教員には許可を取っております)。&lt;/p>
+&lt;div class="inner-link-wrapper">
+ &lt;iframe
+ class="hatenablogcard"
+ style="width:100%;height:155px;max-width:680px;"
+ src="https://hatenablog-parts.com/embed?url=https://drive.google.com/file/d/11UXf2TLIKdU0GUf_szlIYr2LsgMy9CVq/view?usp=sharing"
+ width="300" height="150" frameborder="0" scrolling="no">
+ &lt;/iframe>
+&lt;/div>
+&lt;p>最近競技プログラミングを休んでいたのでかなりお久しぶりになっていました。ABC どころか Rated も出ていない……。&lt;/p>
+&lt;p>ゆっくりのんびり、余裕のある程度にまたやろうかなと思います。&lt;/p></description></item><item><title>AtCoder Regular Contest 046 D - うさぎとマス目 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</link><pubDate>Tue, 01 Jun 2021 23:09:41 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
 &lt;p>なんか全然公式解説と違うことしてました……。&lt;/p>
 &lt;h2 id="問題リンク">問題リンク&lt;/h2>
 &lt;p>&lt;a href="https://atcoder.jp/contests/arc046/tasks/arc046_d">https://atcoder.jp/contests/arc046/tasks/arc046_d&lt;/a>&lt;/p>
