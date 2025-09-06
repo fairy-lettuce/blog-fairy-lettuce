@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロその他 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/</link><description>Recent content in 競プロその他 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Tue, 22 Aug 2023 14:00:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 言語アップデートで使えるようになった新機能 2023 (.NET 5～7)</title><link>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-whatsnew-2023/</link><pubDate>Tue, 22 Aug 2023 14:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-whatsnew-2023/</guid><description>&lt;p>2023 年の AtCoder 言語アップデートで新しく使えるようになった C# の機能について、競技プログラミングの観点で使えそうなものをピックアップします。&lt;/p>
-&lt;h2 id="native-aot">Native AOT&lt;/h2>
-&lt;p>新しいコンパイル方式で、ネイティブのバイナリに変換してくれます。理論上 C++ 並みの実行速度を期待できるので、 C#er にとってはこの上ない福音でしょう。&lt;/p>
-&lt;p>問題にもよりますが、C++ と C# (JIT) の間くらいの実行時間になります。もちろん、旧来のコンパイル方式 (JIT) も利用可能です。&lt;/p></description></item><item><title>オンラインジャッジにおける C# 実行環境まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-onlinejudges/</link><pubDate>Tue, 22 Aug 2023 14:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-onlinejudges/</guid><description>&lt;p>C# は仕様や機能が比較的モダン [要出典] ながらも、その歴史とともに多くの仕様を追加して増築を繰り返してきた言語です。&lt;/p>
-&lt;p>また、仕様が大きく異なる多様な処理系が存在したり言語仕様が昔の処理系では非常に不便だったりします。&lt;/p>
-&lt;p>そのため、コーディングの感覚が実行環境によって比較的左右されやすい言語です。&lt;/p></description></item><item><title>【ご報告】ブログを順次引っ越します</title><link>https://blog.fairy-lettuce.com/cp/misc/blog-move/</link><pubDate>Tue, 10 Jan 2023 20:31:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/blog-move/</guid><description>&lt;p>お久しぶりです。れたすです。&lt;/p>
-&lt;p>この度は、ブログをはてなブログから&lt;a href="https://fairy-lettuce.github.io/">個人サイトのブログ&lt;/a>へと引っ越すことになりました。&lt;/p>
-&lt;p>個人ブログの中でも競技プログラミングに関連する解説記事やその他の記事はサイト内の「&lt;a href="https://fairy-lettuce.github.io/cp/">Competitive&lt;/a>」から閲覧できるようになる予定です。&lt;/p>
-&lt;div class="inner-link-wrapper">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロその他 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/</link><description>Recent content in 競プロその他 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Tue, 22 Aug 2023 14:00:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E3%81%9D%E3%81%AE%E4%BB%96/index.xml" rel="self" type="application/rss+xml"/><item><title>C# 言語アップデートで使えるようになった新機能 2023 (.NET 5～7)</title><link>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-whatsnew-2023/</link><pubDate>Tue, 22 Aug 2023 14:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-whatsnew-2023/</guid><description>&lt;p&gt;2023 年の AtCoder 言語アップデートで新しく使えるようになった C# の機能について、競技プログラミングの観点で使えそうなものをピックアップします。&lt;/p&gt;
+&lt;h2 id="native-aot"&gt;Native AOT&lt;/h2&gt;
+&lt;p&gt;新しいコンパイル方式で、ネイティブのバイナリに変換してくれます。理論上 C++ 並みの実行速度を期待できるので、 C#er にとってはこの上ない福音でしょう。&lt;/p&gt;
+&lt;p&gt;問題にもよりますが、C++ と C# (JIT) の間くらいの実行時間になります。もちろん、旧来のコンパイル方式 (JIT) も利用可能です。&lt;/p&gt;</description></item><item><title>オンラインジャッジにおける C# 実行環境まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-onlinejudges/</link><pubDate>Tue, 22 Aug 2023 14:00:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/csharp/csharp-onlinejudges/</guid><description>&lt;p&gt;C# は仕様や機能が比較的モダン [要出典] ながらも、その歴史とともに多くの仕様を追加して増築を繰り返してきた言語です。&lt;/p&gt;
+&lt;p&gt;また、仕様が大きく異なる多様な処理系が存在したり言語仕様が昔の処理系では非常に不便だったりします。&lt;/p&gt;
+&lt;p&gt;そのため、コーディングの感覚が実行環境によって比較的左右されやすい言語です。&lt;/p&gt;</description></item><item><title>【ご報告】ブログを順次引っ越します</title><link>https://blog.fairy-lettuce.com/cp/misc/blog-move/</link><pubDate>Tue, 10 Jan 2023 20:31:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/blog-move/</guid><description>&lt;p&gt;お久しぶりです。れたすです。&lt;/p&gt;
+&lt;p&gt;この度は、ブログをはてなブログから&lt;a href="https://fairy-lettuce.github.io/"&gt;個人サイトのブログ&lt;/a&gt;へと引っ越すことになりました。&lt;/p&gt;
+&lt;p&gt;個人ブログの中でも競技プログラミングに関連する解説記事やその他の記事はサイト内の「&lt;a href="https://fairy-lettuce.github.io/cp/"&gt;Competitive&lt;/a&gt;」から閲覧できるようになる予定です。&lt;/p&gt;
+&lt;div class="inner-link-wrapper"&gt;
  &lt;iframe
  class="hatenablogcard"
  style="width:100%;height:155px;max-width:680px;"
  src="https://hatenablog-parts.com/embed?url=https://fairy-lettuce.github.io/"
- width="300" height="150" frameborder="0" scrolling="no">
- &lt;/iframe>
-&lt;/div></description></item><item><title>【謹賀新年】ID変更のご報告</title><link>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</link><pubDate>Sat, 02 Jan 2021 20:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</guid><description>&lt;p>あけましておめでとうございます！&lt;/p>
-&lt;p>本年の抱負は何事もなく無事進級すること、及び AtCoder 橙達成 (中間目標として 3 月までに黄色) です。今年もよろしくお願いいたします。&lt;/p>
-&lt;h2 id="id変更のご報告">ID変更のご報告&lt;/h2>
-&lt;p>Codeforces では毎年恒例のユーザー名変更が可能な時期となりましたので、AtCoder 及び Codeforces の ID を fancy_lettuce から fairy_lettuce に変更し、Topcoder 含め統一しました。&lt;/p></description></item><item><title>AtCoder Problems の diff 推定アルゴリズムの変更に伴い色が変わった問題まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</link><pubDate>Tue, 17 Nov 2020 20:22:19 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</guid><description>&lt;p>AtCoder Problems に本日(11月17日)アップデートが入り、各問題の difficulty (以下、diff)の推定アルゴリズムが変わりました。これに伴いいくつかの問題で diff の色が変更になったため、&lt;b>色が変更になった&lt;/b>問題をまとめます。&lt;/p>
-&lt;blockquote class="twitter-tweet" >
- &lt;p lang="ja" dir="ltr">&lt;/p>
- &lt;a href="https://twitter.com/kenkoooo/status/1328538237850193920?s=20">&lt;/a>
-&lt;/blockquote>
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
-日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
-&lt;p>出典:&lt;br>
-&lt;a href="https://codeforces.com/blog/entry/77890">Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a>&lt;/p>
-&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b>マイナス補正&lt;/b>が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p></description></item></channel></rss>
+ width="300" height="150" frameborder="0" scrolling="no"&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;</description></item><item><title>【謹賀新年】ID変更のご報告</title><link>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</link><pubDate>Sat, 02 Jan 2021 20:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</guid><description>&lt;p&gt;あけましておめでとうございます！&lt;/p&gt;
+&lt;p&gt;本年の抱負は何事もなく無事進級すること、及び AtCoder 橙達成 (中間目標として 3 月までに黄色) です。今年もよろしくお願いいたします。&lt;/p&gt;
+&lt;h2 id="id変更のご報告"&gt;ID変更のご報告&lt;/h2&gt;
+&lt;p&gt;Codeforces では毎年恒例のユーザー名変更が可能な時期となりましたので、AtCoder 及び Codeforces の ID を fancy_lettuce から fairy_lettuce に変更し、Topcoder 含め統一しました。&lt;/p&gt;</description></item><item><title>AtCoder Problems の diff 推定アルゴリズムの変更に伴い色が変わった問題まとめ</title><link>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</link><pubDate>Tue, 17 Nov 2020 20:22:19 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/atcoder-problems-diff/</guid><description>&lt;p&gt;AtCoder Problems に本日(11月17日)アップデートが入り、各問題の difficulty (以下、diff)の推定アルゴリズムが変わりました。これに伴いいくつかの問題で diff の色が変更になったため、&lt;b&gt;色が変更になった&lt;/b&gt;問題をまとめます。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" &gt;
+ &lt;p lang="ja" dir="ltr"&gt;&lt;/p&gt;
+ &lt;a href="https://twitter.com/kenkoooo/status/1328538237850193920?s=20"&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p&gt;初めまして。最近競プロ頑張ってるれたすです。&lt;br&gt;
+日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p&gt;
+&lt;p&gt;出典:&lt;br&gt;
+&lt;a href="https://codeforces.com/blog/entry/77890"&gt;Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="概要"&gt;概要&lt;/h2&gt;
+&lt;p&gt;新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b&gt;マイナス補正&lt;/b&gt;が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p&gt;</description></item></channel></rss>

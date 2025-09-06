@@ -1,132 +1,132 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codeforces on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/codeforces/</link><description>Recent content in Codeforces on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Thu, 20 May 2021 19:35:25 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml"/><item><title>Educational Codeforces Round 91 E - Merging Towers 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</link><pubDate>Thu, 20 May 2021 19:35:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>解説記事や Editorial などをざっくり見ても自分の解法の解説が無かったので。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1380/problem/E">https://codeforces.com/contest/1380/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 個の皿が $m$ 個のタワーに置かれています。皿は直径がそれぞれ $1,2,\dots,n$ であり、直径が $i$ である皿はタワー $t_i$ に置かれています。また、各タワーには上から直径が小さい順に皿が置かれています。&lt;/p>
-&lt;p>あなたは $m$ 個のタワーのうち $1$ つに全ての皿が乗っているようにしたいです。タワーは以下の操作を何回か行うことでまとめます。&lt;/p>
-&lt;ul>
-&lt;li>好きな $i,j\ (1\le i,j\le m,\ i\ne j)$ を選ぶ。タワー $i$ から上から何個か (全部でも良い) の皿を取り、同じ順番でタワー $j$ の上に置く。このとき、動かす皿は全て操作前のタワー $j$ の一番上の皿よりも小さくてはならない。&lt;/li>
-&lt;/ul>
-&lt;p>タワーを $1$ つにまとめるのに必要な操作回数の最小値を、タワーをまとめる&lt;b>難易度&lt;/b>と呼ぶことにします。&lt;/p>
-&lt;p>さて、$m-1$ 個のクエリ $a_i,b_i$ が与えられます。$i$ 個目のクエリはタワー $b_i$ の皿を全てタワー $a_i$ の皿とまとめ、新たなタワー $a_i$ にすることを意味します。新たなタワーも皿は上から小さい順になるようにします。これは難易度には関係しません。&lt;/p>
-&lt;p>全ての $k=0,1,2,\dots,m-1$ について、$k$ 番目のクエリまでを処理した状態でのタワーをまとめる&lt;b>難易度&lt;/b>を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le m\le n\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le t_i\le m$&lt;/li>
-&lt;li>$1,2,\dots,m$ までの整数がそれぞれ少なくとも 1 回以上 $t_i$ に現れる。&lt;/li>
-&lt;li>$1\le a_i,b_i\le m,\ a_i\ne b_i$&lt;/li>
-&lt;li>クエリ $a_i,b_i$ はどちらのタワーもそのクエリの時点で存在するようなものが与えられる。&lt;/li>
-&lt;/ul></description></item><item><title>Contest 2050 and Codeforces Round #718 (Div. 1 + Div. 2) D - Exploror Space 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</link><pubDate>Mon, 26 Apr 2021 17:51:57 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>謎制約。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1517/problem/D">https://codeforces.com/contest/1517/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n\times m$ のグリッドグラフが与えられます。$4$ 近傍で繋がっている各辺には道の長さが与えられています。&lt;/p>
-&lt;p>全ての $(i,j)$ について、$k$ 回移動を繰り返して最初の位置 $(i,j)$ に戻ってくるとき、移動経路の距離の最小値を答えてください。戻ってこれなければ -1 としてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le n,m\le 500$&lt;/li>
-&lt;li>$1\le k\le 20$&lt;/li>
-&lt;li>$1\le (各辺の長さ)\le 10^6$&lt;/li>
-&lt;/ul></description></item><item><title>Educational Codeforces Round 102 E - Minimum Path 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</link><pubDate>Fri, 15 Jan 2021 03:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>Educational Codeforces 初めての Unrated 参加でした。見事に出来ないといけない問題が解けずに Educate されました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1473/problem/E">https://codeforces.com/contest/1473/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 頂点 $m$ 辺の重み付き有向連結グラフが与えられます。ここで、二頂点間のパスの距離を、通る辺の重みの総和に、重みの最小値を足して、最大値を引いたものと定義します。頂点 $1$ から各頂点への距離の最小値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le n\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le m\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le w_i\le 10^9$&lt;/li>
-&lt;/ul></description></item><item><title>【謹賀新年】ID変更のご報告</title><link>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</link><pubDate>Sat, 02 Jan 2021 20:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</guid><description>&lt;p>あけましておめでとうございます！&lt;/p>
-&lt;p>本年の抱負は何事もなく無事進級すること、及び AtCoder 橙達成 (中間目標として 3 月までに黄色) です。今年もよろしくお願いいたします。&lt;/p>
-&lt;h2 id="id変更のご報告">ID変更のご報告&lt;/h2>
-&lt;p>Codeforces では毎年恒例のユーザー名変更が可能な時期となりましたので、AtCoder 及び Codeforces の ID を fancy_lettuce から fairy_lettuce に変更し、Topcoder 含め統一しました。&lt;/p></description></item><item><title>Educational Codeforces Round 101 E - A Bit Similar 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</link><pubDate>Tue, 29 Dec 2020 02:55:29 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>C 問題は問題文が読みにくくて少しつらかったけど、D 問題も E 問題も面白くて楽しいセットでした。本番ギリギリ E が間に合わなくてつらかった……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1469/problem/E">https://codeforces.com/contest/1469/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>ふたつの文字列 $a,\ b$ について、同じ位置に同じ文字が存在するような位置がひとつでもある場合、&lt;i>a bit similar&lt;/i> といいます。&lt;/p>
-&lt;p>&lt;code>0&lt;/code> および &lt;code>1&lt;/code> からなる文字列 $s$ について、その長さ $k$ の部分文字列全てと a bit similar である長さ $k$ の文字列のうち、辞書順最小のものを求めてください。そのような文字列が存在しない場合はその旨を報告してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le k\le n\le 10^6$&lt;/p></description></item><item><title>AtCoder 青 / Codeforces 紫 / Topcoder 黄 になりました</title><link>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-blue/</link><pubDate>Wed, 09 Dec 2020 00:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-blue/</guid><description>&lt;p>この記事は、&lt;a href="https://adventar.org/calendars/5178">色変記事 Advent Calendar 2020&lt;/a> の12月9日公開の記事です。&lt;/p>
-&lt;hr>
-&lt;p>色変記事アドベントカレンダー、なるものの募集を見ました。&lt;/p>
-&lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">色変記事AdventCalendarを作成しました。&lt;br>みなさまの勇気ある宣言をお待ちしております！&lt;a href="https://t.co/1NqMxq7Wu3">https://t.co/1NqMxq7Wu3&lt;/a>&lt;/p>&amp;mdash; dokin (@ayoiyouyoeyo) &lt;a href="https://twitter.com/ayoiyouyoeyo/status/1323945171734519809?ref_src=twsrc%5Etfw">November 4, 2020&lt;/a>&lt;/blockquote>
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codeforces on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/codeforces/</link><description>Recent content in Codeforces on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Thu, 20 May 2021 19:35:25 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml"/><item><title>Educational Codeforces Round 91 E - Merging Towers 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</link><pubDate>Thu, 20 May 2021 19:35:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;解説記事や Editorial などをざっくり見ても自分の解法の解説が無かったので。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1380/problem/E"&gt;https://codeforces.com/contest/1380/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 個の皿が $m$ 個のタワーに置かれています。皿は直径がそれぞれ $1,2,\dots,n$ であり、直径が $i$ である皿はタワー $t_i$ に置かれています。また、各タワーには上から直径が小さい順に皿が置かれています。&lt;/p&gt;
+&lt;p&gt;あなたは $m$ 個のタワーのうち $1$ つに全ての皿が乗っているようにしたいです。タワーは以下の操作を何回か行うことでまとめます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好きな $i,j\ (1\le i,j\le m,\ i\ne j)$ を選ぶ。タワー $i$ から上から何個か (全部でも良い) の皿を取り、同じ順番でタワー $j$ の上に置く。このとき、動かす皿は全て操作前のタワー $j$ の一番上の皿よりも小さくてはならない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;タワーを $1$ つにまとめるのに必要な操作回数の最小値を、タワーをまとめる&lt;b&gt;難易度&lt;/b&gt;と呼ぶことにします。&lt;/p&gt;
+&lt;p&gt;さて、$m-1$ 個のクエリ $a_i,b_i$ が与えられます。$i$ 個目のクエリはタワー $b_i$ の皿を全てタワー $a_i$ の皿とまとめ、新たなタワー $a_i$ にすることを意味します。新たなタワーも皿は上から小さい順になるようにします。これは難易度には関係しません。&lt;/p&gt;
+&lt;p&gt;全ての $k=0,1,2,\dots,m-1$ について、$k$ 番目のクエリまでを処理した状態でのタワーをまとめる&lt;b&gt;難易度&lt;/b&gt;を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le m\le n\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le t_i\le m$&lt;/li&gt;
+&lt;li&gt;$1,2,\dots,m$ までの整数がそれぞれ少なくとも 1 回以上 $t_i$ に現れる。&lt;/li&gt;
+&lt;li&gt;$1\le a_i,b_i\le m,\ a_i\ne b_i$&lt;/li&gt;
+&lt;li&gt;クエリ $a_i,b_i$ はどちらのタワーもそのクエリの時点で存在するようなものが与えられる。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Contest 2050 and Codeforces Round #718 (Div. 1 + Div. 2) D - Exploror Space 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</link><pubDate>Mon, 26 Apr 2021 17:51:57 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;謎制約。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1517/problem/D"&gt;https://codeforces.com/contest/1517/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n\times m$ のグリッドグラフが与えられます。$4$ 近傍で繋がっている各辺には道の長さが与えられています。&lt;/p&gt;
+&lt;p&gt;全ての $(i,j)$ について、$k$ 回移動を繰り返して最初の位置 $(i,j)$ に戻ってくるとき、移動経路の距離の最小値を答えてください。戻ってこれなければ -1 としてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le n,m\le 500$&lt;/li&gt;
+&lt;li&gt;$1\le k\le 20$&lt;/li&gt;
+&lt;li&gt;$1\le (各辺の長さ)\le 10^6$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Educational Codeforces Round 102 E - Minimum Path 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</link><pubDate>Fri, 15 Jan 2021 03:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;Educational Codeforces 初めての Unrated 参加でした。見事に出来ないといけない問題が解けずに Educate されました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1473/problem/E"&gt;https://codeforces.com/contest/1473/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 頂点 $m$ 辺の重み付き有向連結グラフが与えられます。ここで、二頂点間のパスの距離を、通る辺の重みの総和に、重みの最小値を足して、最大値を引いたものと定義します。頂点 $1$ から各頂点への距離の最小値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le n\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le m\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le w_i\le 10^9$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>【謹賀新年】ID変更のご報告</title><link>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</link><pubDate>Sat, 02 Jan 2021 20:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/newyear-newid/</guid><description>&lt;p&gt;あけましておめでとうございます！&lt;/p&gt;
+&lt;p&gt;本年の抱負は何事もなく無事進級すること、及び AtCoder 橙達成 (中間目標として 3 月までに黄色) です。今年もよろしくお願いいたします。&lt;/p&gt;
+&lt;h2 id="id変更のご報告"&gt;ID変更のご報告&lt;/h2&gt;
+&lt;p&gt;Codeforces では毎年恒例のユーザー名変更が可能な時期となりましたので、AtCoder 及び Codeforces の ID を fancy_lettuce から fairy_lettuce に変更し、Topcoder 含め統一しました。&lt;/p&gt;</description></item><item><title>Educational Codeforces Round 101 E - A Bit Similar 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</link><pubDate>Tue, 29 Dec 2020 02:55:29 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;C 問題は問題文が読みにくくて少しつらかったけど、D 問題も E 問題も面白くて楽しいセットでした。本番ギリギリ E が間に合わなくてつらかった……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1469/problem/E"&gt;https://codeforces.com/contest/1469/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;ふたつの文字列 $a,\ b$ について、同じ位置に同じ文字が存在するような位置がひとつでもある場合、&lt;i&gt;a bit similar&lt;/i&gt; といいます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;0&lt;/code&gt; および &lt;code&gt;1&lt;/code&gt; からなる文字列 $s$ について、その長さ $k$ の部分文字列全てと a bit similar である長さ $k$ の文字列のうち、辞書順最小のものを求めてください。そのような文字列が存在しない場合はその旨を報告してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le k\le n\le 10^6$&lt;/p&gt;</description></item><item><title>AtCoder 青 / Codeforces 紫 / Topcoder 黄 になりました</title><link>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-blue/</link><pubDate>Wed, 09 Dec 2020 00:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/kyopro-colorchange-blue/</guid><description>&lt;p&gt;この記事は、&lt;a href="https://adventar.org/calendars/5178"&gt;色変記事 Advent Calendar 2020&lt;/a&gt; の12月9日公開の記事です。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;色変記事アドベントカレンダー、なるものの募集を見ました。&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="ja" dir="ltr"&gt;色変記事AdventCalendarを作成しました。&lt;br&gt;みなさまの勇気ある宣言をお待ちしております！&lt;a href="https://t.co/1NqMxq7Wu3"&gt;https://t.co/1NqMxq7Wu3&lt;/a&gt;&lt;/p&gt;&amp;mdash; dokin (@ayoiyouyoeyo) &lt;a href="https://twitter.com/ayoiyouyoeyo/status/1323945171734519809?ref_src=twsrc%5Etfw"&gt;November 4, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 
-&lt;p>この恐ろしいアドベントカレンダーを見てしまった私。そういえば、AtCoder 青も Codeforces 紫も、近かったような……あれ、Topcoder も黄になれるんじゃ？&lt;/p>
-&lt;a href="https://f.hatena.ne.jp/fairy_lettuce/20201105125829">
- &lt;img src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fairy_lettuce/20201105/20201105125829.png" alt="20201105125829">
-&lt;/a>
-&lt;p>ということで、参加してみました。完全にノリですが、Topcoder はともかく AtCoder と Codeforces はずっと色変しないまま膠着していたので、これを期に色変してやろうと考えました。&lt;/p>
-&lt;p>(達成できたら)恐らく前代未聞の、3 コンテストサイト同時の色変記事になります。&lt;/p></description></item><item><title>Educational Codeforces Round 99 D - Sequence and Swaps 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</link><pubDate>Wed, 02 Dec 2020 03:23:08 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</guid><description>&lt;p>大爆死。反省を込めて解説ブログを書きます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1455/problem/D">https://codeforces.com/contest/1455/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>非負整数からなる数列 ${a_i}$ および非負整数 $x$ が与えられます。&lt;br>
-$a_{i}&amp;gt;x$ である $a_{i},\ x$ を swap することを任意の回数できます。$a$ を広義単調増加にするためには最小で何回の操作を行えばいいでしょうか。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 500$ (テストケース数)&lt;br>
-$1\le n\le 500$&lt;br>
-$0\le x,\ a_i\le 500$&lt;/p></description></item><item><title>Codeforces Round #686 Div.3-F - Array Partition 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</link><pubDate>Wed, 25 Nov 2020 06:47:38 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>これ E よりも簡単じゃないですか？&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1454/problem/F">https://codeforces.com/contest/1454/problem/F&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 要素からなる数列 $a$ があります。$a$ を $1$ 以上の要素からなる $3$ つの部分列に分けます。&lt;br>
-最初の部分列の最大値、真ん中の部分列の最小値、最後の部分列の最大値が全て等しくなるような分け方は存在しますか。存在するときはその分け方も出力してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br>
-$3\le n\le 2\times 10^{5}$&lt;br>
-$1\le a_{i} \le 10^{9}$&lt;br>
-$\sum{n}\le 2\times 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #686 Div.3-E - Number of Simple Paths 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</link><pubDate>Wed, 25 Nov 2020 05:34:46 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</guid><description>&lt;p>Div. 3 全完しようと思ったらこの問題に阻まれてしまいました。どう考えても不可能だと思ってたけど、よくよく見たらなもりグラフという制約を見逃していました。恥ずかしい。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1454/problem/E">https://codeforces.com/contest/1454/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>自己ループや多重辺のない $n$ 頂点 $n$ 辺の連結グラフ(つまり、&lt;b>なもりグラフ&lt;/b>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)が与えられます。このグラフに含まれる長さが $1$ 以上の単純パスの数を求めてください。ただし、逆順にたどっただけのパスは同じものとみなします。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br>
-$3\le n\le 2\times 10^{5}$&lt;br>
-$\sum{n}\le 2\times 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #685 Div.2-E1/E2 - Bitwise Queries 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</link><pubDate>Sun, 22 Nov 2020 04:28:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</guid><description>&lt;p>数列を当てる系のインタラクティブとても好きだし得意。この前の JOI の数当てもそうだったけど、こういう問題を考えるのがとても楽しいと思えます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>E1 (Easy Version): &lt;a href="https://codeforces.com/contest/1451/problem/E1">https://codeforces.com/contest/1451/problem/E1&lt;/a>&lt;br>
-E2 (Hard Version): &lt;a href="https://codeforces.com/contest/1451/problem/E2">https://codeforces.com/contest/1451/problem/E2&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 要素からなる数列 $a$ を当てるインタラクティブ問題。解答者はプログラムの中で以下の質問をすることができます。&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>AND i j&lt;/code>: $a_{i}$ と $a_{j}$ の AND を質問する。&lt;/li>
-&lt;li>&lt;code>OR i j&lt;/code>: $a_{i}$ と $a_{j}$ の OR を質問する。&lt;/li>
-&lt;li>&lt;code>XOR i j&lt;/code>: $a_{i}$ と $a_{j}$ の XOR を質問する。&lt;/li>
-&lt;/ul>
-&lt;p>規定の回数以内の質問で元の数列を当ててください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$4\le n\le 2^{16}$&lt;br>
-$n$ は $2$ の冪である&lt;br>
-&lt;b>Easy&lt;/b>: 質問の回数は $n+2$ 回以内&lt;br>
-&lt;b>Hard&lt;/b>: 質問の回数は $n+1$ 回以内&lt;/p></description></item><item><title>Codeforces Round #685 Div.2-D - Circle Game 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</link><pubDate>Sun, 22 Nov 2020 02:45:20 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</guid><description>&lt;p>同じ日の ARC で -55 もレート溶かしたのに同じ日のこどふぉでレート超盛りました。Codeforces は調子いいのに、AtCoder の下振れが酷いです。助けて。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1451/problem/D">https://codeforces.com/contest/1451/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$x-y$ 座標上の円 $x^{2}+y^{2}=d^{2}$ があります。この円の中でマスを動かすゲームをします。&lt;br>
-マスは最初 $(0,\ 0)$ にあり、ふたりはお互いのターンで $x,\ y$ 座標どちらかの正の向きにちょうど $k$ だけ進めます。円の外に出たら負けです。勝者は先手か後手か求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le d \le 10^{5}$&lt;br>
-$1\le k \le 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #683 Div.2-D/Div.1-B - Catching Cheaters 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</link><pubDate>Mon, 16 Nov 2020 04:30:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</guid><description>&lt;p>Rated コンテストにたくさん出たいのでこどふぉに出ました。冷えました。つらいです……。&lt;/p>
-&lt;p>今回はその冷えたこどふぉで解けなかった問題の解説です。解けて然るべき問題を解けなかった時の辛さは全競プロer共通だと勝手に思っています。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1447/problem/D">https://codeforces.com/contest/1447/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>文字列 $A,\ B$ の&lt;b>部分文字列&lt;/b>を $C,\ D$ とします。$C,\ D$ のスコアを $4\times LCS(C,\ D)-|C|-|D|$ とします。ただし、$LCS(C,\ D)$ は $C,\ D$ の最長&lt;b>部分列&lt;/b>の長さとします。スコアの最大値を求めて下さい。&lt;br>
-部分文字列は連続していなければならず、部分列は連続していなくてもいいことに注意して下さい。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le |A|,\ |B|\le 5000$&lt;/p></description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p>初めまして。最近競プロ頑張ってるれたすです。&lt;br>
-日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p>
-&lt;p>出典:&lt;br>
-&lt;a href="https://codeforces.com/blog/entry/77890">Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a>&lt;/p>
-&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b>マイナス補正&lt;/b>が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p></description></item></channel></rss>
+&lt;p&gt;この恐ろしいアドベントカレンダーを見てしまった私。そういえば、AtCoder 青も Codeforces 紫も、近かったような……あれ、Topcoder も黄になれるんじゃ？&lt;/p&gt;
+&lt;a href="https://f.hatena.ne.jp/fairy_lettuce/20201105125829"&gt;
+ &lt;img src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fairy_lettuce/20201105/20201105125829.png" alt="20201105125829"&gt;
+&lt;/a&gt;
+&lt;p&gt;ということで、参加してみました。完全にノリですが、Topcoder はともかく AtCoder と Codeforces はずっと色変しないまま膠着していたので、これを期に色変してやろうと考えました。&lt;/p&gt;
+&lt;p&gt;(達成できたら)恐らく前代未聞の、3 コンテストサイト同時の色変記事になります。&lt;/p&gt;</description></item><item><title>Educational Codeforces Round 99 D - Sequence and Swaps 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</link><pubDate>Wed, 02 Dec 2020 03:23:08 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</guid><description>&lt;p&gt;大爆死。反省を込めて解説ブログを書きます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1455/problem/D"&gt;https://codeforces.com/contest/1455/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;非負整数からなる数列 ${a_i}$ および非負整数 $x$ が与えられます。&lt;br&gt;
+$a_{i}&amp;gt;x$ である $a_{i},\ x$ を swap することを任意の回数できます。$a$ を広義単調増加にするためには最小で何回の操作を行えばいいでしょうか。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 500$ (テストケース数)&lt;br&gt;
+$1\le n\le 500$&lt;br&gt;
+$0\le x,\ a_i\le 500$&lt;/p&gt;</description></item><item><title>Codeforces Round #686 Div.3-F - Array Partition 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</link><pubDate>Wed, 25 Nov 2020 06:47:38 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;これ E よりも簡単じゃないですか？&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1454/problem/F"&gt;https://codeforces.com/contest/1454/problem/F&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 要素からなる数列 $a$ があります。$a$ を $1$ 以上の要素からなる $3$ つの部分列に分けます。&lt;br&gt;
+最初の部分列の最大値、真ん中の部分列の最小値、最後の部分列の最大値が全て等しくなるような分け方は存在しますか。存在するときはその分け方も出力してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br&gt;
+$3\le n\le 2\times 10^{5}$&lt;br&gt;
+$1\le a_{i} \le 10^{9}$&lt;br&gt;
+$\sum{n}\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>Codeforces Round #686 Div.3-E - Number of Simple Paths 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</link><pubDate>Wed, 25 Nov 2020 05:34:46 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</guid><description>&lt;p&gt;Div. 3 全完しようと思ったらこの問題に阻まれてしまいました。どう考えても不可能だと思ってたけど、よくよく見たらなもりグラフという制約を見逃していました。恥ずかしい。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1454/problem/E"&gt;https://codeforces.com/contest/1454/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;自己ループや多重辺のない $n$ 頂点 $n$ 辺の連結グラフ(つまり、&lt;b&gt;なもりグラフ&lt;/b&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;)が与えられます。このグラフに含まれる長さが $1$ 以上の単純パスの数を求めてください。ただし、逆順にたどっただけのパスは同じものとみなします。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br&gt;
+$3\le n\le 2\times 10^{5}$&lt;br&gt;
+$\sum{n}\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>Codeforces Round #685 Div.2-E1/E2 - Bitwise Queries 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</link><pubDate>Sun, 22 Nov 2020 04:28:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</guid><description>&lt;p&gt;数列を当てる系のインタラクティブとても好きだし得意。この前の JOI の数当てもそうだったけど、こういう問題を考えるのがとても楽しいと思えます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;E1 (Easy Version): &lt;a href="https://codeforces.com/contest/1451/problem/E1"&gt;https://codeforces.com/contest/1451/problem/E1&lt;/a&gt;&lt;br&gt;
+E2 (Hard Version): &lt;a href="https://codeforces.com/contest/1451/problem/E2"&gt;https://codeforces.com/contest/1451/problem/E2&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 要素からなる数列 $a$ を当てるインタラクティブ問題。解答者はプログラムの中で以下の質問をすることができます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AND i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の AND を質問する。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OR i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の OR を質問する。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;XOR i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の XOR を質問する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;規定の回数以内の質問で元の数列を当ててください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$4\le n\le 2^{16}$&lt;br&gt;
+$n$ は $2$ の冪である&lt;br&gt;
+&lt;b&gt;Easy&lt;/b&gt;: 質問の回数は $n+2$ 回以内&lt;br&gt;
+&lt;b&gt;Hard&lt;/b&gt;: 質問の回数は $n+1$ 回以内&lt;/p&gt;</description></item><item><title>Codeforces Round #685 Div.2-D - Circle Game 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</link><pubDate>Sun, 22 Nov 2020 02:45:20 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</guid><description>&lt;p&gt;同じ日の ARC で -55 もレート溶かしたのに同じ日のこどふぉでレート超盛りました。Codeforces は調子いいのに、AtCoder の下振れが酷いです。助けて。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1451/problem/D"&gt;https://codeforces.com/contest/1451/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$x-y$ 座標上の円 $x^{2}+y^{2}=d^{2}$ があります。この円の中でマスを動かすゲームをします。&lt;br&gt;
+マスは最初 $(0,\ 0)$ にあり、ふたりはお互いのターンで $x,\ y$ 座標どちらかの正の向きにちょうど $k$ だけ進めます。円の外に出たら負けです。勝者は先手か後手か求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le d \le 10^{5}$&lt;br&gt;
+$1\le k \le 10^{5}$&lt;/p&gt;</description></item><item><title>Codeforces Round #683 Div.2-D/Div.1-B - Catching Cheaters 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</link><pubDate>Mon, 16 Nov 2020 04:30:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</guid><description>&lt;p&gt;Rated コンテストにたくさん出たいのでこどふぉに出ました。冷えました。つらいです……。&lt;/p&gt;
+&lt;p&gt;今回はその冷えたこどふぉで解けなかった問題の解説です。解けて然るべき問題を解けなかった時の辛さは全競プロer共通だと勝手に思っています。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1447/problem/D"&gt;https://codeforces.com/contest/1447/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;文字列 $A,\ B$ の&lt;b&gt;部分文字列&lt;/b&gt;を $C,\ D$ とします。$C,\ D$ のスコアを $4\times LCS(C,\ D)-|C|-|D|$ とします。ただし、$LCS(C,\ D)$ は $C,\ D$ の最長&lt;b&gt;部分列&lt;/b&gt;の長さとします。スコアの最大値を求めて下さい。&lt;br&gt;
+部分文字列は連続していなければならず、部分列は連続していなくてもいいことに注意して下さい。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le |A|,\ |B|\le 5000$&lt;/p&gt;</description></item><item><title>Codeforces の新レーティングについてまとめてみた</title><link>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</link><pubDate>Thu, 02 Jul 2020 02:40:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/misc/codeforces-newrating/</guid><description>&lt;p&gt;初めまして。最近競プロ頑張ってるれたすです。&lt;br&gt;
+日本語文献が一切無さそうな、Codeforcesに最近適用された新しいレーティング算出方法についてまとめようと思います。Codeforcesって色んな情報をまとめるのが不便なので大変ですよね……。&lt;/p&gt;
+&lt;p&gt;出典:&lt;br&gt;
+&lt;a href="https://codeforces.com/blog/entry/77890"&gt;Codeforces: Soon We Will Change the Rating Calculation for New Accounts&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="概要"&gt;概要&lt;/h2&gt;
+&lt;p&gt;新しくCodeforcesに参加するアカウントには初回$6$回のコンテストに限り表示レートに&lt;b&gt;マイナス補正&lt;/b&gt;が掛かるようになります(AtCoderのレートに掛かるいわゆるリセマラ補正みたいなもの)。マイナス補正は回数を重ねる毎に少しずつ小さくなっていって$6$回目の参加でゼロになります。&lt;/p&gt;</description></item></channel></rss>

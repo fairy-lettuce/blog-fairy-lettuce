@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCJ on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/gcj/</link><description>Recent content in GCJ on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sat, 30 Apr 2022 21:23:14 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/gcj/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Code Jam Round 1C 2022 B - Squary 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</link><pubDate>Sat, 30 Apr 2022 21:23:14 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>おもしろかった。気付いたときうわーーーーって言いました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76">https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76&lt;/a>&lt;/p>
-&lt;p>&lt;strong>2023/07/16 追記&lt;/strong>&lt;/p>
-&lt;p>GCJ のサイトが閉じられたので、代替となるリンクを貼ります。&lt;/p>
-&lt;p>&lt;a href="https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary">https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary&lt;/a>&lt;/p>
-&lt;p>なお、GCJ の過去問のデータは&lt;a href="https://github.com/google/coding-competitions-archive">このリポジトリ&lt;/a>で参照できます。&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>数列 ${E_i}$ に、$K$ 個以下の整数 ($-10^{18}$ 以上 $10^{18}$ 以下) を追加し、以下の等式が成り立つようにしてください。&lt;/p>
-&lt;ul>
-&lt;li>$\displaystyle \sum E_i^2=\left(\sum E_i \right)^2$&lt;/li>
-&lt;/ul>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le T\le 100$ (テストケース数)&lt;/li>
-&lt;li>$1\le N\le 1000$ (数列の長さ)&lt;/li>
-&lt;li>$-1000\le E_i\le 1000$&lt;/li>
-&lt;/ul>
-&lt;h2 id="小課題">小課題&lt;/h2>
-&lt;ul>
-&lt;li>小課題 1 (9pts): $K=1$&lt;/li>
-&lt;li>小課題 2 (22pts): $2\le K \le 1000$&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GCJ on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/gcj/</link><description>Recent content in GCJ on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sat, 30 Apr 2022 21:23:14 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/gcj/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Code Jam Round 1C 2022 B - Squary 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</link><pubDate>Sat, 30 Apr 2022 21:23:14 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;おもしろかった。気付いたときうわーーーーって言いました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76"&gt;https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2023/07/16 追記&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GCJ のサイトが閉じられたので、代替となるリンクを貼ります。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary"&gt;https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;なお、GCJ の過去問のデータは&lt;a href="https://github.com/google/coding-competitions-archive"&gt;このリポジトリ&lt;/a&gt;で参照できます。&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;数列 ${E_i}$ に、$K$ 個以下の整数 ($-10^{18}$ 以上 $10^{18}$ 以下) を追加し、以下の等式が成り立つようにしてください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\displaystyle \sum E_i^2=\left(\sum E_i \right)^2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le T\le 100$ (テストケース数)&lt;/li&gt;
+&lt;li&gt;$1\le N\le 1000$ (数列の長さ)&lt;/li&gt;
+&lt;li&gt;$-1000\le E_i\le 1000$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="小課題"&gt;小課題&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;小課題 1 (9pts): $K=1$&lt;/li&gt;
+&lt;li&gt;小課題 2 (22pts): $2\le K \le 1000$&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

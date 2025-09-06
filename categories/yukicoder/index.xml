@@ -1,118 +1,118 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yukicoder on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/yukicoder/</link><description>Recent content in Yukicoder on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sun, 17 Jan 2021 19:27:40 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/yukicoder/index.xml" rel="self" type="application/rss+xml"/><item><title>yukicoder No. 1354 - Sambo's Treasure 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</link><pubDate>Sun, 17 Jan 2021 19:27:40 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/307">灘中入試コンテストday2&lt;/a>-E でした。実装が重かったです。無限に実装をバグらせてしまい、自らの実装力の無さを嘆きました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1354">https://yukicoder.me/problems/no/1354&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$x,\ y$ 座標ともに $0,\ 1,\ \dots,\ N$ からなる竹藪があります。サンボ君はこの竹藪の $M$ 個のチェックポイントを全て通りつつ $(0,\ 0)$ から $(N,\ N)$ へと移動したいです。移動は右または下にのみ可能です。&lt;/p>
-&lt;p>ただし、竹藪には $L$ 体のトラが棲んでいます。トラのいるマスには最大でも $K$ 回までしか通れません。&lt;/p>
-&lt;p>条件を満たすような移動のしかたは何通りあるでしょうか。$998244353$ で割った余りを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 2\times 10^{5}$&lt;/li>
-&lt;li>$0\le M\le \min(10^5,\ N-1)$&lt;/li>
-&lt;li>$0\le L\le \min(100,\ (N+1)^2-2)$&lt;/li>
-&lt;li>$0\le K\le 10^5$&lt;/li>
-&lt;li>チェックポイントの座標について、$0\lt xc_i,\ yc_i\lt N$&lt;/li>
-&lt;li>$xc_i\lt xc_{i+1},\ yc_i\lt yc_{i+1}$&lt;/li>
-&lt;li>トラの座標について、$0\le xt_i,\ yt_i\le N,\ (xt_i,\ yt_i)\ne (0,\ 0),\ (N,\ N)$&lt;/li>
-&lt;li>トラの座標は Distinct&lt;/li>
-&lt;/ul></description></item><item><title>yukicoder No. 1314 - N言っちゃダメゲーム (5)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</link><pubDate>Fri, 11 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>ネタ被りが前日に発覚して (4) が (5) になるってどんな偶然なんですか？？&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1314#">https://yukicoder.me/problems/no/1314#&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/8">N言っちゃダメゲーム&lt;/a>をします。つまり、先手であるあなたは $0$ から始め、お互いに $[1,\ K]$ の整数を加算したものを言っていき、$N$ 以上の整数を言った人の負けです。&lt;br>
-$N$ は今回 $2$ 以上 $M$ の各整数を用います。先手の人は残っているものの中から好きなものを選び、その回の $N$ とします。一度使った数は以降使えなくなります。$2$ 回目以降のゲームは前回負けたプレイヤーが先手をします。&lt;/p>
-&lt;p>お互いに各ゲームではわざと負けたりしない条件のもと勝つ回数を最大化します。あなたが勝つか負けるか、引き分けになるかを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le M,\ K\le 10^{9}$&lt;/p></description></item><item><title>yukicoder No. 1313 - N言っちゃダメゲーム (4)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</link><pubDate>Thu, 10 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1313">https://yukicoder.me/problems/no/1313&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>先攻のプレイヤーであるあなたは $0$ から始めます。交互に $[1,\ K]$ のうちのどれかの整数を加算していきます。$N$ 以上の数字、または予め指定された&lt;b>危険な数字&lt;/b>を言ってしまうと負けです。&lt;/p>
-&lt;p>あなたが勝つ場合は最初に宣言して勝てる数字を全て出力してください。あなたが負ける場合は $0$ を出力してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$N,\ K$ は整数&lt;/li>
-&lt;li>$1\le K\lt N\le 2\times 10^{5}$&lt;/li>
-&lt;li>$|S|=N-1$&lt;/li>
-&lt;li>$S_{i}$ が &lt;code>x&lt;/code> のときは $i$ は「危険な数字」で、&lt;code>o&lt;/code> のときはそうではない&lt;/li>
-&lt;/ul></description></item><item><title>yukicoder No. 1312 - Snake Eyes (Advent Calendar Contest 2020 - I) 講評</title><link>https://blog.fairy-lettuce.com/cp/writer/yukicoder-writer-1312/</link><pubDate>Wed, 09 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/writer/yukicoder-writer-1312/</guid><description>&lt;p>これから私が yukicoder において Writer/Tester をした問題やコンテストの講評は開催されるたびに上げようと思います。当然ですが、&lt;b>問題のネタバレを含みます&lt;/b>。&lt;/p>
-&lt;p>私の Writer をした問題では初出題です。yukicoder 毎年恒例のアドカレコンのうち 1 問を担当させて頂きました。色々不慣れな点もありましたが無事出題でき、良かったです。Tester のりあんさんには感謝です！&lt;/p>
-&lt;h2 id="yukicoder-no1312-snake-eyes">yukicoder No.1312 Snake Eyes&lt;/h2>
-&lt;p>&lt;a href="https://adventar.org/calendars/5073">yukicoder Advent Calendar Contest 2020&lt;/a> の 12 月 9 日公開問題です。&lt;/p>
-&lt;ul>
-&lt;li>&lt;b>問題ページ&lt;/b>&lt;br>
-&lt;a href="https://yukicoder.me/problems/no/1312">https://yukicoder.me/problems/no/1312&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>yukicoder No.1311 - Reverse Permutation Index 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</link><pubDate>Tue, 08 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/08 出題問題です。&lt;/p>
-&lt;p>一見すると $N,\ S$ の間に簡単な法則が成り立ちそうですが、どうなんでしょう。面白いですね。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1311">https://yukicoder.me/problems/no/1311&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>ある順列が辞書順で出てくる順番をインデックスと呼びます。また、$S$ 要素で $1$-indexed な順列 $a$ に対して $b$ が $a_{b_{i}}=i (i=1,\ 2,\ \dots,\ s)$ を満たすとき、$b$ を $a$ の逆置換と呼びます。&lt;br>
-$S$ 要素の順列の中で、$N$ 番目の順列の逆置換のインデックスを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$0\le N\lt S! \lt 2^{64}$&lt;br>
-$1\le S\le 20$&lt;/p></description></item><item><title>yukicoder No. 1310 - 量子アニーリング 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</link><pubDate>Mon, 07 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/07 出題問題です。&lt;/p>
-&lt;p>みんながぐろふぉに出ている中の出題だったため&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>、FA を狙えないかと思っていましたが残念ながら 3 番目の AC でした。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1310">https://yukicoder.me/problems/no/1310&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 要素の $+1,\ -1$ のどちらかからなる数列 $s$ に対して、&lt;/p>
-&lt;div>$\displaystyle E=-\sum_{i=1}^{N}s_i s_{i+1}$&lt;/div>
-&lt;p>とします。ただし $s_{N+1}=s_{1}$ です。$2^{|E|}$ の総和を $998244353$ で割った余りを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$3\le N\le 2\times 10^{5}$&lt;/p></description></item><item><title>yukicoder No. 1306 - Exactly 2 Digits 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</link><pubDate>Thu, 03 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/03 出題問題です。&lt;/p>
-&lt;p>教育的問題除く ★4 初 AC！(★3.5 の AC が無いのは内緒) ちなみに 16 番目の AC でした。時間はかかったけれど、高難易度の問題をじっくり攻略するのは楽しいです。&lt;/p>
-&lt;p>おことわりですが、問題を解いた後ぼーっとしながら思考をそのまま書き連ねているので、解説の体を成していないかもしれません(ごめんなさい)。「考察」の内容は解説というよりは私の思考手順をなるべく細かく文章にしたものです。解説記事については、「私と同じ知識を有する人が同じ問題が全く分からなかった際に見て思考を追える文章」をモットーにしているので、いささか回りくどいかもしれません。その代わり、「解法」パートは簡潔に解き方をまとめようと思うので、どうかご容赦ください。&lt;br>
-解説をどれくらいの細かさで書くかは本当に人々の思想だと思うんですけれど(ABC の解説を見ているとよく分かります……)、どうしたらいいんでしょうか……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1306">https://yukicoder.me/problems/no/1306&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>インタラクティブ数当てゲーム。&lt;/p>
-&lt;p>$\{N,\ N+1,\ \dots ,\ N^2 -1\}$ をちょうど $1$ つずつ含む順列 $A$ があります。この順列を以下のクエリを高々 $1.5\times(N^2-N)$ 回行うことで特定してください。&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>? i j&lt;/code>
-&lt;ol>
-&lt;li>$p=\lfloor A_i/N\rfloor-\lfloor A_j/N\rfloor$ とする。つまり、$A_i,\ A_j$ の $N$ の位の差。&lt;/li>
-&lt;li>$q=\lfloor A_i%N\rfloor-\lfloor A_j%N\rfloor$ とする。つまり、$A_i,\ A_j$ の $1$ の位の差。&lt;/li>
-&lt;li>もし $p\lt q$ なら $p,\ q$ を swap する。&lt;/li>
-&lt;li>$p,\ q$ が返される。&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;p>数列を特定したら、&lt;code>!&lt;/code> に続けて数列を出力してください。&lt;/p>
-&lt;p>ただし、&lt;b>出力したクエリによって完全に数列を特定できることができない状態で数列を答えても AC とはなりません&lt;/b>(adaptive なジャッジ)。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le N\le 50$&lt;/p></description></item><item><title>yukicoder No. 1305 - Speak of the Devil 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</link><pubDate>Wed, 02 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/02 出題問題です。&lt;br>
-今気付いたんですが、これ yukicoder の記念すべき第 300 回目のコンテストらしいですね。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1305">https://yukicoder.me/problems/no/1305&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>太郎君を呼ぶためにあなたは以下のうちのどちらかの行動をします。&lt;/p>
-&lt;ul>
-&lt;li>噂をする。$1$ 分後に太郎君は $1/p$ の確率で来る。そうでない確率 $(p-1)/p$ のときは再度どちらかの行動をする。&lt;/li>
-&lt;li>電話をして呼び出す。太郎君は $q$ 分後に必ず来る。&lt;/li>
-&lt;/ul>
-&lt;p>太郎君が来るまでの時間の期待値の最小値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le p,\ q\le 10^{9}$&lt;br>
-入力は整数&lt;/p></description></item><item><title>yukicoder No. 1293 - 2種類の道路 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</link><pubDate>Sat, 21 Nov 2020 02:04:59 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/292">yukicoder contest 275&lt;/a> より。&lt;br>
-個人差が強い問題。発想出来るかが分かれ目？yukicoder problems では黄 diff とのことですが&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>、人によっては黄相応だと思う人も青程度と思う人もいると思います。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1293">https://yukicoder.me/problems/no/1293&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 個の都市には $D$ 本の自動車専用道路と $W$ 本の歩行者専用があります。&lt;br>
-$0$ 本以上の自動車専用道路を通った後に $0$ 本以上の歩行者専用道路を通ることで移動できる都市のペアの個数(自身どうしのペアを含まない)を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le N\le 10^{5}$&lt;br>
-$1\le D,\ W\le \min\left(10^{5},\ \frac{N(N-1)}{2}\right)$&lt;/p></description></item><item><title>yukicoder No. 1292 - パタパタ三角形 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</link><pubDate>Sat, 21 Nov 2020 00:48:48 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/292">yukicoder contest 275&lt;/a> より。&lt;br>
-実装ゲーでした。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1292">https://yukicoder.me/problems/no/1292&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>辺 a, b, c からなる面積 $1$ の三角形があります。どの辺について対称移動させるかの順序が文字列 $S$ で与えられるので、通過する面積を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le |S| \le 2\times 10^{5}$&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yukicoder on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/yukicoder/</link><description>Recent content in Yukicoder on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sun, 17 Jan 2021 19:27:40 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/yukicoder/index.xml" rel="self" type="application/rss+xml"/><item><title>yukicoder No. 1354 - Sambo's Treasure 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</link><pubDate>Sun, 17 Jan 2021 19:27:40 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/307"&gt;灘中入試コンテストday2&lt;/a&gt;-E でした。実装が重かったです。無限に実装をバグらせてしまい、自らの実装力の無さを嘆きました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1354"&gt;https://yukicoder.me/problems/no/1354&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$x,\ y$ 座標ともに $0,\ 1,\ \dots,\ N$ からなる竹藪があります。サンボ君はこの竹藪の $M$ 個のチェックポイントを全て通りつつ $(0,\ 0)$ から $(N,\ N)$ へと移動したいです。移動は右または下にのみ可能です。&lt;/p&gt;
+&lt;p&gt;ただし、竹藪には $L$ 体のトラが棲んでいます。トラのいるマスには最大でも $K$ 回までしか通れません。&lt;/p&gt;
+&lt;p&gt;条件を満たすような移動のしかたは何通りあるでしょうか。$998244353$ で割った余りを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 2\times 10^{5}$&lt;/li&gt;
+&lt;li&gt;$0\le M\le \min(10^5,\ N-1)$&lt;/li&gt;
+&lt;li&gt;$0\le L\le \min(100,\ (N+1)^2-2)$&lt;/li&gt;
+&lt;li&gt;$0\le K\le 10^5$&lt;/li&gt;
+&lt;li&gt;チェックポイントの座標について、$0\lt xc_i,\ yc_i\lt N$&lt;/li&gt;
+&lt;li&gt;$xc_i\lt xc_{i+1},\ yc_i\lt yc_{i+1}$&lt;/li&gt;
+&lt;li&gt;トラの座標について、$0\le xt_i,\ yt_i\le N,\ (xt_i,\ yt_i)\ne (0,\ 0),\ (N,\ N)$&lt;/li&gt;
+&lt;li&gt;トラの座標は Distinct&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>yukicoder No. 1314 - N言っちゃダメゲーム (5)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</link><pubDate>Fri, 11 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;ネタ被りが前日に発覚して (4) が (5) になるってどんな偶然なんですか？？&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1314#"&gt;https://yukicoder.me/problems/no/1314#&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/8"&gt;N言っちゃダメゲーム&lt;/a&gt;をします。つまり、先手であるあなたは $0$ から始め、お互いに $[1,\ K]$ の整数を加算したものを言っていき、$N$ 以上の整数を言った人の負けです。&lt;br&gt;
+$N$ は今回 $2$ 以上 $M$ の各整数を用います。先手の人は残っているものの中から好きなものを選び、その回の $N$ とします。一度使った数は以降使えなくなります。$2$ 回目以降のゲームは前回負けたプレイヤーが先手をします。&lt;/p&gt;
+&lt;p&gt;お互いに各ゲームではわざと負けたりしない条件のもと勝つ回数を最大化します。あなたが勝つか負けるか、引き分けになるかを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le M,\ K\le 10^{9}$&lt;/p&gt;</description></item><item><title>yukicoder No. 1313 - N言っちゃダメゲーム (4)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</link><pubDate>Thu, 10 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1313"&gt;https://yukicoder.me/problems/no/1313&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;先攻のプレイヤーであるあなたは $0$ から始めます。交互に $[1,\ K]$ のうちのどれかの整数を加算していきます。$N$ 以上の数字、または予め指定された&lt;b&gt;危険な数字&lt;/b&gt;を言ってしまうと負けです。&lt;/p&gt;
+&lt;p&gt;あなたが勝つ場合は最初に宣言して勝てる数字を全て出力してください。あなたが負ける場合は $0$ を出力してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$N,\ K$ は整数&lt;/li&gt;
+&lt;li&gt;$1\le K\lt N\le 2\times 10^{5}$&lt;/li&gt;
+&lt;li&gt;$|S|=N-1$&lt;/li&gt;
+&lt;li&gt;$S_{i}$ が &lt;code&gt;x&lt;/code&gt; のときは $i$ は「危険な数字」で、&lt;code&gt;o&lt;/code&gt; のときはそうではない&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>yukicoder No. 1312 - Snake Eyes (Advent Calendar Contest 2020 - I) 講評</title><link>https://blog.fairy-lettuce.com/cp/writer/yukicoder-writer-1312/</link><pubDate>Wed, 09 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/writer/yukicoder-writer-1312/</guid><description>&lt;p&gt;これから私が yukicoder において Writer/Tester をした問題やコンテストの講評は開催されるたびに上げようと思います。当然ですが、&lt;b&gt;問題のネタバレを含みます&lt;/b&gt;。&lt;/p&gt;
+&lt;p&gt;私の Writer をした問題では初出題です。yukicoder 毎年恒例のアドカレコンのうち 1 問を担当させて頂きました。色々不慣れな点もありましたが無事出題でき、良かったです。Tester のりあんさんには感謝です！&lt;/p&gt;
+&lt;h2 id="yukicoder-no1312-snake-eyes"&gt;yukicoder No.1312 Snake Eyes&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://adventar.org/calendars/5073"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12 月 9 日公開問題です。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;問題ページ&lt;/b&gt;&lt;br&gt;
+&lt;a href="https://yukicoder.me/problems/no/1312"&gt;https://yukicoder.me/problems/no/1312&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>yukicoder No.1311 - Reverse Permutation Index 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</link><pubDate>Tue, 08 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/08 出題問題です。&lt;/p&gt;
+&lt;p&gt;一見すると $N,\ S$ の間に簡単な法則が成り立ちそうですが、どうなんでしょう。面白いですね。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1311"&gt;https://yukicoder.me/problems/no/1311&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;ある順列が辞書順で出てくる順番をインデックスと呼びます。また、$S$ 要素で $1$-indexed な順列 $a$ に対して $b$ が $a_{b_{i}}=i (i=1,\ 2,\ \dots,\ s)$ を満たすとき、$b$ を $a$ の逆置換と呼びます。&lt;br&gt;
+$S$ 要素の順列の中で、$N$ 番目の順列の逆置換のインデックスを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$0\le N\lt S! \lt 2^{64}$&lt;br&gt;
+$1\le S\le 20$&lt;/p&gt;</description></item><item><title>yukicoder No. 1310 - 量子アニーリング 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</link><pubDate>Mon, 07 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/07 出題問題です。&lt;/p&gt;
+&lt;p&gt;みんながぐろふぉに出ている中の出題だったため&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;、FA を狙えないかと思っていましたが残念ながら 3 番目の AC でした。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1310"&gt;https://yukicoder.me/problems/no/1310&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 要素の $+1,\ -1$ のどちらかからなる数列 $s$ に対して、&lt;/p&gt;
+&lt;div&gt;$\displaystyle E=-\sum_{i=1}^{N}s_i s_{i+1}$&lt;/div&gt;
+&lt;p&gt;とします。ただし $s_{N+1}=s_{1}$ です。$2^{|E|}$ の総和を $998244353$ で割った余りを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$3\le N\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>yukicoder No. 1306 - Exactly 2 Digits 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</link><pubDate>Thu, 03 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/03 出題問題です。&lt;/p&gt;
+&lt;p&gt;教育的問題除く ★4 初 AC！(★3.5 の AC が無いのは内緒) ちなみに 16 番目の AC でした。時間はかかったけれど、高難易度の問題をじっくり攻略するのは楽しいです。&lt;/p&gt;
+&lt;p&gt;おことわりですが、問題を解いた後ぼーっとしながら思考をそのまま書き連ねているので、解説の体を成していないかもしれません(ごめんなさい)。「考察」の内容は解説というよりは私の思考手順をなるべく細かく文章にしたものです。解説記事については、「私と同じ知識を有する人が同じ問題が全く分からなかった際に見て思考を追える文章」をモットーにしているので、いささか回りくどいかもしれません。その代わり、「解法」パートは簡潔に解き方をまとめようと思うので、どうかご容赦ください。&lt;br&gt;
+解説をどれくらいの細かさで書くかは本当に人々の思想だと思うんですけれど(ABC の解説を見ているとよく分かります……)、どうしたらいいんでしょうか……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1306"&gt;https://yukicoder.me/problems/no/1306&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;インタラクティブ数当てゲーム。&lt;/p&gt;
+&lt;p&gt;$\{N,\ N+1,\ \dots ,\ N^2 -1\}$ をちょうど $1$ つずつ含む順列 $A$ があります。この順列を以下のクエリを高々 $1.5\times(N^2-N)$ 回行うことで特定してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;? i j&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;$p=\lfloor A_i/N\rfloor-\lfloor A_j/N\rfloor$ とする。つまり、$A_i,\ A_j$ の $N$ の位の差。&lt;/li&gt;
+&lt;li&gt;$q=\lfloor A_i%N\rfloor-\lfloor A_j%N\rfloor$ とする。つまり、$A_i,\ A_j$ の $1$ の位の差。&lt;/li&gt;
+&lt;li&gt;もし $p\lt q$ なら $p,\ q$ を swap する。&lt;/li&gt;
+&lt;li&gt;$p,\ q$ が返される。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数列を特定したら、&lt;code&gt;!&lt;/code&gt; に続けて数列を出力してください。&lt;/p&gt;
+&lt;p&gt;ただし、&lt;b&gt;出力したクエリによって完全に数列を特定できることができない状態で数列を答えても AC とはなりません&lt;/b&gt;(adaptive なジャッジ)。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le N\le 50$&lt;/p&gt;</description></item><item><title>yukicoder No. 1305 - Speak of the Devil 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</link><pubDate>Wed, 02 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/02 出題問題です。&lt;br&gt;
+今気付いたんですが、これ yukicoder の記念すべき第 300 回目のコンテストらしいですね。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1305"&gt;https://yukicoder.me/problems/no/1305&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;太郎君を呼ぶためにあなたは以下のうちのどちらかの行動をします。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;噂をする。$1$ 分後に太郎君は $1/p$ の確率で来る。そうでない確率 $(p-1)/p$ のときは再度どちらかの行動をする。&lt;/li&gt;
+&lt;li&gt;電話をして呼び出す。太郎君は $q$ 分後に必ず来る。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;太郎君が来るまでの時間の期待値の最小値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le p,\ q\le 10^{9}$&lt;br&gt;
+入力は整数&lt;/p&gt;</description></item><item><title>yukicoder No. 1293 - 2種類の道路 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</link><pubDate>Sat, 21 Nov 2020 02:04:59 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/292"&gt;yukicoder contest 275&lt;/a&gt; より。&lt;br&gt;
+個人差が強い問題。発想出来るかが分かれ目？yukicoder problems では黄 diff とのことですが&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;、人によっては黄相応だと思う人も青程度と思う人もいると思います。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1293"&gt;https://yukicoder.me/problems/no/1293&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 個の都市には $D$ 本の自動車専用道路と $W$ 本の歩行者専用があります。&lt;br&gt;
+$0$ 本以上の自動車専用道路を通った後に $0$ 本以上の歩行者専用道路を通ることで移動できる都市のペアの個数(自身どうしのペアを含まない)を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le N\le 10^{5}$&lt;br&gt;
+$1\le D,\ W\le \min\left(10^{5},\ \frac{N(N-1)}{2}\right)$&lt;/p&gt;</description></item><item><title>yukicoder No. 1292 - パタパタ三角形 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</link><pubDate>Sat, 21 Nov 2020 00:48:48 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/292"&gt;yukicoder contest 275&lt;/a&gt; より。&lt;br&gt;
+実装ゲーでした。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1292"&gt;https://yukicoder.me/problems/no/1292&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;辺 a, b, c からなる面積 $1$ の三角形があります。どの辺について対称移動させるかの順序が文字列 $S$ で与えられるので、通過する面積を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le |S| \le 2\times 10^{5}$&lt;/p&gt;</description></item></channel></rss>

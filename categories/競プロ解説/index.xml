@@ -1,540 +1,540 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロ解説 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/</link><description>Recent content in 競プロ解説 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sun, 17 Aug 2025 00:36:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>AtCoder Beginner Contest 419 F - All Included 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</link><pubDate>Sun, 17 Aug 2025 00:36:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</guid><description>&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc419/tasks/abc419_f">https://atcoder.jp/contests/abc419/tasks/abc419_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>長さ $L$ の英小文字列であって、$S_1,S_2,\dots,S_N$ をすべて部分文字列として含むものの個数を数え上げよ。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 8$&lt;/li>
-&lt;li>$1\le L\le 100$&lt;/li>
-&lt;li>$N,L$ は整数&lt;/li>
-&lt;li>$1\le |S_i|\le 10$, 英小文字からなる文字列&lt;/li>
-&lt;li>$S_i\ne S_j\ (i\ne j)$&lt;/li>
-&lt;/ul>
-&lt;!-- more -->
-&lt;h2 id="解法">解法&lt;/h2>
-&lt;p>素直に DP する。ここで、各文字列が既に部分文字列として含まれているか ($O(2^N)$ 通り)、およびその文字列の suffix が重なる最長の prefix が状態になる。各文字列の prefix は $M=\sum_i |S_i|$ 個で、DP は全体で $O(2^NML\sigma)$ で動く (ただし $\sigma=26$)。&lt;/p></description></item><item><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</link><pubDate>Fri, 14 Jul 2023 23:50:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>公式解説と全然違うことをしている……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/agc027/tasks/agc027_d">https://atcoder.jp/contests/agc027/tasks/agc027_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ が与えられます。次のような $N \times N$ 行列 $a$ を構築してください。&lt;/p>
-&lt;ul>
-&lt;li>$1\le a_{ij}\le 10^{15}$&lt;/li>
-&lt;li>$a_{ij}$ は distinct&lt;/li>
-&lt;li>隣接する要素 $x, y$ について、$\max(x,y) \% \min(x,y)$ の値は正かつ全て同じ&lt;/li>
-&lt;/ul>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le N \le 500$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Regular Contest 129 D - -1+2-1 解説 (エスパー→証明)</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</link><pubDate>Tue, 20 Dec 2022 21:14:45 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>エスパーです。正直&lt;a href="https://kmjp.hatenablog.jp/entry/2021/12/19/0900">こっち&lt;/a>のほうが分かりやすいです。&lt;/p>
-&lt;p>厳密ではありませんが証明はちゃんとつけました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc129/tasks/arc129_d">https://atcoder.jp/contests/arc129/tasks/arc129_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>長さ $N$ の整数列 $(A_1, \dots, A_N)$ があります。この整数列の両端は繋がっています。&lt;/p>
-&lt;p>$A_{i-1}, A_i, A_{i+1}$ にそれぞれ $-1,2,-1$ を何回か足すことによって $A_i$ を全て $0$ にできるか判定し、できるなら最小回数を求めて下さい。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$3\le N\le 200000$&lt;/li>
-&lt;li>$-100\le A_i \le 100$&lt;/li>
-&lt;li>入力は全て整数&lt;/li>
-&lt;/ul></description></item><item><title>Google Code Jam Round 1C 2022 B - Squary 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</link><pubDate>Sat, 30 Apr 2022 21:23:14 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>おもしろかった。気付いたときうわーーーーって言いました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76">https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76&lt;/a>&lt;/p>
-&lt;p>&lt;strong>2023/07/16 追記&lt;/strong>&lt;/p>
-&lt;p>GCJ のサイトが閉じられたので、代替となるリンクを貼ります。&lt;/p>
-&lt;p>&lt;a href="https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary">https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary&lt;/a>&lt;/p>
-&lt;p>なお、GCJ の過去問のデータは&lt;a href="https://github.com/google/coding-competitions-archive">このリポジトリ&lt;/a>で参照できます。&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>数列 ${E_i}$ に、$K$ 個以下の整数 ($-10^{18}$ 以上 $10^{18}$ 以下) を追加し、以下の等式が成り立つようにしてください。&lt;/p>
-&lt;ul>
-&lt;li>$\displaystyle \sum E_i^2=\left(\sum E_i \right)^2$&lt;/li>
-&lt;/ul>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le T\le 100$ (テストケース数)&lt;/li>
-&lt;li>$1\le N\le 1000$ (数列の長さ)&lt;/li>
-&lt;li>$-1000\le E_i\le 1000$&lt;/li>
-&lt;/ul>
-&lt;h2 id="小課題">小課題&lt;/h2>
-&lt;ul>
-&lt;li>小課題 1 (9pts): $K=1$&lt;/li>
-&lt;li>小課題 2 (22pts): $2\le K \le 1000$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 091 C / AtCoder Regular Contest 092 A - 2D Plane 2D Points 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</link><pubDate>Tue, 09 Nov 2021 11:20:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</guid><description>&lt;p>計算機プログラミングの授業では解説しなかったため没となったスライドを供養します。&lt;/p>
-&lt;p>本番では使用してないですがほぼ完成しています。あくまでスライドなので、普段の解説記事よりは簡潔かと思います。&lt;/p>
-&lt;div class="inner-link-wrapper">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>競プロ解説 on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/</link><description>Recent content in 競プロ解説 on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Sun, 17 Aug 2025 00:36:00 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/%E7%AB%B6%E3%83%97%E3%83%AD%E8%A7%A3%E8%AA%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>AtCoder Beginner Contest 419 F - All Included 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</link><pubDate>Sun, 17 Aug 2025 00:36:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc419-f/</guid><description>&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc419/tasks/abc419_f"&gt;https://atcoder.jp/contests/abc419/tasks/abc419_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;長さ $L$ の英小文字列であって、$S_1,S_2,\dots,S_N$ をすべて部分文字列として含むものの個数を数え上げよ。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 8$&lt;/li&gt;
+&lt;li&gt;$1\le L\le 100$&lt;/li&gt;
+&lt;li&gt;$N,L$ は整数&lt;/li&gt;
+&lt;li&gt;$1\le |S_i|\le 10$, 英小文字からなる文字列&lt;/li&gt;
+&lt;li&gt;$S_i\ne S_j\ (i\ne j)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="解法"&gt;解法&lt;/h2&gt;
+&lt;p&gt;素直に DP する。ここで、各文字列が既に部分文字列として含まれているか ($O(2^N)$ 通り)、およびその文字列の suffix が重なる最長の prefix が状態になる。各文字列の prefix は $M=\sum_i |S_i|$ 個で、DP は全体で $O(2^NML\sigma)$ で動く (ただし $\sigma=26$)。&lt;/p&gt;</description></item><item><title>AtCoder Grand Contest 027 D - Modulo Matrix 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</link><pubDate>Fri, 14 Jul 2023 23:50:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc027-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;公式解説と全然違うことをしている……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/agc027/tasks/agc027_d"&gt;https://atcoder.jp/contests/agc027/tasks/agc027_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ が与えられます。次のような $N \times N$ 行列 $a$ を構築してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le a_{ij}\le 10^{15}$&lt;/li&gt;
+&lt;li&gt;$a_{ij}$ は distinct&lt;/li&gt;
+&lt;li&gt;隣接する要素 $x, y$ について、$\max(x,y) \% \min(x,y)$ の値は正かつ全て同じ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le N \le 500$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Regular Contest 129 D - -1+2-1 解説 (エスパー→証明)</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</link><pubDate>Tue, 20 Dec 2022 21:14:45 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc129-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;エスパーです。正直&lt;a href="https://kmjp.hatenablog.jp/entry/2021/12/19/0900"&gt;こっち&lt;/a&gt;のほうが分かりやすいです。&lt;/p&gt;
+&lt;p&gt;厳密ではありませんが証明はちゃんとつけました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc129/tasks/arc129_d"&gt;https://atcoder.jp/contests/arc129/tasks/arc129_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;長さ $N$ の整数列 $(A_1, \dots, A_N)$ があります。この整数列の両端は繋がっています。&lt;/p&gt;
+&lt;p&gt;$A_{i-1}, A_i, A_{i+1}$ にそれぞれ $-1,2,-1$ を何回か足すことによって $A_i$ を全て $0$ にできるか判定し、できるなら最小回数を求めて下さい。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$3\le N\le 200000$&lt;/li&gt;
+&lt;li&gt;$-100\le A_i \le 100$&lt;/li&gt;
+&lt;li&gt;入力は全て整数&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Google Code Jam Round 1C 2022 B - Squary 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</link><pubDate>Sat, 30 Apr 2022 21:23:14 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/gcj/gcj2022r1c-b/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;おもしろかった。気付いたときうわーーーーって言いました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76"&gt;https://codingcompetitions.withgoogle.com/codejam/round/0000000000877b42/0000000000afdf76&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2023/07/16 追記&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GCJ のサイトが閉じられたので、代替となるリンクを貼ります。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary"&gt;https://github.com/google/coding-competitions-archive/tree/main/codejam/2022/round_1c/squary&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;なお、GCJ の過去問のデータは&lt;a href="https://github.com/google/coding-competitions-archive"&gt;このリポジトリ&lt;/a&gt;で参照できます。&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;数列 ${E_i}$ に、$K$ 個以下の整数 ($-10^{18}$ 以上 $10^{18}$ 以下) を追加し、以下の等式が成り立つようにしてください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\displaystyle \sum E_i^2=\left(\sum E_i \right)^2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le T\le 100$ (テストケース数)&lt;/li&gt;
+&lt;li&gt;$1\le N\le 1000$ (数列の長さ)&lt;/li&gt;
+&lt;li&gt;$-1000\le E_i\le 1000$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="小課題"&gt;小課題&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;小課題 1 (9pts): $K=1$&lt;/li&gt;
+&lt;li&gt;小課題 2 (22pts): $2\le K \le 1000$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 091 C / AtCoder Regular Contest 092 A - 2D Plane 2D Points 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</link><pubDate>Tue, 09 Nov 2021 11:20:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc091-c/</guid><description>&lt;p&gt;計算機プログラミングの授業では解説しなかったため没となったスライドを供養します。&lt;/p&gt;
+&lt;p&gt;本番では使用してないですがほぼ完成しています。あくまでスライドなので、普段の解説記事よりは簡潔かと思います。&lt;/p&gt;
+&lt;div class="inner-link-wrapper"&gt;
  &lt;iframe
  class="hatenablogcard"
  style="width:100%;height:155px;max-width:680px;"
  src="https://hatenablog-parts.com/embed?url=https://drive.google.com/file/d/1K-0uNAh0CCfkpp27WTjvbk3ubbj46NlC/view?usp=sharing"
- width="300" height="150" frameborder="0" scrolling="no">
- &lt;/iframe>
-&lt;/div></description></item><item><title>AtCoder Grand Contest 029 B - Powers of two 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</link><pubDate>Tue, 09 Nov 2021 11:16:21 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</guid><description>&lt;p>お久しぶりです。&lt;/p>
-&lt;p>計算機プログラミングの授業でこの問題の解説をしたので、普段の解説記事とは違う形式ですがそのスライドを公開しようと思います (教員には許可を取っております)。&lt;/p>
-&lt;div class="inner-link-wrapper">
+ width="300" height="150" frameborder="0" scrolling="no"&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;</description></item><item><title>AtCoder Grand Contest 029 B - Powers of two 解説スライド</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</link><pubDate>Tue, 09 Nov 2021 11:16:21 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/agc/agc029-b/</guid><description>&lt;p&gt;お久しぶりです。&lt;/p&gt;
+&lt;p&gt;計算機プログラミングの授業でこの問題の解説をしたので、普段の解説記事とは違う形式ですがそのスライドを公開しようと思います (教員には許可を取っております)。&lt;/p&gt;
+&lt;div class="inner-link-wrapper"&gt;
  &lt;iframe
  class="hatenablogcard"
  style="width:100%;height:155px;max-width:680px;"
  src="https://hatenablog-parts.com/embed?url=https://drive.google.com/file/d/11UXf2TLIKdU0GUf_szlIYr2LsgMy9CVq/view?usp=sharing"
- width="300" height="150" frameborder="0" scrolling="no">
- &lt;/iframe>
-&lt;/div>
-&lt;p>最近競技プログラミングを休んでいたのでかなりお久しぶりになっていました。ABC どころか Rated も出ていない……。&lt;/p>
-&lt;p>ゆっくりのんびり、余裕のある程度にまたやろうかなと思います。&lt;/p></description></item><item><title>AtCoder Regular Contest 046 D - うさぎとマス目 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</link><pubDate>Tue, 01 Jun 2021 23:09:41 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>なんか全然公式解説と違うことしてました……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc046/tasks/arc046_d">https://atcoder.jp/contests/arc046/tasks/arc046_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$H$ 行 $W$ 列からなるグリッドグラフがあります。&lt;/p>
-&lt;p>このグラフにおいて、$(i,j)$ から $((i+1) \bmod H, j)$ または $(i,(j+1) \bmod W)$ に移動できます。&lt;/p>
-&lt;p>マス $(0,0)$ からスタートして全てのマスを通り、$(0,0)$ に戻ってくるような経路の数を $\bmod 10^9+7$ で数え上げてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le H,W\le 10^6$&lt;/p></description></item><item><title>Educational Codeforces Round 91 E - Merging Towers 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</link><pubDate>Thu, 20 May 2021 19:35:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>解説記事や Editorial などをざっくり見ても自分の解法の解説が無かったので。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1380/problem/E">https://codeforces.com/contest/1380/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 個の皿が $m$ 個のタワーに置かれています。皿は直径がそれぞれ $1,2,\dots,n$ であり、直径が $i$ である皿はタワー $t_i$ に置かれています。また、各タワーには上から直径が小さい順に皿が置かれています。&lt;/p>
-&lt;p>あなたは $m$ 個のタワーのうち $1$ つに全ての皿が乗っているようにしたいです。タワーは以下の操作を何回か行うことでまとめます。&lt;/p>
-&lt;ul>
-&lt;li>好きな $i,j\ (1\le i,j\le m,\ i\ne j)$ を選ぶ。タワー $i$ から上から何個か (全部でも良い) の皿を取り、同じ順番でタワー $j$ の上に置く。このとき、動かす皿は全て操作前のタワー $j$ の一番上の皿よりも小さくてはならない。&lt;/li>
-&lt;/ul>
-&lt;p>タワーを $1$ つにまとめるのに必要な操作回数の最小値を、タワーをまとめる&lt;b>難易度&lt;/b>と呼ぶことにします。&lt;/p>
-&lt;p>さて、$m-1$ 個のクエリ $a_i,b_i$ が与えられます。$i$ 個目のクエリはタワー $b_i$ の皿を全てタワー $a_i$ の皿とまとめ、新たなタワー $a_i$ にすることを意味します。新たなタワーも皿は上から小さい順になるようにします。これは難易度には関係しません。&lt;/p>
-&lt;p>全ての $k=0,1,2,\dots,m-1$ について、$k$ 番目のクエリまでを処理した状態でのタワーをまとめる&lt;b>難易度&lt;/b>を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le m\le n\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le t_i\le m$&lt;/li>
-&lt;li>$1,2,\dots,m$ までの整数がそれぞれ少なくとも 1 回以上 $t_i$ に現れる。&lt;/li>
-&lt;li>$1\le a_i,b_i\le m,\ a_i\ne b_i$&lt;/li>
-&lt;li>クエリ $a_i,b_i$ はどちらのタワーもそのクエリの時点で存在するようなものが与えられる。&lt;/li>
-&lt;/ul></description></item><item><title>ZONeエナジー プログラミングコンテスト “HELLO SPACE” F - 出会いと別れ / Encounter and Farewell 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/zone2021-f/</link><pubDate>Sun, 02 May 2021 00:40:52 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/zone2021-f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/zone2021/tasks/zone2021_f">https://atcoder.jp/contests/zone2021/tasks/zone2021_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N=2^n$ 個の頂点 $0,1,2,\dots,N-1$ について、$N-1$ 個の辺 $(i,j)$ を張って全域木を構成したいです。ただし、$(i,j)$ について、$i\oplus j$ が $A_1,A_2,\dots,A_M$ のいずれかと一致するような辺 $(i,j)$ は張れません。&lt;/p>
-&lt;p>全域木が構成できるか判定し、出来る場合は構成の仕方を $1$ つ示してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$N=2^n$ として、$1\le n\le 18$&lt;/li>
-&lt;li>$0\le M\le N-1$&lt;/li>
-&lt;li>$0\lt A_1\lt A_2\lt\dots\lt A_M\lt N$&lt;/li>
-&lt;/ul></description></item><item><title>Contest 2050 and Codeforces Round #718 (Div. 1 + Div. 2) D - Exploror Space 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</link><pubDate>Mon, 26 Apr 2021 17:51:57 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>謎制約。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1517/problem/D">https://codeforces.com/contest/1517/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n\times m$ のグリッドグラフが与えられます。$4$ 近傍で繋がっている各辺には道の長さが与えられています。&lt;/p>
-&lt;p>全ての $(i,j)$ について、$k$ 回移動を繰り返して最初の位置 $(i,j)$ に戻ってくるとき、移動経路の距離の最小値を答えてください。戻ってこれなければ -1 としてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le n,m\le 500$&lt;/li>
-&lt;li>$1\le k\le 20$&lt;/li>
-&lt;li>$1\le (各辺の長さ)\le 10^6$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 198 E - Unique Color 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-e/</link><pubDate>Mon, 12 Apr 2021 02:44:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>最近似た問題を見ていたのでその解説を見て難しい解法にハマりました。&lt;/p>
-&lt;p>Editorial と同じ解法と、自分の解法を両方紹介します。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc198/tasks/abc198_e">https://atcoder.jp/contests/abc198/tasks/abc198_e&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 頂点の木が与えられます。頂点 $i$ は色 $C_i$ で塗られています。&lt;/p>
-&lt;p>頂点 $1$ から $x$ への最短パスに色 $C_x$ が頂点 $x$ 以外に現れないような頂点を&lt;b>良い頂点&lt;/b>と呼びます。良い頂点を列挙してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le N\le 10^5$&lt;/li>
-&lt;li>$1\le C_i\le 10^5$&lt;/li>
-&lt;li>与えられるグラフは木&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 198 D - Send More Money 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-d/</link><pubDate>Mon, 12 Apr 2021 01:20:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>久々に ABC でやったらいけないミスした……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc198/tasks/abc198_d">https://atcoder.jp/contests/abc198/tasks/abc198_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>覆面算 $S_1+S_2=S_3$ を解いてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le |S_i|\le 10$&lt;/li>
-&lt;li>$S_i$ は英小文字のみからなる。&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Regular Contest 114 C - Sequence Scores 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</link><pubDate>Fri, 19 Mar 2021 07:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>解説記事を書くのはかなりお久しぶりになってしまいました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc114/tasks/arc114_c">https://atcoder.jp/contests/arc114/tasks/arc114_c&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$1$ 以上 $M$ 以下の整数からなる長さ $N$ の数列 $A$ に対して、$f(A)$ を以下のように定義します。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>長さ $N$ の数列 $X$ があり、初め全ての要素は $0$ である。$f(A)$ を、次の操作を繰り返して $X$ を $A$ に等しくするために必要な最小の操作回数とする。&lt;/p>
-&lt;ul>
-&lt;li>$1\le l\le r\le N$ と $1\le v\le M$ を指定する。$1\le i\le r$ に対して $X_i$ を $\max(X_i,\ v)$ で置き換える。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>全ての $A$ に対する $f(A)$ の和を $\bmod 998244353$ で求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N,\ M\le 5000$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 190 D - Staircase Sequences 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc190-d/</link><pubDate>Sun, 31 Jan 2021 22:45:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc190-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>ABC 反省文シリーズ。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc190/tasks/abc190_d">https://atcoder.jp/contests/abc190/tasks/abc190_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>整数からなる公差 $1$ の等差数列のうち、総和が $N$ であるものはいくつあるでしょうか？&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N \le 10^{12}$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 189 F - Sugoroku2</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc189-f/</link><pubDate>Sun, 24 Jan 2021 11:57:37 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc189-f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>ABC 反省文シリーズです。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc189/tasks/abc189_f">https://atcoder.jp/contests/abc189/tasks/abc189_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>マス $0$ から始めてマス $N$ を目指す双六があります。高橋くんは $1$ から $M$ までの目が出るルーレットを回して進みます。また、この双六のマス $A_i\ (i=1,\ 2,\ ,\dots,\ K)$ は振り出しに戻るマスで、そこに止まるとマス $0$ に戻されます。&lt;/p>
-&lt;p>高橋くんがマス $N$ より先に着きゴールするまでにルーレットを回す回数の期待値を求めてください。到達不可能ならその旨を報告してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N,\ M\le 10^5$&lt;/li>
-&lt;li>$0\le K\le 10$&lt;/li>
-&lt;li>$0\lt A_1\lt \dots\lt A_K\lt N$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Regular Contest 071 F - Infinite Sequence 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc071-f/</link><pubDate>Tue, 19 Jan 2021 09:23:07 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc071-f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>解きました。公式解説や有志の解説ブログを見ても自分と同じような考え方の人がいなかったので解説ブログを書きます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc071/tasks/arc071_d">https://atcoder.jp/contests/arc071/tasks/arc071_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$1,\ 2,\ 3,\ \dots,\ n$ からなる無限長の数列 $a_1,\ a_2,\ \dots$ のうち、次の条件を満たすものの個数を答えてください。&lt;/p>
-&lt;ul>
-&lt;li>$a_n=a_{n+1}=\dots$&lt;/li>
-&lt;li>すべての $a_i$ について、$a_{i+1}=a_{i+2}=\dots=a_{i+a_i}$&lt;/li>
-&lt;/ul>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le n\le 10^6$&lt;/li>
-&lt;/ul></description></item><item><title>yukicoder No. 1354 - Sambo's Treasure 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</link><pubDate>Sun, 17 Jan 2021 19:27:40 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/307">灘中入試コンテストday2&lt;/a>-E でした。実装が重かったです。無限に実装をバグらせてしまい、自らの実装力の無さを嘆きました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1354">https://yukicoder.me/problems/no/1354&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$x,\ y$ 座標ともに $0,\ 1,\ \dots,\ N$ からなる竹藪があります。サンボ君はこの竹藪の $M$ 個のチェックポイントを全て通りつつ $(0,\ 0)$ から $(N,\ N)$ へと移動したいです。移動は右または下にのみ可能です。&lt;/p>
-&lt;p>ただし、竹藪には $L$ 体のトラが棲んでいます。トラのいるマスには最大でも $K$ 回までしか通れません。&lt;/p>
-&lt;p>条件を満たすような移動のしかたは何通りあるでしょうか。$998244353$ で割った余りを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 2\times 10^{5}$&lt;/li>
-&lt;li>$0\le M\le \min(10^5,\ N-1)$&lt;/li>
-&lt;li>$0\le L\le \min(100,\ (N+1)^2-2)$&lt;/li>
-&lt;li>$0\le K\le 10^5$&lt;/li>
-&lt;li>チェックポイントの座標について、$0\lt xc_i,\ yc_i\lt N$&lt;/li>
-&lt;li>$xc_i\lt xc_{i+1},\ yc_i\lt yc_{i+1}$&lt;/li>
-&lt;li>トラの座標について、$0\le xt_i,\ yt_i\le N,\ (xt_i,\ yt_i)\ne (0,\ 0),\ (N,\ N)$&lt;/li>
-&lt;li>トラの座標は Distinct&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Regular Contest 111 B - Reversible Cards 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc111-b/</link><pubDate>Sat, 16 Jan 2021 00:15:28 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc111-b/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>過去にやった問題が役に立ったので嬉しかったです。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc111/tasks/arc111_b">https://atcoder.jp/contests/arc111/tasks/arc111_b&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 枚のカードがあり、各カードの両面には $a_i,\ b_i$ の色がついています。どちらかを表にするとき、表側の色の種類数の最大値はいくつになるでしょうか。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le a_i,\ b_i\le 4\times 10^5$&lt;/li>
-&lt;/ul></description></item><item><title>Educational Codeforces Round 102 E - Minimum Path 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</link><pubDate>Fri, 15 Jan 2021 03:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>Educational Codeforces 初めての Unrated 参加でした。見事に出来ないといけない問題が解けずに Educate されました。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1473/problem/E">https://codeforces.com/contest/1473/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 頂点 $m$ 辺の重み付き有向連結グラフが与えられます。ここで、二頂点間のパスの距離を、通る辺の重みの総和に、重みの最小値を足して、最大値を引いたものと定義します。頂点 $1$ から各頂点への距離の最小値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$2\le n\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le m\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le w_i\le 10^9$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 188 F - +1-1x2 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc188-f/</link><pubDate>Mon, 11 Jan 2021 00:11:37 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc188-f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>最近の ABC は調子良かったんですが、今回はありとあらゆる失敗を詰め込んだ破滅回でした。もう反省だらけです。&lt;/p>
-&lt;p>&lt;b>【追記】嘘解法であることが発覚したので、その部分を訂正して正当な解法にしました。&lt;/b>&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc188/tasks/abc188_f">https://atcoder.jp/contests/abc188/tasks/abc188_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>整数 $X$ を整数 $Y$ にしたいです。以下の操作を何回でもできます。&lt;/p>
-&lt;ul>
-&lt;li>整数を $1$ 増やす。&lt;/li>
-&lt;li>整数を $1$ 減らす。&lt;/li>
-&lt;li>整数を $2$ 倍する。&lt;/li>
-&lt;/ul>
-&lt;p>最小で何回操作する必要があるでしょうか。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le X,\ Y\le 10^{18}$&lt;/p></description></item><item><title>Educational Codeforces Round 101 E - A Bit Similar 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</link><pubDate>Tue, 29 Dec 2020 02:55:29 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>C 問題は問題文が読みにくくて少しつらかったけど、D 問題も E 問題も面白くて楽しいセットでした。本番ギリギリ E が間に合わなくてつらかった……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1469/problem/E">https://codeforces.com/contest/1469/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>ふたつの文字列 $a,\ b$ について、同じ位置に同じ文字が存在するような位置がひとつでもある場合、&lt;i>a bit similar&lt;/i> といいます。&lt;/p>
-&lt;p>&lt;code>0&lt;/code> および &lt;code>1&lt;/code> からなる文字列 $s$ について、その長さ $k$ の部分文字列全てと a bit similar である長さ $k$ の文字列のうち、辞書順最小のものを求めてください。そのような文字列が存在しない場合はその旨を報告してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le k\le n\le 10^6$&lt;/p></description></item><item><title>AtCoder Beginner Contest 161 E - Yutori 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc161-e/</link><pubDate>Mon, 28 Dec 2020 12:52:11 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc161-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>今回はバチャでやった問題の反省文です。過去の ABC の問題の解説になります。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc161/tasks/abc161_e">https://atcoder.jp/contests/abc161/tasks/abc161_e&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>高橋さんは $N$ 日間のうち $K$ 日を選んで働くことにしました。&lt;/p>
-&lt;ul>
-&lt;li>働く日どうしの間には $C$ 日以上空ける&lt;/li>
-&lt;li>$S_i$ が &lt;code>x&lt;/code> であるときは働かない。&lt;/li>
-&lt;/ul>
-&lt;p>これらの条件を満たすように働くとき、必ず働く日を全て求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 2\times 10^5$&lt;/li>
-&lt;li>$1\le K\le N$&lt;/li>
-&lt;li>$0\le C\le N$&lt;/li>
-&lt;li>問題文の条件を満たすように働くことができる&lt;/li>
-&lt;/ul></description></item><item><title>パナソニックプログラミングコンテスト (ABC186) F - Rook on Grid 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc186-f/</link><pubDate>Sat, 19 Dec 2020 22:40:02 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc186-f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>全完黄パフォ～～～！！！&lt;br>
-ペナはもう少し縮まったはずなので反省も多いですが、最近の ABC は失敗ばかりだったのでとにかく嬉しいです！&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc186/tasks/abc186_f">https://atcoder.jp/contests/abc186/tasks/abc186_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>縦 $H$ マス、横 $W$ マスのグリッドがあります。また、グリッド上には $M$ 個の障害物があり、$i$ 番目は $(X_i,\ Y_i)$ に置かれています。&lt;/p>
-&lt;p>障害物にぶつかるまで右または下にずっと移動できる飛車のコマがマス $(1,\ 1)$ にあります。飛車が $2$ 手で到達できるマスの数を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le H,\ W\le 2\times 10^5$&lt;/li>
-&lt;li>$0\le M\le 2\times 10^5$&lt;/li>
-&lt;li>$(X_i,\ Y_i)\neq (1,\ 1)$&lt;/li>
-&lt;li>$(X_i,\ Y_i)$ は相異なる&lt;/li>
-&lt;/ul></description></item><item><title>JOI 2021 二次予選 C イベント巡り (Event Hopping)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</link><pubDate>Wed, 16 Dec 2020 05:37:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c">https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。&lt;/p>
-&lt;p>JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。&lt;/p>
-&lt;p>参加できるイベント数の最大値を求めてください。&lt;/p>
-&lt;h2 id="制約-満点">制約 (満点)&lt;/h2>
-&lt;p>$1\le N\le 200\ 000$&lt;br>
-$1\le D\le 10^{12}$&lt;br>
-$0\le K\le 10^{12}$&lt;br>
-$1\le P_{i} \le 2$&lt;br>
-$1\le S_{i} \le 10^{12}$&lt;br>
-$S_{i}$ は全て異なる。&lt;/p></description></item><item><title>AtCoder Beginner Contest 185 E - Sequence Matching 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc185-e/</link><pubDate>Mon, 14 Dec 2020 01:20:27 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc185-e/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>やらかし反省録が増えました！！！！！！！！！！！！！！！！！！！&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc185/tasks/abc185_e">https://atcoder.jp/contests/abc185/tasks/abc185_e&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N,\ M$ 要素からなる整数列 $A,\ B$ があります。$A,\ B$ からいくつかの要素をコスト $1$ で取り除くことができます。取り除いたあと、$A,\ B$ の要素数が同じでなくてはなりません。&lt;br>
-取り除いたあとの $A,\ B$ について $A_i\neq B_i$ である要素があれば、その個数だけコストが $1$ ずつ上乗せされます。&lt;br>
-コストの最小値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le N,\ M\le 1000$&lt;br>
-$1\le A_i,\ B_i\le 10^{9}$&lt;/p></description></item><item><title>yukicoder No. 1314 - N言っちゃダメゲーム (5)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</link><pubDate>Fri, 11 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>ネタ被りが前日に発覚して (4) が (5) になるってどんな偶然なんですか？？&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1314#">https://yukicoder.me/problems/no/1314#&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/8">N言っちゃダメゲーム&lt;/a>をします。つまり、先手であるあなたは $0$ から始め、お互いに $[1,\ K]$ の整数を加算したものを言っていき、$N$ 以上の整数を言った人の負けです。&lt;br>
-$N$ は今回 $2$ 以上 $M$ の各整数を用います。先手の人は残っているものの中から好きなものを選び、その回の $N$ とします。一度使った数は以降使えなくなります。$2$ 回目以降のゲームは前回負けたプレイヤーが先手をします。&lt;/p>
-&lt;p>お互いに各ゲームではわざと負けたりしない条件のもと勝つ回数を最大化します。あなたが勝つか負けるか、引き分けになるかを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le M,\ K\le 10^{9}$&lt;/p></description></item><item><title>yukicoder No. 1313 - N言っちゃダメゲーム (4)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</link><pubDate>Thu, 10 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1313">https://yukicoder.me/problems/no/1313&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>先攻のプレイヤーであるあなたは $0$ から始めます。交互に $[1,\ K]$ のうちのどれかの整数を加算していきます。$N$ 以上の数字、または予め指定された&lt;b>危険な数字&lt;/b>を言ってしまうと負けです。&lt;/p>
-&lt;p>あなたが勝つ場合は最初に宣言して勝てる数字を全て出力してください。あなたが負ける場合は $0$ を出力してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$N,\ K$ は整数&lt;/li>
-&lt;li>$1\le K\lt N\le 2\times 10^{5}$&lt;/li>
-&lt;li>$|S|=N-1$&lt;/li>
-&lt;li>$S_{i}$ が &lt;code>x&lt;/code> のときは $i$ は「危険な数字」で、&lt;code>o&lt;/code> のときはそうではない&lt;/li>
-&lt;/ul></description></item><item><title>yukicoder No.1311 - Reverse Permutation Index 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</link><pubDate>Tue, 08 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/08 出題問題です。&lt;/p>
-&lt;p>一見すると $N,\ S$ の間に簡単な法則が成り立ちそうですが、どうなんでしょう。面白いですね。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1311">https://yukicoder.me/problems/no/1311&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>ある順列が辞書順で出てくる順番をインデックスと呼びます。また、$S$ 要素で $1$-indexed な順列 $a$ に対して $b$ が $a_{b_{i}}=i (i=1,\ 2,\ \dots,\ s)$ を満たすとき、$b$ を $a$ の逆置換と呼びます。&lt;br>
-$S$ 要素の順列の中で、$N$ 番目の順列の逆置換のインデックスを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$0\le N\lt S! \lt 2^{64}$&lt;br>
-$1\le S\le 20$&lt;/p></description></item><item><title>yukicoder No. 1310 - 量子アニーリング 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</link><pubDate>Mon, 07 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/07 出題問題です。&lt;/p>
-&lt;p>みんながぐろふぉに出ている中の出題だったため&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>、FA を狙えないかと思っていましたが残念ながら 3 番目の AC でした。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1310">https://yukicoder.me/problems/no/1310&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 要素の $+1,\ -1$ のどちらかからなる数列 $s$ に対して、&lt;/p>
-&lt;div>$\displaystyle E=-\sum_{i=1}^{N}s_i s_{i+1}$&lt;/div>
-&lt;p>とします。ただし $s_{N+1}=s_{1}$ です。$2^{|E|}$ の総和を $998244353$ で割った余りを求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$3\le N\le 2\times 10^{5}$&lt;/p></description></item><item><title>鹿島建設プログラミングコンテスト2020 (ARC110) D - Binomial Coefficient is Fun 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc110-d/</link><pubDate>Sun, 06 Dec 2020 01:03:56 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc110-d/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>数学問エスパーが成功したときほど気持ちいい瞬間はありません。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/arc110/tasks/arc110_d">https://atcoder.jp/contests/arc110/tasks/arc110_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>長さ $N$ の非負整数列 $A$ があります。長さ $N$、総和 $M$ 以下の非負整数列 $B$ 全てについて、$\displaystyle \prod_{i=1}^{N} \binom{B_i}{A_i}$ の総和を $10^9+7$ で割った余りを出力してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le N\le 2000$&lt;br>
-$1\le M\le 10^9$&lt;br>
-$1\le A_i \le 2000$&lt;/p></description></item><item><title>yukicoder No. 1306 - Exactly 2 Digits 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</link><pubDate>Thu, 03 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/03 出題問題です。&lt;/p>
-&lt;p>教育的問題除く ★4 初 AC！(★3.5 の AC が無いのは内緒) ちなみに 16 番目の AC でした。時間はかかったけれど、高難易度の問題をじっくり攻略するのは楽しいです。&lt;/p>
-&lt;p>おことわりですが、問題を解いた後ぼーっとしながら思考をそのまま書き連ねているので、解説の体を成していないかもしれません(ごめんなさい)。「考察」の内容は解説というよりは私の思考手順をなるべく細かく文章にしたものです。解説記事については、「私と同じ知識を有する人が同じ問題が全く分からなかった際に見て思考を追える文章」をモットーにしているので、いささか回りくどいかもしれません。その代わり、「解法」パートは簡潔に解き方をまとめようと思うので、どうかご容赦ください。&lt;br>
-解説をどれくらいの細かさで書くかは本当に人々の思想だと思うんですけれど(ABC の解説を見ているとよく分かります……)、どうしたらいいんでしょうか……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1306">https://yukicoder.me/problems/no/1306&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>インタラクティブ数当てゲーム。&lt;/p>
-&lt;p>$\{N,\ N+1,\ \dots ,\ N^2 -1\}$ をちょうど $1$ つずつ含む順列 $A$ があります。この順列を以下のクエリを高々 $1.5\times(N^2-N)$ 回行うことで特定してください。&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>? i j&lt;/code>
-&lt;ol>
-&lt;li>$p=\lfloor A_i/N\rfloor-\lfloor A_j/N\rfloor$ とする。つまり、$A_i,\ A_j$ の $N$ の位の差。&lt;/li>
-&lt;li>$q=\lfloor A_i%N\rfloor-\lfloor A_j%N\rfloor$ とする。つまり、$A_i,\ A_j$ の $1$ の位の差。&lt;/li>
-&lt;li>もし $p\lt q$ なら $p,\ q$ を swap する。&lt;/li>
-&lt;li>$p,\ q$ が返される。&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;p>数列を特定したら、&lt;code>!&lt;/code> に続けて数列を出力してください。&lt;/p>
-&lt;p>ただし、&lt;b>出力したクエリによって完全に数列を特定できることができない状態で数列を答えても AC とはなりません&lt;/b>(adaptive なジャッジ)。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le N\le 50$&lt;/p></description></item><item><title>yukicoder No. 1305 - Speak of the Devil 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</link><pubDate>Wed, 02 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/300">yukicoder Advent Calendar Contest 2020&lt;/a> の 12/02 出題問題です。&lt;br>
-今気付いたんですが、これ yukicoder の記念すべき第 300 回目のコンテストらしいですね。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1305">https://yukicoder.me/problems/no/1305&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>太郎君を呼ぶためにあなたは以下のうちのどちらかの行動をします。&lt;/p>
-&lt;ul>
-&lt;li>噂をする。$1$ 分後に太郎君は $1/p$ の確率で来る。そうでない確率 $(p-1)/p$ のときは再度どちらかの行動をする。&lt;/li>
-&lt;li>電話をして呼び出す。太郎君は $q$ 分後に必ず来る。&lt;/li>
-&lt;/ul>
-&lt;p>太郎君が来るまでの時間の期待値の最小値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le p,\ q\le 10^{9}$&lt;br>
-入力は整数&lt;/p></description></item><item><title>Educational Codeforces Round 99 D - Sequence and Swaps 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</link><pubDate>Wed, 02 Dec 2020 03:23:08 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</guid><description>&lt;p>大爆死。反省を込めて解説ブログを書きます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1455/problem/D">https://codeforces.com/contest/1455/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>非負整数からなる数列 ${a_i}$ および非負整数 $x$ が与えられます。&lt;br>
-$a_{i}&amp;gt;x$ である $a_{i},\ x$ を swap することを任意の回数できます。$a$ を広義単調増加にするためには最小で何回の操作を行えばいいでしょうか。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 500$ (テストケース数)&lt;br>
-$1\le n\le 500$&lt;br>
-$0\le x,\ a_i\le 500$&lt;/p></description></item><item><title>Codeforces Round #686 Div.3-F - Array Partition 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</link><pubDate>Wed, 25 Nov 2020 06:47:38 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>これ E よりも簡単じゃないですか？&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1454/problem/F">https://codeforces.com/contest/1454/problem/F&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 要素からなる数列 $a$ があります。$a$ を $1$ 以上の要素からなる $3$ つの部分列に分けます。&lt;br>
-最初の部分列の最大値、真ん中の部分列の最小値、最後の部分列の最大値が全て等しくなるような分け方は存在しますか。存在するときはその分け方も出力してください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br>
-$3\le n\le 2\times 10^{5}$&lt;br>
-$1\le a_{i} \le 10^{9}$&lt;br>
-$\sum{n}\le 2\times 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #686 Div.3-E - Number of Simple Paths 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</link><pubDate>Wed, 25 Nov 2020 05:34:46 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</guid><description>&lt;p>Div. 3 全完しようと思ったらこの問題に阻まれてしまいました。どう考えても不可能だと思ってたけど、よくよく見たらなもりグラフという制約を見逃していました。恥ずかしい。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1454/problem/E">https://codeforces.com/contest/1454/problem/E&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>自己ループや多重辺のない $n$ 頂点 $n$ 辺の連結グラフ(つまり、&lt;b>なもりグラフ&lt;/b>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>)が与えられます。このグラフに含まれる長さが $1$ 以上の単純パスの数を求めてください。ただし、逆順にたどっただけのパスは同じものとみなします。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br>
-$3\le n\le 2\times 10^{5}$&lt;br>
-$\sum{n}\le 2\times 10^{5}$&lt;/p></description></item><item><title>AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について)</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-f/</link><pubDate>Mon, 23 Nov 2020 08:43:43 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-f/</guid><description>&lt;p>ABC184-F Programming Contest を題材に、典型アルゴリズムである半分全列挙について詳しく解説します。実装の細かい部分まで解説します。&lt;/p>
-&lt;p>また、半分全列挙の高速化 (今回は主に $\log$ を取る部分について) についても掘り下げていきます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_f">https://atcoder.jp/contests/abc184/tasks/abc184_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 問の問題があります。$i$ 番目の問題は解くのに $A_i$ 分かかります。&lt;/p>
-&lt;p>この中からいくつかの問題を選んで解くのにかかる時間の総和のうち、$T$ 分以下での最大値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 40$&lt;/li>
-&lt;li>$1\le T\le 10^{9}$&lt;/li>
-&lt;li>$1\le A_i\le 10^{9}$&lt;/li>
-&lt;/ul></description></item><item><title>AtCoder Beginner Contest 184 D - increment of coins 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-d/</link><pubDate>Mon, 23 Nov 2020 00:42:26 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-d/</guid><description>&lt;p>この問題だけどうして問題名の最初が英小文字なのか気になってしまい夜も眠れません。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_d">https://atcoder.jp/contests/abc184/tasks/abc184_d&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>袋の中に金貨が $A$ 枚、銀貨が $B$ 枚、銅貨が $C$ 枚入っています。&lt;br>
-袋の中から硬貨をランダムに選び、それと同じ種類の硬貨をもう $1$ 枚入れるのをいずれかの種類の硬貨が $100$ 枚になるまで繰り返します。&lt;br>
-操作回数の期待値を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$0\le A,\ B,\ C\le 99$&lt;br>
-$A+B+C\ge 1$&lt;/p></description></item><item><title>AtCoder Beginner Contest 184 C - Super Ryuma 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-c/</link><pubDate>Mon, 23 Nov 2020 00:06:44 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-c/</guid><description>&lt;p>この問題がこのセットで最難……。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_c">https://atcoder.jp/contests/abc184/tasks/abc184_c&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>斜めにどこまででも進め、また &lt;a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%B3%E3%83%8F%E3%83%83%E3%82%BF%E3%83%B3%E8%B7%9D%E9%9B%A2">マンハッタン距離&lt;/a> が $3$ 以下である場所に進める駒「超竜馬」があります。&lt;br>
-$(r_{1},\ c_{1})$ から $(r_{2},\ c_{2})$ へ動くのに必要な最小手数を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le r_{1},\ c_{1},\ r_{2},\ c_{2}\le 10^{9}$&lt;/p></description></item><item><title>Codeforces Round #685 Div.2-E1/E2 - Bitwise Queries 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</link><pubDate>Sun, 22 Nov 2020 04:28:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</guid><description>&lt;p>数列を当てる系のインタラクティブとても好きだし得意。この前の JOI の数当てもそうだったけど、こういう問題を考えるのがとても楽しいと思えます。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>E1 (Easy Version): &lt;a href="https://codeforces.com/contest/1451/problem/E1">https://codeforces.com/contest/1451/problem/E1&lt;/a>&lt;br>
-E2 (Hard Version): &lt;a href="https://codeforces.com/contest/1451/problem/E2">https://codeforces.com/contest/1451/problem/E2&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$n$ 要素からなる数列 $a$ を当てるインタラクティブ問題。解答者はプログラムの中で以下の質問をすることができます。&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>AND i j&lt;/code>: $a_{i}$ と $a_{j}$ の AND を質問する。&lt;/li>
-&lt;li>&lt;code>OR i j&lt;/code>: $a_{i}$ と $a_{j}$ の OR を質問する。&lt;/li>
-&lt;li>&lt;code>XOR i j&lt;/code>: $a_{i}$ と $a_{j}$ の XOR を質問する。&lt;/li>
-&lt;/ul>
-&lt;p>規定の回数以内の質問で元の数列を当ててください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$4\le n\le 2^{16}$&lt;br>
-$n$ は $2$ の冪である&lt;br>
-&lt;b>Easy&lt;/b>: 質問の回数は $n+2$ 回以内&lt;br>
-&lt;b>Hard&lt;/b>: 質問の回数は $n+1$ 回以内&lt;/p></description></item><item><title>Codeforces Round #685 Div.2-D - Circle Game 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</link><pubDate>Sun, 22 Nov 2020 02:45:20 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</guid><description>&lt;p>同じ日の ARC で -55 もレート溶かしたのに同じ日のこどふぉでレート超盛りました。Codeforces は調子いいのに、AtCoder の下振れが酷いです。助けて。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1451/problem/D">https://codeforces.com/contest/1451/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$x-y$ 座標上の円 $x^{2}+y^{2}=d^{2}$ があります。この円の中でマスを動かすゲームをします。&lt;br>
-マスは最初 $(0,\ 0)$ にあり、ふたりはお互いのターンで $x,\ y$ 座標どちらかの正の向きにちょうど $k$ だけ進めます。円の外に出たら負けです。勝者は先手か後手か求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le d \le 10^{5}$&lt;br>
-$1\le k \le 10^{5}$&lt;/p></description></item><item><title>yukicoder No. 1293 - 2種類の道路 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</link><pubDate>Sat, 21 Nov 2020 02:04:59 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/292">yukicoder contest 275&lt;/a> より。&lt;br>
-個人差が強い問題。発想出来るかが分かれ目？yukicoder problems では黄 diff とのことですが&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>、人によっては黄相応だと思う人も青程度と思う人もいると思います。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1293">https://yukicoder.me/problems/no/1293&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 個の都市には $D$ 本の自動車専用道路と $W$ 本の歩行者専用があります。&lt;br>
-$0$ 本以上の自動車専用道路を通った後に $0$ 本以上の歩行者専用道路を通ることで移動できる都市のペアの個数(自身どうしのペアを含まない)を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$2\le N\le 10^{5}$&lt;br>
-$1\le D,\ W\le \min\left(10^{5},\ \frac{N(N-1)}{2}\right)$&lt;/p></description></item><item><title>yukicoder No. 1292 - パタパタ三角形 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</link><pubDate>Sat, 21 Nov 2020 00:48:48 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</guid><description>&lt;p>&lt;a href="https://yukicoder.me/contests/292">yukicoder contest 275&lt;/a> より。&lt;br>
-実装ゲーでした。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://yukicoder.me/problems/no/1292">https://yukicoder.me/problems/no/1292&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>辺 a, b, c からなる面積 $1$ の三角形があります。どの辺について対称移動させるかの順序が文字列 $S$ で与えられるので、通過する面積を求めてください。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le |S| \le 2\times 10^{5}$&lt;/p></description></item><item><title>Codeforces Round #683 Div.2-D/Div.1-B - Catching Cheaters 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</link><pubDate>Mon, 16 Nov 2020 04:30:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</guid><description>&lt;p>Rated コンテストにたくさん出たいのでこどふぉに出ました。冷えました。つらいです……。&lt;/p>
-&lt;p>今回はその冷えたこどふぉで解けなかった問題の解説です。解けて然るべき問題を解けなかった時の辛さは全競プロer共通だと勝手に思っています。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://codeforces.com/contest/1447/problem/D">https://codeforces.com/contest/1447/problem/D&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>文字列 $A,\ B$ の&lt;b>部分文字列&lt;/b>を $C,\ D$ とします。$C,\ D$ のスコアを $4\times LCS(C,\ D)-|C|-|D|$ とします。ただし、$LCS(C,\ D)$ は $C,\ D$ の最長&lt;b>部分列&lt;/b>の長さとします。スコアの最大値を求めて下さい。&lt;br>
-部分文字列は連続していなければならず、部分列は連続していなくてもいいことに注意して下さい。&lt;/p>
-&lt;h2 id="制約">制約&lt;/h2>
-&lt;p>$1\le |A|,\ |B|\le 5000$&lt;/p></description></item><item><title>JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</link><pubDate>Wed, 11 Nov 2020 17:49:13 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</guid><description>&lt;p>今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。&lt;br>
-思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。&lt;br>
-C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f">https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。&lt;br>
-Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。&lt;br>
-一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。&lt;/p>
-&lt;h2 id="制約満点">制約(満点)&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 30$&lt;/li>
-&lt;li>$0\le D,\ X_i,\ Y_i\le 10^{15}$&lt;/li>
-&lt;/ul></description></item><item><title>JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</link><pubDate>Tue, 03 Nov 2020 08:12:35 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</guid><description>&lt;p>お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。&lt;/p>
-&lt;p>初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。&lt;/p>
-&lt;h2 id="問題ページ">問題ページ&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess">https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。&lt;/p>
-&lt;h2 id="制約満点">制約(満点)&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le100$&lt;/li>
-&lt;li>$L=700$&lt;/li>
-&lt;/ul></description></item></channel></rss>
+ width="300" height="150" frameborder="0" scrolling="no"&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;最近競技プログラミングを休んでいたのでかなりお久しぶりになっていました。ABC どころか Rated も出ていない……。&lt;/p&gt;
+&lt;p&gt;ゆっくりのんびり、余裕のある程度にまたやろうかなと思います。&lt;/p&gt;</description></item><item><title>AtCoder Regular Contest 046 D - うさぎとマス目 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</link><pubDate>Tue, 01 Jun 2021 23:09:41 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc046-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;なんか全然公式解説と違うことしてました……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc046/tasks/arc046_d"&gt;https://atcoder.jp/contests/arc046/tasks/arc046_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$H$ 行 $W$ 列からなるグリッドグラフがあります。&lt;/p&gt;
+&lt;p&gt;このグラフにおいて、$(i,j)$ から $((i+1) \bmod H, j)$ または $(i,(j+1) \bmod W)$ に移動できます。&lt;/p&gt;
+&lt;p&gt;マス $(0,0)$ からスタートして全てのマスを通り、$(0,0)$ に戻ってくるような経路の数を $\bmod 10^9+7$ で数え上げてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le H,W\le 10^6$&lt;/p&gt;</description></item><item><title>Educational Codeforces Round 91 E - Merging Towers 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</link><pubDate>Thu, 20 May 2021 19:35:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr91-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;解説記事や Editorial などをざっくり見ても自分の解法の解説が無かったので。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1380/problem/E"&gt;https://codeforces.com/contest/1380/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 個の皿が $m$ 個のタワーに置かれています。皿は直径がそれぞれ $1,2,\dots,n$ であり、直径が $i$ である皿はタワー $t_i$ に置かれています。また、各タワーには上から直径が小さい順に皿が置かれています。&lt;/p&gt;
+&lt;p&gt;あなたは $m$ 個のタワーのうち $1$ つに全ての皿が乗っているようにしたいです。タワーは以下の操作を何回か行うことでまとめます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好きな $i,j\ (1\le i,j\le m,\ i\ne j)$ を選ぶ。タワー $i$ から上から何個か (全部でも良い) の皿を取り、同じ順番でタワー $j$ の上に置く。このとき、動かす皿は全て操作前のタワー $j$ の一番上の皿よりも小さくてはならない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;タワーを $1$ つにまとめるのに必要な操作回数の最小値を、タワーをまとめる&lt;b&gt;難易度&lt;/b&gt;と呼ぶことにします。&lt;/p&gt;
+&lt;p&gt;さて、$m-1$ 個のクエリ $a_i,b_i$ が与えられます。$i$ 個目のクエリはタワー $b_i$ の皿を全てタワー $a_i$ の皿とまとめ、新たなタワー $a_i$ にすることを意味します。新たなタワーも皿は上から小さい順になるようにします。これは難易度には関係しません。&lt;/p&gt;
+&lt;p&gt;全ての $k=0,1,2,\dots,m-1$ について、$k$ 番目のクエリまでを処理した状態でのタワーをまとめる&lt;b&gt;難易度&lt;/b&gt;を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le m\le n\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le t_i\le m$&lt;/li&gt;
+&lt;li&gt;$1,2,\dots,m$ までの整数がそれぞれ少なくとも 1 回以上 $t_i$ に現れる。&lt;/li&gt;
+&lt;li&gt;$1\le a_i,b_i\le m,\ a_i\ne b_i$&lt;/li&gt;
+&lt;li&gt;クエリ $a_i,b_i$ はどちらのタワーもそのクエリの時点で存在するようなものが与えられる。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>ZONeエナジー プログラミングコンテスト “HELLO SPACE” F - 出会いと別れ / Encounter and Farewell 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/zone2021-f/</link><pubDate>Sun, 02 May 2021 00:40:52 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/zone2021-f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/zone2021/tasks/zone2021_f"&gt;https://atcoder.jp/contests/zone2021/tasks/zone2021_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N=2^n$ 個の頂点 $0,1,2,\dots,N-1$ について、$N-1$ 個の辺 $(i,j)$ を張って全域木を構成したいです。ただし、$(i,j)$ について、$i\oplus j$ が $A_1,A_2,\dots,A_M$ のいずれかと一致するような辺 $(i,j)$ は張れません。&lt;/p&gt;
+&lt;p&gt;全域木が構成できるか判定し、出来る場合は構成の仕方を $1$ つ示してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$N=2^n$ として、$1\le n\le 18$&lt;/li&gt;
+&lt;li&gt;$0\le M\le N-1$&lt;/li&gt;
+&lt;li&gt;$0\lt A_1\lt A_2\lt\dots\lt A_M\lt N$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Contest 2050 and Codeforces Round #718 (Div. 1 + Div. 2) D - Exploror Space 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</link><pubDate>Mon, 26 Apr 2021 17:51:57 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf718-div1+2d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;謎制約。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1517/problem/D"&gt;https://codeforces.com/contest/1517/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n\times m$ のグリッドグラフが与えられます。$4$ 近傍で繋がっている各辺には道の長さが与えられています。&lt;/p&gt;
+&lt;p&gt;全ての $(i,j)$ について、$k$ 回移動を繰り返して最初の位置 $(i,j)$ に戻ってくるとき、移動経路の距離の最小値を答えてください。戻ってこれなければ -1 としてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le n,m\le 500$&lt;/li&gt;
+&lt;li&gt;$1\le k\le 20$&lt;/li&gt;
+&lt;li&gt;$1\le (各辺の長さ)\le 10^6$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 198 E - Unique Color 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-e/</link><pubDate>Mon, 12 Apr 2021 02:44:15 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;最近似た問題を見ていたのでその解説を見て難しい解法にハマりました。&lt;/p&gt;
+&lt;p&gt;Editorial と同じ解法と、自分の解法を両方紹介します。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc198/tasks/abc198_e"&gt;https://atcoder.jp/contests/abc198/tasks/abc198_e&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 頂点の木が与えられます。頂点 $i$ は色 $C_i$ で塗られています。&lt;/p&gt;
+&lt;p&gt;頂点 $1$ から $x$ への最短パスに色 $C_x$ が頂点 $x$ 以外に現れないような頂点を&lt;b&gt;良い頂点&lt;/b&gt;と呼びます。良い頂点を列挙してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le N\le 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le C_i\le 10^5$&lt;/li&gt;
+&lt;li&gt;与えられるグラフは木&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 198 D - Send More Money 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-d/</link><pubDate>Mon, 12 Apr 2021 01:20:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc198-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;久々に ABC でやったらいけないミスした……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc198/tasks/abc198_d"&gt;https://atcoder.jp/contests/abc198/tasks/abc198_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;覆面算 $S_1+S_2=S_3$ を解いてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le |S_i|\le 10$&lt;/li&gt;
+&lt;li&gt;$S_i$ は英小文字のみからなる。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Regular Contest 114 C - Sequence Scores 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</link><pubDate>Fri, 19 Mar 2021 07:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc114-c/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;解説記事を書くのはかなりお久しぶりになってしまいました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc114/tasks/arc114_c"&gt;https://atcoder.jp/contests/arc114/tasks/arc114_c&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$1$ 以上 $M$ 以下の整数からなる長さ $N$ の数列 $A$ に対して、$f(A)$ を以下のように定義します。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;長さ $N$ の数列 $X$ があり、初め全ての要素は $0$ である。$f(A)$ を、次の操作を繰り返して $X$ を $A$ に等しくするために必要な最小の操作回数とする。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le l\le r\le N$ と $1\le v\le M$ を指定する。$1\le i\le r$ に対して $X_i$ を $\max(X_i,\ v)$ で置き換える。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;全ての $A$ に対する $f(A)$ の和を $\bmod 998244353$ で求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N,\ M\le 5000$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 190 D - Staircase Sequences 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc190-d/</link><pubDate>Sun, 31 Jan 2021 22:45:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc190-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;ABC 反省文シリーズ。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc190/tasks/abc190_d"&gt;https://atcoder.jp/contests/abc190/tasks/abc190_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;整数からなる公差 $1$ の等差数列のうち、総和が $N$ であるものはいくつあるでしょうか？&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N \le 10^{12}$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 189 F - Sugoroku2</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc189-f/</link><pubDate>Sun, 24 Jan 2021 11:57:37 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc189-f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;ABC 反省文シリーズです。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc189/tasks/abc189_f"&gt;https://atcoder.jp/contests/abc189/tasks/abc189_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;マス $0$ から始めてマス $N$ を目指す双六があります。高橋くんは $1$ から $M$ までの目が出るルーレットを回して進みます。また、この双六のマス $A_i\ (i=1,\ 2,\ ,\dots,\ K)$ は振り出しに戻るマスで、そこに止まるとマス $0$ に戻されます。&lt;/p&gt;
+&lt;p&gt;高橋くんがマス $N$ より先に着きゴールするまでにルーレットを回す回数の期待値を求めてください。到達不可能ならその旨を報告してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N,\ M\le 10^5$&lt;/li&gt;
+&lt;li&gt;$0\le K\le 10$&lt;/li&gt;
+&lt;li&gt;$0\lt A_1\lt \dots\lt A_K\lt N$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Regular Contest 071 F - Infinite Sequence 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc071-f/</link><pubDate>Tue, 19 Jan 2021 09:23:07 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc071-f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;解きました。公式解説や有志の解説ブログを見ても自分と同じような考え方の人がいなかったので解説ブログを書きます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc071/tasks/arc071_d"&gt;https://atcoder.jp/contests/arc071/tasks/arc071_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$1,\ 2,\ 3,\ \dots,\ n$ からなる無限長の数列 $a_1,\ a_2,\ \dots$ のうち、次の条件を満たすものの個数を答えてください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$a_n=a_{n+1}=\dots$&lt;/li&gt;
+&lt;li&gt;すべての $a_i$ について、$a_{i+1}=a_{i+2}=\dots=a_{i+a_i}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le n\le 10^6$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>yukicoder No. 1354 - Sambo's Treasure 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</link><pubDate>Sun, 17 Jan 2021 19:27:40 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1354/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/307"&gt;灘中入試コンテストday2&lt;/a&gt;-E でした。実装が重かったです。無限に実装をバグらせてしまい、自らの実装力の無さを嘆きました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1354"&gt;https://yukicoder.me/problems/no/1354&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$x,\ y$ 座標ともに $0,\ 1,\ \dots,\ N$ からなる竹藪があります。サンボ君はこの竹藪の $M$ 個のチェックポイントを全て通りつつ $(0,\ 0)$ から $(N,\ N)$ へと移動したいです。移動は右または下にのみ可能です。&lt;/p&gt;
+&lt;p&gt;ただし、竹藪には $L$ 体のトラが棲んでいます。トラのいるマスには最大でも $K$ 回までしか通れません。&lt;/p&gt;
+&lt;p&gt;条件を満たすような移動のしかたは何通りあるでしょうか。$998244353$ で割った余りを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 2\times 10^{5}$&lt;/li&gt;
+&lt;li&gt;$0\le M\le \min(10^5,\ N-1)$&lt;/li&gt;
+&lt;li&gt;$0\le L\le \min(100,\ (N+1)^2-2)$&lt;/li&gt;
+&lt;li&gt;$0\le K\le 10^5$&lt;/li&gt;
+&lt;li&gt;チェックポイントの座標について、$0\lt xc_i,\ yc_i\lt N$&lt;/li&gt;
+&lt;li&gt;$xc_i\lt xc_{i+1},\ yc_i\lt yc_{i+1}$&lt;/li&gt;
+&lt;li&gt;トラの座標について、$0\le xt_i,\ yt_i\le N,\ (xt_i,\ yt_i)\ne (0,\ 0),\ (N,\ N)$&lt;/li&gt;
+&lt;li&gt;トラの座標は Distinct&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Regular Contest 111 B - Reversible Cards 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc111-b/</link><pubDate>Sat, 16 Jan 2021 00:15:28 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc111-b/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;過去にやった問題が役に立ったので嬉しかったです。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc111/tasks/arc111_b"&gt;https://atcoder.jp/contests/arc111/tasks/arc111_b&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 枚のカードがあり、各カードの両面には $a_i,\ b_i$ の色がついています。どちらかを表にするとき、表側の色の種類数の最大値はいくつになるでしょうか。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le a_i,\ b_i\le 4\times 10^5$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Educational Codeforces Round 102 E - Minimum Path 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</link><pubDate>Fri, 15 Jan 2021 03:42:33 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/erc102-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;Educational Codeforces 初めての Unrated 参加でした。見事に出来ないといけない問題が解けずに Educate されました。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1473/problem/E"&gt;https://codeforces.com/contest/1473/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 頂点 $m$ 辺の重み付き有向連結グラフが与えられます。ここで、二頂点間のパスの距離を、通る辺の重みの総和に、重みの最小値を足して、最大値を引いたものと定義します。頂点 $1$ から各頂点への距離の最小値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$2\le n\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le m\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le w_i\le 10^9$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 188 F - +1-1x2 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc188-f/</link><pubDate>Mon, 11 Jan 2021 00:11:37 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc188-f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;最近の ABC は調子良かったんですが、今回はありとあらゆる失敗を詰め込んだ破滅回でした。もう反省だらけです。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;【追記】嘘解法であることが発覚したので、その部分を訂正して正当な解法にしました。&lt;/b&gt;&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc188/tasks/abc188_f"&gt;https://atcoder.jp/contests/abc188/tasks/abc188_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;整数 $X$ を整数 $Y$ にしたいです。以下の操作を何回でもできます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整数を $1$ 増やす。&lt;/li&gt;
+&lt;li&gt;整数を $1$ 減らす。&lt;/li&gt;
+&lt;li&gt;整数を $2$ 倍する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最小で何回操作する必要があるでしょうか。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le X,\ Y\le 10^{18}$&lt;/p&gt;</description></item><item><title>Educational Codeforces Round 101 E - A Bit Similar 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</link><pubDate>Tue, 29 Dec 2020 02:55:29 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr101-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;C 問題は問題文が読みにくくて少しつらかったけど、D 問題も E 問題も面白くて楽しいセットでした。本番ギリギリ E が間に合わなくてつらかった……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1469/problem/E"&gt;https://codeforces.com/contest/1469/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;ふたつの文字列 $a,\ b$ について、同じ位置に同じ文字が存在するような位置がひとつでもある場合、&lt;i&gt;a bit similar&lt;/i&gt; といいます。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;0&lt;/code&gt; および &lt;code&gt;1&lt;/code&gt; からなる文字列 $s$ について、その長さ $k$ の部分文字列全てと a bit similar である長さ $k$ の文字列のうち、辞書順最小のものを求めてください。そのような文字列が存在しない場合はその旨を報告してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le k\le n\le 10^6$&lt;/p&gt;</description></item><item><title>AtCoder Beginner Contest 161 E - Yutori 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc161-e/</link><pubDate>Mon, 28 Dec 2020 12:52:11 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc161-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;今回はバチャでやった問題の反省文です。過去の ABC の問題の解説になります。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc161/tasks/abc161_e"&gt;https://atcoder.jp/contests/abc161/tasks/abc161_e&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;高橋さんは $N$ 日間のうち $K$ 日を選んで働くことにしました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;働く日どうしの間には $C$ 日以上空ける&lt;/li&gt;
+&lt;li&gt;$S_i$ が &lt;code&gt;x&lt;/code&gt; であるときは働かない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これらの条件を満たすように働くとき、必ず働く日を全て求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$1\le K\le N$&lt;/li&gt;
+&lt;li&gt;$0\le C\le N$&lt;/li&gt;
+&lt;li&gt;問題文の条件を満たすように働くことができる&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>パナソニックプログラミングコンテスト (ABC186) F - Rook on Grid 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc186-f/</link><pubDate>Sat, 19 Dec 2020 22:40:02 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc186-f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;全完黄パフォ～～～！！！&lt;br&gt;
+ペナはもう少し縮まったはずなので反省も多いですが、最近の ABC は失敗ばかりだったのでとにかく嬉しいです！&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc186/tasks/abc186_f"&gt;https://atcoder.jp/contests/abc186/tasks/abc186_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;縦 $H$ マス、横 $W$ マスのグリッドがあります。また、グリッド上には $M$ 個の障害物があり、$i$ 番目は $(X_i,\ Y_i)$ に置かれています。&lt;/p&gt;
+&lt;p&gt;障害物にぶつかるまで右または下にずっと移動できる飛車のコマがマス $(1,\ 1)$ にあります。飛車が $2$ 手で到達できるマスの数を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le H,\ W\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$0\le M\le 2\times 10^5$&lt;/li&gt;
+&lt;li&gt;$(X_i,\ Y_i)\neq (1,\ 1)$&lt;/li&gt;
+&lt;li&gt;$(X_i,\ Y_i)$ は相異なる&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>JOI 2021 二次予選 C イベント巡り (Event Hopping)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</link><pubDate>Wed, 16 Dec 2020 05:37:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c"&gt;https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。&lt;/p&gt;
+&lt;p&gt;JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。&lt;/p&gt;
+&lt;p&gt;参加できるイベント数の最大値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約-満点"&gt;制約 (満点)&lt;/h2&gt;
+&lt;p&gt;$1\le N\le 200\ 000$&lt;br&gt;
+$1\le D\le 10^{12}$&lt;br&gt;
+$0\le K\le 10^{12}$&lt;br&gt;
+$1\le P_{i} \le 2$&lt;br&gt;
+$1\le S_{i} \le 10^{12}$&lt;br&gt;
+$S_{i}$ は全て異なる。&lt;/p&gt;</description></item><item><title>AtCoder Beginner Contest 185 E - Sequence Matching 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc185-e/</link><pubDate>Mon, 14 Dec 2020 01:20:27 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc185-e/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;やらかし反省録が増えました！！！！！！！！！！！！！！！！！！！&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc185/tasks/abc185_e"&gt;https://atcoder.jp/contests/abc185/tasks/abc185_e&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N,\ M$ 要素からなる整数列 $A,\ B$ があります。$A,\ B$ からいくつかの要素をコスト $1$ で取り除くことができます。取り除いたあと、$A,\ B$ の要素数が同じでなくてはなりません。&lt;br&gt;
+取り除いたあとの $A,\ B$ について $A_i\neq B_i$ である要素があれば、その個数だけコストが $1$ ずつ上乗せされます。&lt;br&gt;
+コストの最小値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le N,\ M\le 1000$&lt;br&gt;
+$1\le A_i,\ B_i\le 10^{9}$&lt;/p&gt;</description></item><item><title>yukicoder No. 1314 - N言っちゃダメゲーム (5)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</link><pubDate>Fri, 11 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1314/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;ネタ被りが前日に発覚して (4) が (5) になるってどんな偶然なんですか？？&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1314#"&gt;https://yukicoder.me/problems/no/1314#&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/8"&gt;N言っちゃダメゲーム&lt;/a&gt;をします。つまり、先手であるあなたは $0$ から始め、お互いに $[1,\ K]$ の整数を加算したものを言っていき、$N$ 以上の整数を言った人の負けです。&lt;br&gt;
+$N$ は今回 $2$ 以上 $M$ の各整数を用います。先手の人は残っているものの中から好きなものを選び、その回の $N$ とします。一度使った数は以降使えなくなります。$2$ 回目以降のゲームは前回負けたプレイヤーが先手をします。&lt;/p&gt;
+&lt;p&gt;お互いに各ゲームではわざと負けたりしない条件のもと勝つ回数を最大化します。あなたが勝つか負けるか、引き分けになるかを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le M,\ K\le 10^{9}$&lt;/p&gt;</description></item><item><title>yukicoder No. 1313 - N言っちゃダメゲーム (4)</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</link><pubDate>Thu, 10 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1313/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1313"&gt;https://yukicoder.me/problems/no/1313&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;先攻のプレイヤーであるあなたは $0$ から始めます。交互に $[1,\ K]$ のうちのどれかの整数を加算していきます。$N$ 以上の数字、または予め指定された&lt;b&gt;危険な数字&lt;/b&gt;を言ってしまうと負けです。&lt;/p&gt;
+&lt;p&gt;あなたが勝つ場合は最初に宣言して勝てる数字を全て出力してください。あなたが負ける場合は $0$ を出力してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$N,\ K$ は整数&lt;/li&gt;
+&lt;li&gt;$1\le K\lt N\le 2\times 10^{5}$&lt;/li&gt;
+&lt;li&gt;$|S|=N-1$&lt;/li&gt;
+&lt;li&gt;$S_{i}$ が &lt;code&gt;x&lt;/code&gt; のときは $i$ は「危険な数字」で、&lt;code&gt;o&lt;/code&gt; のときはそうではない&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>yukicoder No.1311 - Reverse Permutation Index 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</link><pubDate>Tue, 08 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1311/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/08 出題問題です。&lt;/p&gt;
+&lt;p&gt;一見すると $N,\ S$ の間に簡単な法則が成り立ちそうですが、どうなんでしょう。面白いですね。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1311"&gt;https://yukicoder.me/problems/no/1311&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;ある順列が辞書順で出てくる順番をインデックスと呼びます。また、$S$ 要素で $1$-indexed な順列 $a$ に対して $b$ が $a_{b_{i}}=i (i=1,\ 2,\ \dots,\ s)$ を満たすとき、$b$ を $a$ の逆置換と呼びます。&lt;br&gt;
+$S$ 要素の順列の中で、$N$ 番目の順列の逆置換のインデックスを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$0\le N\lt S! \lt 2^{64}$&lt;br&gt;
+$1\le S\le 20$&lt;/p&gt;</description></item><item><title>yukicoder No. 1310 - 量子アニーリング 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</link><pubDate>Mon, 07 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1310/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/07 出題問題です。&lt;/p&gt;
+&lt;p&gt;みんながぐろふぉに出ている中の出題だったため&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;、FA を狙えないかと思っていましたが残念ながら 3 番目の AC でした。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1310"&gt;https://yukicoder.me/problems/no/1310&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 要素の $+1,\ -1$ のどちらかからなる数列 $s$ に対して、&lt;/p&gt;
+&lt;div&gt;$\displaystyle E=-\sum_{i=1}^{N}s_i s_{i+1}$&lt;/div&gt;
+&lt;p&gt;とします。ただし $s_{N+1}=s_{1}$ です。$2^{|E|}$ の総和を $998244353$ で割った余りを求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$3\le N\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>鹿島建設プログラミングコンテスト2020 (ARC110) D - Binomial Coefficient is Fun 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc110-d/</link><pubDate>Sun, 06 Dec 2020 01:03:56 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/arc/arc110-d/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;数学問エスパーが成功したときほど気持ちいい瞬間はありません。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/arc110/tasks/arc110_d"&gt;https://atcoder.jp/contests/arc110/tasks/arc110_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;長さ $N$ の非負整数列 $A$ があります。長さ $N$、総和 $M$ 以下の非負整数列 $B$ 全てについて、$\displaystyle \prod_{i=1}^{N} \binom{B_i}{A_i}$ の総和を $10^9+7$ で割った余りを出力してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le N\le 2000$&lt;br&gt;
+$1\le M\le 10^9$&lt;br&gt;
+$1\le A_i \le 2000$&lt;/p&gt;</description></item><item><title>yukicoder No. 1306 - Exactly 2 Digits 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</link><pubDate>Thu, 03 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1396/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/03 出題問題です。&lt;/p&gt;
+&lt;p&gt;教育的問題除く ★4 初 AC！(★3.5 の AC が無いのは内緒) ちなみに 16 番目の AC でした。時間はかかったけれど、高難易度の問題をじっくり攻略するのは楽しいです。&lt;/p&gt;
+&lt;p&gt;おことわりですが、問題を解いた後ぼーっとしながら思考をそのまま書き連ねているので、解説の体を成していないかもしれません(ごめんなさい)。「考察」の内容は解説というよりは私の思考手順をなるべく細かく文章にしたものです。解説記事については、「私と同じ知識を有する人が同じ問題が全く分からなかった際に見て思考を追える文章」をモットーにしているので、いささか回りくどいかもしれません。その代わり、「解法」パートは簡潔に解き方をまとめようと思うので、どうかご容赦ください。&lt;br&gt;
+解説をどれくらいの細かさで書くかは本当に人々の思想だと思うんですけれど(ABC の解説を見ているとよく分かります……)、どうしたらいいんでしょうか……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1306"&gt;https://yukicoder.me/problems/no/1306&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;インタラクティブ数当てゲーム。&lt;/p&gt;
+&lt;p&gt;$\{N,\ N+1,\ \dots ,\ N^2 -1\}$ をちょうど $1$ つずつ含む順列 $A$ があります。この順列を以下のクエリを高々 $1.5\times(N^2-N)$ 回行うことで特定してください。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;? i j&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;$p=\lfloor A_i/N\rfloor-\lfloor A_j/N\rfloor$ とする。つまり、$A_i,\ A_j$ の $N$ の位の差。&lt;/li&gt;
+&lt;li&gt;$q=\lfloor A_i%N\rfloor-\lfloor A_j%N\rfloor$ とする。つまり、$A_i,\ A_j$ の $1$ の位の差。&lt;/li&gt;
+&lt;li&gt;もし $p\lt q$ なら $p,\ q$ を swap する。&lt;/li&gt;
+&lt;li&gt;$p,\ q$ が返される。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数列を特定したら、&lt;code&gt;!&lt;/code&gt; に続けて数列を出力してください。&lt;/p&gt;
+&lt;p&gt;ただし、&lt;b&gt;出力したクエリによって完全に数列を特定できることができない状態で数列を答えても AC とはなりません&lt;/b&gt;(adaptive なジャッジ)。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le N\le 50$&lt;/p&gt;</description></item><item><title>yukicoder No. 1305 - Speak of the Devil 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</link><pubDate>Wed, 02 Dec 2020 23:30:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1305/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/300"&gt;yukicoder Advent Calendar Contest 2020&lt;/a&gt; の 12/02 出題問題です。&lt;br&gt;
+今気付いたんですが、これ yukicoder の記念すべき第 300 回目のコンテストらしいですね。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1305"&gt;https://yukicoder.me/problems/no/1305&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;太郎君を呼ぶためにあなたは以下のうちのどちらかの行動をします。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;噂をする。$1$ 分後に太郎君は $1/p$ の確率で来る。そうでない確率 $(p-1)/p$ のときは再度どちらかの行動をする。&lt;/li&gt;
+&lt;li&gt;電話をして呼び出す。太郎君は $q$ 分後に必ず来る。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;太郎君が来るまでの時間の期待値の最小値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le p,\ q\le 10^{9}$&lt;br&gt;
+入力は整数&lt;/p&gt;</description></item><item><title>Educational Codeforces Round 99 D - Sequence and Swaps 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</link><pubDate>Wed, 02 Dec 2020 03:23:08 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/ecr/ecr99-d/</guid><description>&lt;p&gt;大爆死。反省を込めて解説ブログを書きます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1455/problem/D"&gt;https://codeforces.com/contest/1455/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;非負整数からなる数列 ${a_i}$ および非負整数 $x$ が与えられます。&lt;br&gt;
+$a_{i}&amp;gt;x$ である $a_{i},\ x$ を swap することを任意の回数できます。$a$ を広義単調増加にするためには最小で何回の操作を行えばいいでしょうか。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 500$ (テストケース数)&lt;br&gt;
+$1\le n\le 500$&lt;br&gt;
+$0\le x,\ a_i\le 500$&lt;/p&gt;</description></item><item><title>Codeforces Round #686 Div.3-F - Array Partition 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</link><pubDate>Wed, 25 Nov 2020 06:47:38 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3f/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;これ E よりも簡単じゃないですか？&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1454/problem/F"&gt;https://codeforces.com/contest/1454/problem/F&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 要素からなる数列 $a$ があります。$a$ を $1$ 以上の要素からなる $3$ つの部分列に分けます。&lt;br&gt;
+最初の部分列の最大値、真ん中の部分列の最小値、最後の部分列の最大値が全て等しくなるような分け方は存在しますか。存在するときはその分け方も出力してください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br&gt;
+$3\le n\le 2\times 10^{5}$&lt;br&gt;
+$1\le a_{i} \le 10^{9}$&lt;br&gt;
+$\sum{n}\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>Codeforces Round #686 Div.3-E - Number of Simple Paths 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</link><pubDate>Wed, 25 Nov 2020 05:34:46 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div3/cf686-div3e/</guid><description>&lt;p&gt;Div. 3 全完しようと思ったらこの問題に阻まれてしまいました。どう考えても不可能だと思ってたけど、よくよく見たらなもりグラフという制約を見逃していました。恥ずかしい。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1454/problem/E"&gt;https://codeforces.com/contest/1454/problem/E&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;自己ループや多重辺のない $n$ 頂点 $n$ 辺の連結グラフ(つまり、&lt;b&gt;なもりグラフ&lt;/b&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;)が与えられます。このグラフに含まれる長さが $1$ 以上の単純パスの数を求めてください。ただし、逆順にたどっただけのパスは同じものとみなします。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le t\le 2\times 10^{4}$ (テストケース数)&lt;br&gt;
+$3\le n\le 2\times 10^{5}$&lt;br&gt;
+$\sum{n}\le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>AtCoder Beginner Contest 184 F - Programming Contest 解説 (おまけ: 半分全列挙高速化について)</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-f/</link><pubDate>Mon, 23 Nov 2020 08:43:43 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-f/</guid><description>&lt;p&gt;ABC184-F Programming Contest を題材に、典型アルゴリズムである半分全列挙について詳しく解説します。実装の細かい部分まで解説します。&lt;/p&gt;
+&lt;p&gt;また、半分全列挙の高速化 (今回は主に $\log$ を取る部分について) についても掘り下げていきます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_f"&gt;https://atcoder.jp/contests/abc184/tasks/abc184_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 問の問題があります。$i$ 番目の問題は解くのに $A_i$ 分かかります。&lt;/p&gt;
+&lt;p&gt;この中からいくつかの問題を選んで解くのにかかる時間の総和のうち、$T$ 分以下での最大値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 40$&lt;/li&gt;
+&lt;li&gt;$1\le T\le 10^{9}$&lt;/li&gt;
+&lt;li&gt;$1\le A_i\le 10^{9}$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AtCoder Beginner Contest 184 D - increment of coins 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-d/</link><pubDate>Mon, 23 Nov 2020 00:42:26 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-d/</guid><description>&lt;p&gt;この問題だけどうして問題名の最初が英小文字なのか気になってしまい夜も眠れません。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_d"&gt;https://atcoder.jp/contests/abc184/tasks/abc184_d&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;袋の中に金貨が $A$ 枚、銀貨が $B$ 枚、銅貨が $C$ 枚入っています。&lt;br&gt;
+袋の中から硬貨をランダムに選び、それと同じ種類の硬貨をもう $1$ 枚入れるのをいずれかの種類の硬貨が $100$ 枚になるまで繰り返します。&lt;br&gt;
+操作回数の期待値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$0\le A,\ B,\ C\le 99$&lt;br&gt;
+$A+B+C\ge 1$&lt;/p&gt;</description></item><item><title>AtCoder Beginner Contest 184 C - Super Ryuma 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-c/</link><pubDate>Mon, 23 Nov 2020 00:06:44 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/atcoder/abc/abc184-c/</guid><description>&lt;p&gt;この問題がこのセットで最難……。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/abc184/tasks/abc184_c"&gt;https://atcoder.jp/contests/abc184/tasks/abc184_c&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;斜めにどこまででも進め、また &lt;a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%B3%E3%83%8F%E3%83%83%E3%82%BF%E3%83%B3%E8%B7%9D%E9%9B%A2"&gt;マンハッタン距離&lt;/a&gt; が $3$ 以下である場所に進める駒「超竜馬」があります。&lt;br&gt;
+$(r_{1},\ c_{1})$ から $(r_{2},\ c_{2})$ へ動くのに必要な最小手数を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le r_{1},\ c_{1},\ r_{2},\ c_{2}\le 10^{9}$&lt;/p&gt;</description></item><item><title>Codeforces Round #685 Div.2-E1/E2 - Bitwise Queries 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</link><pubDate>Sun, 22 Nov 2020 04:28:00 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2e/</guid><description>&lt;p&gt;数列を当てる系のインタラクティブとても好きだし得意。この前の JOI の数当てもそうだったけど、こういう問題を考えるのがとても楽しいと思えます。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;E1 (Easy Version): &lt;a href="https://codeforces.com/contest/1451/problem/E1"&gt;https://codeforces.com/contest/1451/problem/E1&lt;/a&gt;&lt;br&gt;
+E2 (Hard Version): &lt;a href="https://codeforces.com/contest/1451/problem/E2"&gt;https://codeforces.com/contest/1451/problem/E2&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$n$ 要素からなる数列 $a$ を当てるインタラクティブ問題。解答者はプログラムの中で以下の質問をすることができます。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AND i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の AND を質問する。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OR i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の OR を質問する。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;XOR i j&lt;/code&gt;: $a_{i}$ と $a_{j}$ の XOR を質問する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;規定の回数以内の質問で元の数列を当ててください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$4\le n\le 2^{16}$&lt;br&gt;
+$n$ は $2$ の冪である&lt;br&gt;
+&lt;b&gt;Easy&lt;/b&gt;: 質問の回数は $n+2$ 回以内&lt;br&gt;
+&lt;b&gt;Hard&lt;/b&gt;: 質問の回数は $n+1$ 回以内&lt;/p&gt;</description></item><item><title>Codeforces Round #685 Div.2-D - Circle Game 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</link><pubDate>Sun, 22 Nov 2020 02:45:20 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf685-div2d/</guid><description>&lt;p&gt;同じ日の ARC で -55 もレート溶かしたのに同じ日のこどふぉでレート超盛りました。Codeforces は調子いいのに、AtCoder の下振れが酷いです。助けて。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1451/problem/D"&gt;https://codeforces.com/contest/1451/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$x-y$ 座標上の円 $x^{2}+y^{2}=d^{2}$ があります。この円の中でマスを動かすゲームをします。&lt;br&gt;
+マスは最初 $(0,\ 0)$ にあり、ふたりはお互いのターンで $x,\ y$ 座標どちらかの正の向きにちょうど $k$ だけ進めます。円の外に出たら負けです。勝者は先手か後手か求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le d \le 10^{5}$&lt;br&gt;
+$1\le k \le 10^{5}$&lt;/p&gt;</description></item><item><title>yukicoder No. 1293 - 2種類の道路 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</link><pubDate>Sat, 21 Nov 2020 02:04:59 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1293/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/292"&gt;yukicoder contest 275&lt;/a&gt; より。&lt;br&gt;
+個人差が強い問題。発想出来るかが分かれ目？yukicoder problems では黄 diff とのことですが&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;、人によっては黄相応だと思う人も青程度と思う人もいると思います。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1293"&gt;https://yukicoder.me/problems/no/1293&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 個の都市には $D$ 本の自動車専用道路と $W$ 本の歩行者専用があります。&lt;br&gt;
+$0$ 本以上の自動車専用道路を通った後に $0$ 本以上の歩行者専用道路を通ることで移動できる都市のペアの個数(自身どうしのペアを含まない)を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$2\le N\le 10^{5}$&lt;br&gt;
+$1\le D,\ W\le \min\left(10^{5},\ \frac{N(N-1)}{2}\right)$&lt;/p&gt;</description></item><item><title>yukicoder No. 1292 - パタパタ三角形 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</link><pubDate>Sat, 21 Nov 2020 00:48:48 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/yukicoder/yukicoder-1292/</guid><description>&lt;p&gt;&lt;a href="https://yukicoder.me/contests/292"&gt;yukicoder contest 275&lt;/a&gt; より。&lt;br&gt;
+実装ゲーでした。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://yukicoder.me/problems/no/1292"&gt;https://yukicoder.me/problems/no/1292&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;辺 a, b, c からなる面積 $1$ の三角形があります。どの辺について対称移動させるかの順序が文字列 $S$ で与えられるので、通過する面積を求めてください。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le |S| \le 2\times 10^{5}$&lt;/p&gt;</description></item><item><title>Codeforces Round #683 Div.2-D/Div.1-B - Catching Cheaters 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</link><pubDate>Mon, 16 Nov 2020 04:30:25 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/codeforces/div1+2/cf683-div1b/</guid><description>&lt;p&gt;Rated コンテストにたくさん出たいのでこどふぉに出ました。冷えました。つらいです……。&lt;/p&gt;
+&lt;p&gt;今回はその冷えたこどふぉで解けなかった問題の解説です。解けて然るべき問題を解けなかった時の辛さは全競プロer共通だと勝手に思っています。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://codeforces.com/contest/1447/problem/D"&gt;https://codeforces.com/contest/1447/problem/D&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;文字列 $A,\ B$ の&lt;b&gt;部分文字列&lt;/b&gt;を $C,\ D$ とします。$C,\ D$ のスコアを $4\times LCS(C,\ D)-|C|-|D|$ とします。ただし、$LCS(C,\ D)$ は $C,\ D$ の最長&lt;b&gt;部分列&lt;/b&gt;の長さとします。スコアの最大値を求めて下さい。&lt;br&gt;
+部分文字列は連続していなければならず、部分列は連続していなくてもいいことに注意して下さい。&lt;/p&gt;
+&lt;h2 id="制約"&gt;制約&lt;/h2&gt;
+&lt;p&gt;$1\le |A|,\ |B|\le 5000$&lt;/p&gt;</description></item><item><title>JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</link><pubDate>Wed, 11 Nov 2020 17:49:13 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</guid><description>&lt;p&gt;今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。&lt;br&gt;
+思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。&lt;br&gt;
+C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f"&gt;https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。&lt;br&gt;
+Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。&lt;br&gt;
+一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約満点"&gt;制約(満点)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 30$&lt;/li&gt;
+&lt;li&gt;$0\le D,\ X_i,\ Y_i\le 10^{15}$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</link><pubDate>Tue, 03 Nov 2020 08:12:35 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</guid><description>&lt;p&gt;お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。&lt;/p&gt;
+&lt;p&gt;初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。&lt;/p&gt;
+&lt;h2 id="問題ページ"&gt;問題ページ&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess"&gt;https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。&lt;/p&gt;
+&lt;h2 id="制約満点"&gt;制約(満点)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le100$&lt;/li&gt;
+&lt;li&gt;$L=700$&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

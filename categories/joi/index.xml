@@ -1,38 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JOI on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/joi/</link><description>Recent content in JOI on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Wed, 16 Dec 2020 05:37:58 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/joi/index.xml" rel="self" type="application/rss+xml"/><item><title>JOI 2021 二次予選 C イベント巡り (Event Hopping)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</link><pubDate>Wed, 16 Dec 2020 05:37:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</guid><description>&lt;!-- 解説ブログ テンプレ -->
-&lt;p>JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c">https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。&lt;/p>
-&lt;p>JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。&lt;/p>
-&lt;p>参加できるイベント数の最大値を求めてください。&lt;/p>
-&lt;h2 id="制約-満点">制約 (満点)&lt;/h2>
-&lt;p>$1\le N\le 200\ 000$&lt;br>
-$1\le D\le 10^{12}$&lt;br>
-$0\le K\le 10^{12}$&lt;br>
-$1\le P_{i} \le 2$&lt;br>
-$1\le S_{i} \le 10^{12}$&lt;br>
-$S_{i}$ は全て異なる。&lt;/p></description></item><item><title>JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</link><pubDate>Wed, 11 Nov 2020 17:49:13 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</guid><description>&lt;p>今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。&lt;br>
-思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。&lt;br>
-C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。&lt;/p>
-&lt;h2 id="問題リンク">問題リンク&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f">https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。&lt;br>
-Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。&lt;br>
-一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。&lt;/p>
-&lt;h2 id="制約満点">制約(満点)&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le 30$&lt;/li>
-&lt;li>$0\le D,\ X_i,\ Y_i\le 10^{15}$&lt;/li>
-&lt;/ul></description></item><item><title>JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</link><pubDate>Tue, 03 Nov 2020 08:12:35 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</guid><description>&lt;p>お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。&lt;/p>
-&lt;p>初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。&lt;/p>
-&lt;h2 id="問題ページ">問題ページ&lt;/h2>
-&lt;p>&lt;a href="https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess">https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess&lt;/a>&lt;/p>
-&lt;h2 id="問題概要">問題概要&lt;/h2>
-&lt;p>インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。&lt;/p>
-&lt;h2 id="制約満点">制約(満点)&lt;/h2>
-&lt;ul>
-&lt;li>$1\le N\le100$&lt;/li>
-&lt;li>$L=700$&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JOI on Growth Record of Lettuce Farm: Extended</title><link>https://blog.fairy-lettuce.com/categories/joi/</link><description>Recent content in JOI on Growth Record of Lettuce Farm: Extended</description><generator>Hugo</generator><language>ja</language><copyright>&amp;copy;fairy-lettuce 2023</copyright><lastBuildDate>Wed, 16 Dec 2020 05:37:58 +0900</lastBuildDate><atom:link href="https://blog.fairy-lettuce.com/categories/joi/index.xml" rel="self" type="application/rss+xml"/><item><title>JOI 2021 二次予選 C イベント巡り (Event Hopping)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</link><pubDate>Wed, 16 Dec 2020 05:37:58 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2021yo2-c/</guid><description>&lt;!-- 解説ブログ テンプレ --&gt;
+&lt;p&gt;JOI 2021 二次予選をバチャしました。難しかったし、納得いく結果が出せませんでしたが、面白い問題でした！&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c"&gt;https://atcoder.jp/contests/joi2021yo2/tasks/joi2021_yo2_c&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$2$ つの街があり、合計 $N$ 個のイベントが行われます。イベント $i$ は街 $P_i$ で開催され、時間は $(S_i,\ S_i+1)$ の間行われます。&lt;/p&gt;
+&lt;p&gt;JOI 君はこれらのイベントに参加します。どちらの街から始めることができ、それまでに参加したイベント数を $j$ 個とすると、$D+K\times j$ だけ街の間の移動に時間がかかります。&lt;/p&gt;
+&lt;p&gt;参加できるイベント数の最大値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約-満点"&gt;制約 (満点)&lt;/h2&gt;
+&lt;p&gt;$1\le N\le 200\ 000$&lt;br&gt;
+$1\le D\le 10^{12}$&lt;br&gt;
+$0\le K\le 10^{12}$&lt;br&gt;
+$1\le P_{i} \le 2$&lt;br&gt;
+$1\le S_{i} \le 10^{12}$&lt;br&gt;
+$S_{i}$ は全て異なる。&lt;/p&gt;</description></item><item><title>JOI 2015 予選 F - 財宝 (Treasures) 解説 (おまけ: C#での定数倍高速化に関する知見)</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</link><pubDate>Wed, 11 Nov 2020 17:49:13 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2015yo-f/</guid><description>&lt;p&gt;今回の問題解説では、JOI 2015 年の予選より、財宝 (難易度 8) を解説します。&lt;br&gt;
+思ったより苦戦させられ、周りの C# 使いの競プロerを巻き込んで一緒に TLE と格闘したので、その経緯も含めて解説します。&lt;br&gt;
+C# での定数倍高速化に関する知見を纏めた記事は多くないため、これが C# 競プロerの皆さんに役立つ知見となると嬉しいです。&lt;/p&gt;
+&lt;h2 id="問題リンク"&gt;問題リンク&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f"&gt;https://atcoder.jp/contests/joi2015yo/tasks/joi2015yo_f&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;$N$ 個の財宝があり、それぞれには市場価値 $X_i$ と貴重度 $Y_i$ が定められています。これらの財宝を Anna と Bruno の2人で分配します。2 人とも取らない財宝があってもですし、2 人とも取る財宝が 0 個でもいいです。&lt;br&gt;
+Anna は、Anna が取った財宝の市場価値の合計と Bruno が取った市場価値の合計の差の絶対値が $D$ 以下であれば満足します。&lt;br&gt;
+一方 Bruno は財宝の貴重度の合計を大きくしたいです。Anna が満足する取り方をした上で、Bruno が取った財宝の貴重度の合計から Anna が取った財宝の貴重度の合計を引いた値の最大値を求めてください。&lt;/p&gt;
+&lt;h2 id="制約満点"&gt;制約(満点)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le 30$&lt;/li&gt;
+&lt;li&gt;$0\le D,\ X_i,\ Y_i\le 10^{15}$&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>JOI 2010-2011 春合宿 数当て (Guess Them All) 解説</title><link>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</link><pubDate>Tue, 03 Nov 2020 08:12:35 +0900</pubDate><guid>https://blog.fairy-lettuce.com/cp/editorial/joi/joi2011sc-guess/</guid><description>&lt;p&gt;お久しぶりの記事です。暇なので競プロの問題の解説をしてみることにしました。のんびり解説記事を書きたいので自分が解けた中で難しい問題や自分の解法が他の解説と違ったものに絞り解説しようと思います。&lt;/p&gt;
+&lt;p&gt;初めての解説記事はJOI春合宿より「数当て」(難易度 9) です。&lt;/p&gt;
+&lt;h2 id="問題ページ"&gt;問題ページ&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess"&gt;https://atcoder.jp/contests/joisc2011/tasks/joisc2011_guess&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="問題概要"&gt;問題概要&lt;/h2&gt;
+&lt;p&gt;インタラクティブ問題です。$1$ から $N$ を並び替えた順列を予想して、合致する箇所の個数が知らされるのでその順列を当てようという問題です。予想できるのは合計$L$回までです。&lt;/p&gt;
+&lt;h2 id="制約満点"&gt;制約(満点)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;$1\le N\le100$&lt;/li&gt;
+&lt;li&gt;$L=700$&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
