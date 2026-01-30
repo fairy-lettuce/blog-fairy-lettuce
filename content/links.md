@@ -41,3 +41,9 @@ keywords:
 ### はてなブログ (日常用)
 
 [Lettuce Diary](https://lettuce-diary.hatenadiary.com/)
+
+## リンク集
+
+他の個人サイトへのリンク集です！ 追加・更新・削除のご連絡は上記の連絡先まで
+
+- <a href="https://licjar.xyz"><img src="https://licjar.xyz/images/banner.svg" width=200 height=40 /></a>
