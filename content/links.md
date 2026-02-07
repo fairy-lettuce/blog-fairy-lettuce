@@ -10,6 +10,12 @@ keywords:
 
 <!--more-->
 
+## RSS フィード (ベータ)
+
+https://blog.fairy-lettuce.com/index.xml
+
+今後仕様が変更される可能性が高いです。
+
 ## アカウント類
 
 - Twitter: [@fairy_lettuce](https://twitter.com/fairy_lettuce)
