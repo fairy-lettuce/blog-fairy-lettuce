@@ -13,7 +13,7 @@ aliases:
 
 先日の エイシング プログラミング コンテスト 2020 で、AtCoder水色になりました！！！！！！！！！！！！！！！！！！！！！！  
 
-{{< tweet id="1281953832964993030" user="fairly_lettuce" >}}
+{{< x id="1281953832964993030" user="fairly_lettuce" >}}
 
 自分にとって水色は通過点だと思っていたのでぱぱっと水色になって上に行こうと思っていたら思いの外レートが伸び悩んでしまい、一時期非常に苦しかったのですが、無事水色になれました。マイルストーンとして今までに競プロでやったことをまとめようと思います。  
 
@@ -53,7 +53,7 @@ aliases:
 
 ## 精進記録
 2020年07月12日、入水直後の記録です。2か月でAC Countを3倍くらいに伸ばしました。
-{{< tweet id="1282257473668173824" user="fairly_lettuce" >}}
+{{< x id="1282257473668173824" user="fairly_lettuce" >}}
 
 <a href="https://f.hatena.ne.jp/fairy_lettuce/20200712192455">
   <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/f/fairy_lettuce/20200712/20200712192455.png" alt="20200712192455">

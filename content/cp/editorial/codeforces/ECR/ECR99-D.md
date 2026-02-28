@@ -107,7 +107,7 @@ ACコード: https://codeforces.com/contest/1455/submission/100039109
 
 ちなみにこれが問題を解いたときの惨状です。  
 
-{{< tweet id="1333450701817536512" user="fairly_lettuce" >}}
+{{< x id="1333450701817536512" user="fairly_lettuce" >}}
 
 反省。
 
